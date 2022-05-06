@@ -38,7 +38,7 @@ layout: base
     {% for item in steps %}
     <div class="step">
       <div class="layout horizontal center">
-        <h2>Step {{forloop.index}}</h2>
+        <h2>{{ item.preTitle }}</h2>
         <span class="title">{{item.title}}</span>
       </div>
       {% if item.image or item.content %}

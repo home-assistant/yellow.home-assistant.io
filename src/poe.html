@@ -4,6 +4,7 @@ description: Home Assistant Yellow
 guideName: Home Assistant Yellow Power-Over-Ethernet Kit
 steps:
   - title: Gather the required tools
+    preTitle: Step 1
     image: step-1.png
     content: |
       <ul>
@@ -11,12 +12,12 @@ steps:
         <li>2 heat pads: heat pad memory, heat pad SOC</li>
         <li>Heat sink</li>
         <li>Ethernet cable</li>
-        <li>Power supply (not required for PoE variant)</li>
         <li>Raspberry Pi CM4 Module (not part of Kit)</li>
         <li>NVMe M.2 SSD drive (optional, not part of kit)</li>
         <li>No. 1 hex screwdriver (required for NVMe drive)</li>
       </ul>
   - title: Ground yourself
+    preTitle: Step 2
     image: step-2.jpeg
     content: |
       <ul>
@@ -24,6 +25,7 @@ steps:
         <li>This protects the components from the static electricity that is naturally present in your body - grounding is an extra safeguard.</li>
       </ul>
   - title: Remove the translucent enclosure
+    preTitle: Step 3
     image: step-3.png
     content: |
       <ul>
@@ -31,8 +33,10 @@ steps:
         <li>Keep the thumb screws close by; you will need them again later.</li>
       </ul>
   - title: Unpack the Raspberry Pi CM4 Module
+    preTitle: Step 4
     image: step-4.png
   - title: Install the Raspberry Pi CM4 Module onto the Home Assistant Yellow carrier board
+    preTitle: Step 5
     image: step-5.png
     content: |
       <ul>
@@ -40,8 +44,10 @@ steps:
         <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
       </ul>
   - title: Place the heat pads onto the memory and the SOC on the CM4 Module
+    preTitle: Step 6
     image: step-6.png
   - title: Install the heat sink.
+    preTitle: Step 7
     image: step-7.png
     content: |
       <ul>
@@ -50,8 +56,10 @@ steps:
       </ul>
   - title: Skip to step 13 if you do not have an NVMe drive
   - title: Unscrew the stand-off nut.
+    preTitle: Step 8
     image: step-8.png
   - title: Insert the NMVe M.2 SSD drive.
+    preTitle: Step 9
     image: step-9.png
     content: |
       <ul>
@@ -62,12 +70,14 @@ steps:
         <li>Do not force the connection.</li>
       </ul>
   - title: Slide the stand-off nut into the dent at the end of the SSD drive.
+    preTitle: Step 10
     image: step-10.png
     content: |
       <ul>
         <li>Make sure the thinner end of the nut is on top</li>
       </ul>
   - title: Attach the SSD drive to the carrier board
+    preTitle: Step 11
     image: step-12.png
     content: |
       <ul>
@@ -77,18 +87,21 @@ steps:
         <li>Do not over-tighten the screw.</li>
       </ul>
   - title: Place the translucent enclosure ground plate on the table.
+    preTitle: Step 12
     image: step-13.png
     content: |
       <ul>
         <li>Make sure the extrusion is facing towards the top right corner.</li>
       </ul>
   - title: Place the carrier board onto the enclosure ground plate.
+    preTitle: Step 13
     image: step-14.png
     content: |
       <ul>
         <li>Make sure the USB connectors are facing upwards, away from you.</li>
       </ul>
   - title: Install the carrier board.
+    preTitle: Step 14
     image: step-15.png
     content: |
       <ul>
@@ -96,9 +109,28 @@ steps:
         <li>Then slide the push buttons into the openings of the housing.</li>
       </ul>
   - title: Insert the 4 thumb screws
+    preTitle: Step 15
     image: step-16.png
     content: |
       <ul>
         <li>Do not over-tighten the screws.</li>
+      </ul>
+  - title: Insert Ethernet Cable
+    preTitle: Step 16
+    image: insert-ethernet-cable.png
+    content: |
+      <ul>
+        <li>Push the ethernet cable into the jack until you hear a click</li>
+        <li>The other end of the Ethernet cable should be connected to your Router or Switch with POE</li>
+      </ul>
+  - title: Get started with Home Assistant
+    preTitle: Step 17
+    image: home-assistant-mobile.png
+    content: |
+      <ul>
+        <li>Initial startup may take longer depending on your internet connection</li>
+        <li>Download the Home Assistant App on Android/IOS or visit <a href="http://homeassistant.local:8123">http://homeassistant.local:8123</a> in your computer's browser</li>
+        <li>Once your Yellow has initialized, the onboarding will guide you through setup on your phone or computer</li>
+        <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/">Onboarding</a></li>
       </ul>
 ---
