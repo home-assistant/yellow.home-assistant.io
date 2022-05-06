@@ -185,3 +185,15 @@ h3 {
 hr {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
+
+/* VIDEOS STYLES */
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.video {
+  width: 650px;
+  margin: 16px;
+}

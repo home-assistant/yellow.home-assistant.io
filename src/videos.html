@@ -1,0 +1,30 @@
+---
+layout: base
+videos:
+  - url: "https://www.youtube.com/embed/8i4Tv2YFTas"
+    title: "Home Assistant Yellow: First Impressions!"
+  - url: "https://www.youtube.com/embed/gJFsZL5CTgM"
+    title: "Home automation that's private and local?! (Home Assistant Yellow)"
+  - url: "https://www.youtube.com/embed/9TBDaCf7sDI"
+    title: "Home Assistant Yellow: Let's talk about it!"
+  - url: "https://player.vimeo.com/video/605135351?h=6621cae4ed"
+    title: "Home Assistant Yellow Introduction"
+  - url: "https://www.youtube.com/embed/KPR-shzT_VQ"
+    title: "Home Assistant Yellow Introduction"
+---
+
+<div class="videos">
+  {% for video in videos %}
+  <div class="video">
+    <iframe
+      width="650"
+      height="365"
+      src="{{ video.url}}"
+      title="{{ video.title}}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+  {% endfor %}
+</div>

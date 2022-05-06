@@ -4,6 +4,8 @@ menu:
       - /poe/
       - /power-supply/
     - Guides
+  - - - /videos/
+    - Videos
 ---
 
 {% comment %}
@@ -28,7 +30,6 @@ Home Assistant Yellow Guide
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link href="/style.css" rel="stylesheet" />
     <title>{{ full_title }}</title>
     <meta name="description" content="{{ description }}" />
     <meta name="viewport" content="width=device-width" />
@@ -48,7 +49,7 @@ Home Assistant Yellow Guide
           <li>
             <a
               class="{% if item[0] contains page.url %}active{% endif %}"
-              href="{{ item[0] }}"
+              href="{{ item[0][0] }}"
               >{{ item[1] }}</a
             >
           </li>
