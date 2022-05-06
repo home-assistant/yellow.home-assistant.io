@@ -1,0 +1,73 @@
+---
+menu:
+  - - - /
+      - /poe/
+      - /power-supply/
+    - Guides
+---
+
+{% comment %}
+<!-- prettier-ignore -->
+{% endcomment %}
+
+{% capture css %}
+  {% include "style.css" %}
+{% endcapture %}
+
+{% capture full_title -%}
+{%- if title -%}
+{{ title }} – Home Assistant Yellow
+{%- else -%}
+Home Assistant Yellow Guide
+{%- endif -%}
+{%- endcapture %}
+{% comment %}
+<!-- prettier-unignore -->
+{% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="/style.css" rel="stylesheet" />
+    <title>{{ full_title }}</title>
+    <meta name="description" content="{{ description }}" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:title" content="{{ full_title }}" />
+  </head>
+  <style>
+    {{ css }}
+  </style>
+  <body>
+    <div class="container">
+      <div class="nav-bar">
+        <a href="/"
+          ><img src="/images/yellow-logo.png" alt="Home Assistant Yellow"
+        /></a>
+        <ul>
+          {% for item in menu %}
+          <li>
+            <a
+              class="{% if item[0] contains page.url %}active{% endif %}"
+              href="{{ item[0] }}"
+              >{{ item[1] }}</a
+            >
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">{{ content }}</div>
+
+    <div class="container">
+      <div class="footer">
+        <div>
+          Home Assistant Yellow &nbsp; – &nbsp;
+          <a href="mailto:yellow@home-assistant.io">Contact</a>
+          &nbsp; – &nbsp;
+          <a href="https://www.github.com/home-assistant">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

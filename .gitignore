@@ -1,0 +1,6 @@
+node_modules
+dist
+.rpt2_cache
+.DS_Store
+manifest.json
+.vscode/settings.json
