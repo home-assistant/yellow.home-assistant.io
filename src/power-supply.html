@@ -2,143 +2,252 @@
 layout: guide
 description: Home Assistant Yellow
 guideName: Home Assistant Yellow Power Supply Kit
-steps:
-  - title: Gather the required tools
-    preTitle: Step 1
-    image: step-1.png
-    content: |
-      <ul>
-        <li>Home Assistant Yellow</li>
-        <li>2 heat pads: heat pad memory, heat pad SOC</li>
-        <li>Heat sink</li>
-        <li>Ethernet cable</li>
-        <li>Power supply</li>
-        <li>Raspberry Pi CM4 Module (not part of Kit)</li>
-        <li>NVMe M.2 SSD drive (optional, not part of kit)</li>
-        <li>No. 1 hex screwdriver (required for NVMe drive)</li>
-      </ul>
-  - title: Ground yourself.
-    preTitle: Step 2
-    image: step-2.jpeg
-    content: |
-      <ul>
-        <li>Touch something that has a direct conductive path to the earth, such as a water pipe, a wooden table, or the exterior metal box of your desktop computer.</li>
-        <li>This protects the components from the static electricity that is naturally present in your body - grounding is an extra safeguard.</li>
-      </ul>
-  - title: Remove the translucent enclosure.
-    preTitle: Step 3
-    image: step-3.png
-    content: |
-      <ul>
-        <li>Using the 4 screws on the bottom of the Home Assistant Yellow Kit.</li>
-        <li>Keep the thumb screws close by; you will need them again later.</li>
-      </ul>
-  - title: Unpack the Raspberry Pi CM4 Module.
-    preTitle: Step 4
-    image: step-4.png
-  - title: Install the Raspberry Pi CM4 Module onto the Home Assistant Yellow carrier board.
-    preTitle: Step 5
-    image: step-5.png
-    content: |
-      <ul>
-        <li>Check for correct orientation of the CM4: the berry icon needs to be upside down.</li>
-        <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
-      </ul>
-  - title: Place the heat pads onto the memory and the SOC on the CM4 Module.
-    preTitle: Step 6
-    image: step-6.png
-  - title: Install the heat sink.
-    preTitle: Step 7
-    image: step-7.png
-    content: |
-      <ul>
-        <li>Start by first fixating one of the plastic push pins into the dedicated hole on the carrier board.</li>
-        <li>Then, press the second push pin into the other hole on the carrier board.</li>
-      </ul>
-  - title: Skip to step 13 if you do not have an NVMe drive.
-  - title: Unscrew the stand-off nut.
-    preTitle: Step 8
-    image: step-8.png
-  - title: Insert the NMVe M.2 SSD drive.
-    preTitle: Step 9
-    image: step-9.png
-    content: |
-      <ul>
-        <li>Notice! Do not touch the gold connector pins.</li>
-        <li>Hold the SSD carefully by the sides.</li>
-        <li>Align the notches in the SSD with the ridges in the NVMe M.2 SSD slot.</li>
-        <li>Then, insert at a 30-degree angle.</li>
-        <li>Do not force the connection.</li>
-      </ul>
-  - title: Slide the stand-off nut into the dent at the end of the SSD drive.
-    preTitle: Step 10
-    image: step-10.png
-    content: |
-      <ul>
-        <li>Make sure the thinner end of the nut is on top.</li>
-      </ul>
-  - title: Attach the SSD drive to the carrier board.
-    preTitle: Step 11
-    image: step-12.png
-    content: |
-      <ul>
-        <li>Press the stand-off nut and the SSD drive against the carrier board.</li>
-        <li>While pressing down the drive, turn over the carrier board.</li>
-        <li>From the rear side of the carrier board, insert the M2 hex screw.</li>
-        <li>Do not over-tighten the screw.</li>
-      </ul>
-  - title: Place the translucent enclosure ground plate on the table.
-    preTitle: Step 12
-    image: step-13.png
-    content: |
-      <ul>
-        <li>Make sure the extrusion is facing towards the top right corner.</li>
-      </ul>
-  - title: Place the carrier board onto the enclosure ground plate.
-    preTitle: Step 13
-    image: step-14.png
-    content: |
-      <ul>
-        <li>Make sure the USB connectors are facing upwards, away from you.</li>
-      </ul>
-  - title: Install the carrier board.
-    preTitle: Step 14
-    image: step-15.png
-    content: |
-      <ul>
-        <li>Turn the enclosure upside down.</li>
-        <li>Then slide the push buttons into the openings of the housing.</li>
-      </ul>
-  - title: Insert the 4 thumb screws.
-    preTitle: Step 15
-    image: step-16.png
-    content: |
-      <ul>
-        <li>Do not over-tighten the screws.</li>
-      </ul>
-  - title: Insert the Ethernet cable.
-    preTitle: Step 16
-    image: insert-ethernet-cable.png
-    content: |
-      <ul>
-        <li>Push the Ethernet cable into the jack until you hear a click.</li>
-        <li>The other end of the Ethernet cable should be connected to your Router or Switch.</li>
-      </ul>
-  - title:
-    preTitle: Step 17
-    image: insert-power.png
-    content: |
-      <ul>
-        <li>Connect the power to the wall and then to the yellow.</li>
-      </ul>
-  - title: Get started with Home Assistant.
-    preTitle: Step 18
-    image: home-assistant-mobile.png
-    content: |
-      <ul>
-        <li>Initial startup may take longer depending on your internet connection.</li>
-        <li>Download the Home Assistant App on Android/IOS or visit <a href="http://homeassistant.local:8123">http://homeassistant.local:8123</a> in your computer's browser.</li>
-        <li>Once your Yellow has initialized, the onboarding will guide you through setup on your phone or computer.</li>
-        <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/">Onboarding</a>.</li>
-      </ul>
+procedures:
+  - title: Setting up the hardware
+    steps:
+      - title: Gather the required tools
+        preTitle: Step 1
+        image: step-1.png
+        content: |
+          <ul>
+            <li>Home Assistant Yellow</li>
+            <li>2 heat pads: heat pad memory, heat pad SOC</li>
+            <li>Heat sink</li>
+            <li>Ethernet cable</li>
+            <li>Power supply</li>
+            <li>Raspberry Pi CM4 Module (not part of Kit)</li>
+            <li>NVMe M.2 SSD drive (optional, not part of kit)</li>
+            <li>No. 1 hex screwdriver (required for NVMe drive)</li>
+          </ul>
+      - title: Ground yourself.
+        preTitle: Step 2
+        image: step-2.jpeg
+        content: |
+          <ul>
+            <li>Touch something that has a direct conductive path to the earth, such as a water pipe, a wooden table, or the exterior metal box of your desktop computer.</li>
+            <li>This protects the components from the static electricity that is naturally present in your body - grounding is an extra safeguard.</li>
+          </ul>
+      - title: Remove the translucent enclosure.
+        preTitle: Step 3
+        image: step-3.png
+        content: |
+          <ul>
+            <li>Using the 4 screws on the bottom of the Home Assistant Yellow Kit.</li>
+            <li>Keep the thumb screws close by; you will need them again later.</li>
+          </ul>
+      - title: Unpack the Raspberry Pi CM4 Module.
+        preTitle: Step 4
+        image: step-4.png
+      - title: Install the Raspberry Pi CM4 Module onto the Home Assistant Yellow carrier board.
+        preTitle: Step 5
+        image: step-5.png
+        content: |
+          <ul>
+            <li>Check for correct orientation of the CM4: the berry icon needs to be upside down.</li>
+            <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
+          </ul>
+      - title: Place the heat pads onto the memory and the SOC on the CM4 Module.
+        preTitle: Step 6
+        image: step-6.png
+      - title: Install the heat sink.
+        preTitle: Step 7
+        image: step-7.png
+        content: |
+          <ul>
+            <li>Start by first fixating one of the plastic push pins into the dedicated hole on the carrier board.</li>
+            <li>Then, press the second push pin into the other hole on the carrier board.</li>
+          </ul>
+      - title: Skip to step 13 if you do not have an NVMe drive.
+      - title: Unscrew the stand-off nut.
+        preTitle: Step 8
+        image: step-8.png
+      - title: Insert the NMVe M.2 SSD drive.
+        preTitle: Step 9
+        image: step-9.png
+        content: |
+          <ul>
+            <li>Notice! Do not touch the gold connector pins.</li>
+            <li>Hold the SSD carefully by the sides.</li>
+            <li>Align the notches in the SSD with the ridges in the NVMe M.2 SSD slot.</li>
+            <li>Then, insert at a 30-degree angle.</li>
+            <li>Do not force the connection.</li>
+          </ul>
+      - title: Slide the stand-off nut into the dent at the end of the SSD drive.
+        preTitle: Step 10
+        image: step-10.png
+        content: |
+          <ul>
+            <li>Make sure the thinner end of the nut is on top.</li>
+          </ul>
+      - title: Attach the SSD drive to the carrier board.
+        preTitle: Step 11
+        image: step-12.png
+        content: |
+          <ul>
+            <li>Press the stand-off nut and the SSD drive against the carrier board.</li>
+            <li>While pressing down the drive, turn over the carrier board.</li>
+            <li>From the rear side of the carrier board, insert the M2 hex screw.</li>
+            <li>Do not over-tighten the screw.</li>
+          </ul>
+      - title: Place the translucent enclosure ground plate on the table.
+        preTitle: Step 12
+        image: step-13.png
+        content: |
+          <ul>
+            <li>Make sure the extrusion is facing towards the top right corner.</li>
+          </ul>
+      - title: Place the carrier board onto the enclosure ground plate.
+        preTitle: Step 13
+        image: step-14.png
+        content: |
+          <ul>
+            <li>Make sure the USB connectors are facing upwards, away from you.</li>
+          </ul>
+      - title: Install the carrier board.
+        preTitle: Step 14
+        image: step-15.png
+        content: |
+          <ul>
+            <li>Turn the enclosure upside down.</li>
+            <li>Then slide the push buttons into the openings of the housing.</li>
+          </ul>
+      - title: Insert the 4 thumb screws.
+        preTitle: Step 15
+        image: step-16.png
+        content: |
+          <ul>
+            <li>Do not over-tighten the screws.</li>
+          </ul>
+      - title: Insert the Ethernet cable.
+        preTitle: Step 16
+        image: insert-ethernet-cable.png
+        content: |
+          <ul>
+            <li>Push the Ethernet cable into the jack until you hear a click.</li>
+            <li>The other end of the Ethernet cable should be connected to your Router or Switch.</li>
+          </ul>
+      - title:
+        preTitle: Step 17
+        image: insert-power.png
+        content: |
+          <ul>
+            <li>Connect the power to the wall and then to the yellow.</li>
+          </ul>
+      - title: Get started with Home Assistant.
+        preTitle: Step 18
+        image: home-assistant-mobile.png
+        content: |
+          <ul>
+            <li>Initial startup may take longer depending on your internet connection.</li>
+            <li>Download the Home Assistant App on Android/IOS or visit <a href="http://homeassistant.local:8123">http://homeassistant.local:8123</a> in your computer's browser.</li>
+            <li>Once your Yellow has initialized, the onboarding will guide you through setup on your phone or computer.</li>
+            <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/">Onboarding</a>.</li>
+          </ul>
+  - title: Installing Home Assistant Software on Kit
+    steps:
+    - title: On your computer, install the Raspeberry Pi Imager
+      preTitle: Step 2
+      image: rpi_imager.png
+      content: |
+        <ul>
+          <li>as described under <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a></li>
+        </ul>
+    - title: Insert the USB drive into your computer,
+      preTitle: Step 3    
+    - title: Start the Raspberry Pi Imager.
+      preTitle: Step 4
+      image: start_rpi_imager.png
+    - title: In Raspberry Pi Imager, choose the button <b>Choose OS</b>.
+      preTitle: Step 5
+      image: rpi_choose_ha_os.png
+      content: |
+        <ul>
+          <li>From the dropdown menu, select <b>Home Assistant Operating System</b>.</li>
+        </ul>
+    - title: Choose the button <b>Choose Storage</b>.
+      preTitle: Step 6
+      image: rpi_choose_storage.png
+      content: |
+        <ul>
+          <li>From the dropdown menu, select your USB drive.</li>
+        </ul>
+    - title: Choose the <b>Write</b> button.
+      preTitle: Step 7
+      image: rpi_choose_write.png
+      content: |
+        <ul>
+          <li>Wait for the Home Assistant Operating system to be written to the USB drive.</li>
+        </ul>
+    - title: Eject the USB drive from your computer.
+      preTitle: Step 8
+    - title: Insert the USB drive with the Home Assistant Operating System image into Home Assistant Yellow Kit.
+      preTitle: Step 9
+      image: insert_usb.png    
+    - title: Connect the Ethernet cable to the Ethernet connector on Home Assistant Yellow.
+      preTitle: Step 10
+      image: insert_ethernet_cable.png    
+    - title: If you do not have PoE,
+      preTitle: Step 11
+      image: insert_power_cable.png
+      content: |
+        <ul>
+          <li>Connect the power supply to Home Assistant Yellow Kit.</li>
+        </ul>
+    - title: Wait for Home Assistant Yellow to start booting from the USB drive.
+      preTitle: Step 12
+      image: status_leds_yellow_heartbeat.gif
+      content: |
+        <ul>
+          <li>During boot, the Yellow LED blinks in a heartbeat pattern.</li>
+          <li>Once the installer is ready, the Yellow LED is on constantly.</li>
+        </ul>
+    - title: Press the red or the blue button.
+      preTitle: Step 13
+      image: status_leds_yellow_blinking_all_off.gif
+      content: |
+        <ul>
+          <li>Installation of Home Assistant OS starts automatically.</li>
+          <li>The yellow LED starts to blink steadily.</li>
+          <li>Once all the LEDs turn off, the flashing process is finished.</li>
+        </ul>
+    - title: Remove the USB flash drive and disconnect power.
+      preTitle: Step 14
+      image: insert-ethernet-cable.png
+      content: |
+        <ul>
+          <li>If you do <b>not</b> have PoE:</li>
+          <li>Remove the power cable.</li>
+        </ul>
+    - title: If you <b>do</b> have PoE,
+      preTitle: Step 15
+      image: no_cables_no_usb.png
+      content: |
+        <ul>
+          <li>Also remove the Ethernet cable.</li>
+        </ul>
+    - title: Reconnect power.
+      preTitle: Step 16
+      image: insert-power.png
+      content: |
+        <ul>
+          <li>If you do <b>not</b> have PoE:</li>
+          <li>Reinsert the power cable to start Home Assistant.</li>
+        </ul>
+    - title: If you <b>do</b> have PoE,
+      preTitle: Step 17
+      image: insert-ethernet-cable.png
+      content: |
+        <ul>
+          <li>Reinsert the Ethernet cable.</li>
+        </ul>
+    - title: Get started with Home Assistant.
+      preTitle: Step 17
+      image: ha_onboarding.png
+      content: |
+        <ul>
+          <li>Initial startup may take longer - depending on your internet connection.</li>
+          <li>Visit <a href="http://homeassistant.local:8123">http://homeassistant.local:8123</a> in your Browser to access the device Web frontend.</li>
+          <li>The Web frontend guides you through the initial onboarding.</li>
+          <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/">https://www.home-assistant.io/getting-started/onboarding/</a>.</li>
+        </ul>
 ---

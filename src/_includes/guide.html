@@ -18,19 +18,10 @@ layout: base
     </a>
     <a
       href="/power-supply"
-      class="{% if page.url contains 'power-supply' %}active{% endif %}"
-    >
+      class="{% if page.url contains 'power-supply' %}active{% endif %}">
       <div class="layout vertical center">
         <img src="/images/yellow-power-supply.png" />
         <h3>Power Supply Kit</h3>
-      </div>
-    </a>
-    <a href="/installing-ha" 
-       class="{% if page.url contains 'installing-ha' %}active{% endif %}"
-    >
-      <div class="layout vertical center">
-        <img src="/images/ha_onboarding.png" />
-        <h3>Installing Home Assistant on Kit</h3>
       </div>
     </a>
   </div>
@@ -41,9 +32,12 @@ layout: base
   <span>{{guideName}}</span>
 </div>
 
+
+{% for proc in procedures %}
 <div class="container">
   <div>
-    {% for item in steps %}
+    <h1>{{ proc.title }}</h1>
+    {% for item in proc.steps %}
     <div class="step">
       <div class="layout horizontal center">
         <h2>{{ item.preTitle }}</h2>
@@ -63,3 +57,4 @@ layout: base
     {% endfor %}
   </div>
 </div>
+{% endfor %}
