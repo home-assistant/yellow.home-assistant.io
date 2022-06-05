@@ -32,7 +32,6 @@ layout: base
   <span>{{guideName}}</span>
 </div>
 
-
 {% for proc in procedures %}
 <div class="container">
   <div>
@@ -58,3 +57,29 @@ layout: base
   </div>
 </div>
 {% endfor %}
+
+{% if needs-install %}
+<div class="container">
+  <div>
+    <h1>{{ install-ha.title }}</h1>
+    {% for item in install-ha.steps %}
+    <div class="step">
+      <div class="layout horizontal center">
+        <h2>{{ item.preTitle }}</h2>
+        <span class="title">{{item.title}}</span>
+      </div>
+      {% if item.image or item.content %}
+      <div class="layout horizontal">
+        {% if item.image %}
+        <div class="image"><img src="/images/{{item.image}}" /></div>
+        {% endif %} {% if item.content %}
+        <div>{{item.content}}</div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+    <hr />
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
