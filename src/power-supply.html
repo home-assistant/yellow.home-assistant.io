@@ -8,7 +8,7 @@ procedures:
     steps:
       - title: Gather the required tools
         preTitle: Step 1
-        image: step-1.png
+        image: step-1-std-overview.jpeg
         content: |
           <ul>
             <li>Home Assistant Yellow</li>
@@ -30,53 +30,58 @@ procedures:
           </ul>
       - title: Remove the 4 screws on the bottom of the Home Assistant Yellow Kit,
         preTitle: Step 3
-        image: step-3.png
+        image: step-3-remove-thumb-screws.jpeg
         content: |
           <ul>
-            <li>[replace image with bottom view]</li>
             <li>Keep the thumb screws close by; you will need them again later.</li>
           </ul>
       - title: Remove the translucent enclosure
-        preTitle: Step 3b
-        image: step-3.png
+        preTitle: Step 4
+        image: step-4-open.webp
         content: |
           <ul>
-            <li>[Add gif showing the motion].</li>
             <li>Make sure the interfaces are facing towards your left.</li>
             <li>Flip the case over.</li>
             <li>Slightly lift off the enclosure on your left.</li>
             <li>Slide the enclosure off towards your right.</li>
           </ul>
       - title: Unpack the Raspberry Pi CM4 Module.
-        preTitle: Step 4
-        image: step-4.png
-      - title: Install the Raspberry Pi CM4 Module onto the Home Assistant Yellow carrier board.
         preTitle: Step 5
-        image: step-5.png
+        image: step-5-std-unpacked.jpeg
+      - title: Install the Raspberry Pi CM4 Module onto the Home Assistant Yellow carrier board.
+        preTitle: Step 6
+        image: step-6-std-install-cm4.jpeg
         content: |
           <ul>
             <li>The berry icon needs to be upside down: check for correct orientation of the CM4.</li>
             <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
-            <li>Make sure you press on both sides (the two long edges) [update imgage].</li>
+            <li>Make sure you press on both sides (the two long edges).</li>
             <li>Verify it is parallel to the yellow board.</li>
           </ul>
       - title: Place the heat pads onto the memory and the SOC on the CM4 Module.
-        preTitle: Step 6
-        image: step-6.png
+        preTitle: Step 7
+        image: step-7-std-heat-pads-placement.jpeg
         content: |
           <ul>
             <li>Remove the protective cover from one side of the heat pad.</li>
             <li>Stick the unprotected side onto the memory / SOC.</li>
             <li>Remove the protective cover from the top side of the heat pad.</li>            
           </ul>
-      - title: Install the heat sink.
-        preTitle: Step 7
-        image: step-7.png
+      - title: Place the heat sink.
+        preTitle: Step 8
+        image: step-8-install-heatsink.webp
         content: |
           <ul>
             <li>Push the two plastic push pins into the dedicated hole on the heat sink.</li>
-            <li>Start by first fixating one of the plastic push pins into the dedicated hole on the carrier board.</li>
-            <li>Then, press the second push pin into the other hole on the carrier board.</li>
+            <li>Start by first aligning the right plastic push pins into the dedicated hole on the carrier board.</li>
+            <li>Then, place the heatsink onto the CM4. Do not push the push pins through the carrier board yet.</li>
+          </ul>
+      - title: Fixate the heat sink.
+        preTitle: Step 9
+        image: step-9-push-pins-heatsink.webp
+        content: |
+          <ul>
+            <li>Take the PCB off your workplace and push the pins firmly through the carrier board.</li>
           </ul>
       - title: Skip to step 13 if you do not have an NVMe drive.
       - title: Unscrew the stand-off nut.
