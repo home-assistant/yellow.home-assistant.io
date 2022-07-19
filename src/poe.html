@@ -6,145 +6,151 @@ needs-install: true
 procedures:
   - title: Setting up the hardware
     steps:
-    - title: Gather the required tools.
-      preTitle: Step 1
-      image: step-1.png
-      content: |
-        <ul>
-          <li>Home Assistant Yellow</li>
-          <li>2 heat pads: heat pad memory, heat pad SOC</li>
-          <li>Heat sink</li>
-          <li>Ethernet cable</li>
-          <li>Raspberry Pi CM4 Module (not part of Kit)</li>
-          <li>NVMe M.2 SSD drive (optional, not part of kit)</li>
-          <li>Optional: No. 1 hex screwdriver (required for NVMe drive)</li>
-        </ul>
-    - title: Ground yourself.
-      preTitle: Step 2
-      image: step-2.jpeg
-      content: |
-        <ul>
-          <li>Touch something that has a direct conductive path to the earth, such as a water pipe, a wooden table, or the exterior metal box of your desktop computer.</li>
-          <li>This protects the components from the static electricity that is naturally present in your body - grounding is an extra safeguard.</li>
-        </ul>
-    - title: Remove the 4 screws on the bottom of the Home Assistant Yellow Kit
-      preTitle: Step 3
-      image: step-3.png
-      content: |
-        <ul>
-          <li>[replace image with bottom view]</li>
-          <li>Keep the thumb screws close by; you will need them again later.</li>
-        </ul>
-    - title: Remove the translucent enclosure
-      preTitle: Step 3b
-      image: step-3.png
-      content: |
-        <ul>
-          <li>[Add gif showing the motion].</li>
-          <li>Make sure the interfaces are facing towards your left.</li>
-          <li>Flip the case over.</li>
-          <li>Slightly lift off the enclosure on your left.</li>
-          <li>Slide the enclosure off towards your right.</li>
-        </ul>
-    - title: Unpack the Raspberry Pi CM4 Module.
-      preTitle: Step 4
-      image: step-4.png
-    - title: Install the Raspberry Pi CM4 Module onto the Home Assistant Yellow carrier board.
-      preTitle: Step 5
-      image: step-5.png
-      content: |
-        <ul>
-          <li>The berry icon needs to be upside down: check for correct orientation of the CM4. </li>
-          <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
-          <li>Make sure you press on both sides (the two long edges) [update image].</li>
-          <li>Verify it is parallel to the yellow board.</li>
-        </ul>
-    - title: Place the heat pads onto the memory and the SOC on the CM4 Module.
-      preTitle: Step 6
-      image: step-6.png
-      content: |
-        <ul>
-          <li>Remove the protective cover from one side of the heat pad.</li>
-          <li>Stick the unprotected side onto the memory / SOC.</li>
-          <li>Remove the protective cover from the top side of the heat pad.</li>            
-        </ul>
-    - title: Install the heat sink.
-      preTitle: Step 7
-      image: step-7.png
-      content: |
-        <ul>
-          <li>Push the two plastic push pins into the dedicated hole on the heat sink.</li>
-          <li>Start by first fixating one of the plastic push pins into the dedicated hole on the carrier board.</li>
-          <li>Then, press the second push pin into the other hole on the carrier board.</li>
-        </ul>
-    - title: Skip to step 13 if you do not have an NVMe drive.
-    - title: Unscrew the stand-off nut.
-      preTitle: Step 8
-      image: step-8.png
-    - title: Insert the NMVe M.2 SSD drive.
-      preTitle: Step 9
-      image: step-9.png
-      content: |
-        <ul>
-          <li>Notice! Do not touch the gold connector pins.</li>
-          <li>Hold the SSD carefully by the sides.</li>
-          <li>Align the notches in the SSD with the ridges in the NVMe M.2 SSD slot.</li>
-          <li>Then, insert at a 30-degree angle.</li>
-          <li>Do not force the connection.</li>
-        </ul>
-    - title: Slide the stand-off nut into the dent at the end of the SSD drive.
-      preTitle: Step 10
-      image: step-10.png
-      content: |
-        <ul>
-          <li>Make sure the thinner end of the nut is on top.</li>
-        </ul>
-    - title: Attach the SSD drive to the carrier board.
-      preTitle: Step 11
-      image: step-12.png
-      content: |
-        <ul>
-          <li>Press the stand-off nut and the SSD drive against the carrier board.</li>
-          <li>While pressing down the drive, turn over the carrier board.</li>
-          <li>From the rear side of the carrier board, insert the M2 hex screw.</li>
-          <li>Do not over-tighten the screw.</li>
-        </ul>
-    - title: Place the translucent enclosure ground plate on the table.
-      preTitle: Step 12
-      image: step-13.png
-      content: |
-        <ul>
-          <li>Make sure the two round notches form a line pointing towards the top right corner.</li>
-        </ul>
-    - title: Place the carrier board onto the enclosure ground plate.
-      preTitle: Step 13
-      image: step-14.png
-      content: |
-        <ul>
-          <li>Make sure the USB connectors are facing upwards, away from you.</li>
-        </ul>
-    - title: Install the carrier board.
-      preTitle: Step 14
-      image: step-15.png
-      content: |
-        <ul>
-          <li>Turn the enclosure upside down.</li>
-          <li>Then, slide the push buttons into the openings of the housing.</li>
-        </ul>
-    - title: Insert the 4 thumb screws.
-      preTitle: Step 15
-      image: step-16.png
-      content: |
-        <ul>
-          <li>Do not over-tighten the screws.</li>
-        </ul>
-    - title: Insert Ethernet Cable
-      preTitle: Step 16
-      image: insert-ethernet-cable.png
-      content: |
-        <ul>
-          <li>Push the ethernet cable into the jack until you hear a click.</li>
-          <li>The other end of the Ethernet cable should be connected to your Router or Switch with POE.</li>
-        </ul>
+      - title: Gather the required tools.
+        preTitle: Step 1
+        image: step-1-poe-overview.jpeg
+        content: |
+          <ul>
+            <li>Home Assistant Yellow</li>
+            <li>2 heat pads: heat pad memory, heat pad SOC</li>
+            <li>Heat sink</li>
+            <li>Ethernet cable</li>
+            <li>Raspberry Pi CM4 Module (not part of Kit)</li>
+            <li>NVMe M.2 SSD drive (optional, not part of kit)</li>
+            <li>Optional: No. 1 hex screwdriver (required for NVMe drive)</li>
+          </ul>
+      - title: Ground yourself.
+        preTitle: Step 2
+        image: step-2.jpeg
+        content: |
+          <ul>
+            <li>Touch something that has a direct conductive path to the earth, such as a water pipe, a wooden table, or the exterior metal box of your desktop computer.</li>
+            <li>This protects the components from the static electricity that is naturally present in your body - grounding is an extra safeguard.</li>
+          </ul>
+      - title: Remove the 4 screws on the bottom of the Home Assistant Yellow Kit
+        preTitle: Step 3
+        image: step-3-remove-thumb-screws.jpeg
+        content: |
+          <ul>
+            <li>Keep the thumb screws close by; you will need them again later.</li>
+          </ul>
+      - title: Remove the translucent enclosure
+        preTitle: Step 4
+        image: step-4-open.webp
+        content: |
+          <ul>
+            <li>Make sure the interfaces are facing towards your left.</li>
+            <li>Flip the case over.</li>
+            <li>Slightly lift off the enclosure on your left.</li>
+            <li>Slide the enclosure off towards your right.</li>
+          </ul>
+      - title: Unpack the Raspberry Pi CM4 Module.
+        preTitle: Step 5
+        image: step-5-poe-unpacked.jpeg
+      - title: Install the Raspberry Pi CM4 Module onto the Home Assistant Yellow carrier board.
+        preTitle: Step 6
+        image: step-6-poe-install-cm4.jpeg
+        content: |
+          <ul>
+            <li>The berry icon needs to be upside down: check for correct orientation of the CM4. </li>
+            <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
+            <li>Make sure you press on both sides (the two long edges).</li>
+            <li>Verify it is parallel to the yellow board.</li>
+          </ul>
+      - title: Place the heat pads onto the memory and the SOC on the CM4 Module.
+        preTitle: Step 7
+        image: step-7-poe-heat-pads-placement.jpeg
+        content: |
+          <ul>
+            <li>Remove the protective cover from one side of the heat pad.</li>
+            <li>Stick the unprotected side onto the memory / SOC.</li>
+            <li>Remove the protective cover from the top side of the heat pad.</li>
+          </ul>
+      - title: Install the heat sink.
+        preTitle: Step 8
+        image: step-8-install-heatsink.webp
+        content: |
+          <ul>
+            <li>Push the two plastic push pins into the dedicated hole on the heat sink.</li>
+            <li>Start by first aligning the right plastic push pins into the dedicated hole on the carrier board.</li>
+            <li>Then, place the heatsink onto the CM4.</li>
+            <li>Lastly, take the PCB off your workplace and push the pins firmly through the carrier board.</li>
+          </ul>
+      - title: Fixate the heat sink.
+        preTitle: Step 9
+        image: step-9-push-pins-heatsink.webp
+        content: |
+          <ul>
+            <li>Take the PCB off your workplace and push the pins firmly through the carrier board.</li>
+          </ul>
+      - title: Skip to step 13 if you do not have an NVMe drive.
+      - title: Unscrew the stand-off nut.
+        preTitle: Step 8
+        image: step-8.png
+      - title: Insert the NMVe M.2 SSD drive.
+        preTitle: Step 9
+        image: step-9.png
+        content: |
+          <ul>
+            <li>Notice! Do not touch the gold connector pins.</li>
+            <li>Hold the SSD carefully by the sides.</li>
+            <li>Align the notches in the SSD with the ridges in the NVMe M.2 SSD slot.</li>
+            <li>Then, insert at a 30-degree angle.</li>
+            <li>Do not force the connection.</li>
+          </ul>
+      - title: Slide the stand-off nut into the dent at the end of the SSD drive.
+        preTitle: Step 10
+        image: step-10.png
+        content: |
+          <ul>
+            <li>Make sure the thinner end of the nut is on top.</li>
+          </ul>
+      - title: Attach the SSD drive to the carrier board.
+        preTitle: Step 11
+        image: step-12.png
+        content: |
+          <ul>
+            <li>Press the stand-off nut and the SSD drive against the carrier board.</li>
+            <li>While pressing down the drive, turn over the carrier board.</li>
+            <li>From the rear side of the carrier board, insert the M2 hex screw.</li>
+            <li>Do not over-tighten the screw.</li>
+          </ul>
+      - title: Place the translucent enclosure ground plate on the table.
+        preTitle: Step 12
+        image: step-13.png
+        content: |
+          <ul>
+            <li>Make sure the two round notches form a line pointing towards the top right corner.</li>
+          </ul>
+      - title: Place the carrier board onto the enclosure ground plate.
+        preTitle: Step 13
+        image: step-14.png
+        content: |
+          <ul>
+            <li>Make sure the USB connectors are facing upwards, away from you.</li>
+          </ul>
+      - title: Install the carrier board.
+        preTitle: Step 14
+        image: step-15.png
+        content: |
+          <ul>
+            <li>Turn the enclosure upside down.</li>
+            <li>Then, slide the push buttons into the openings of the housing.</li>
+          </ul>
+      - title: Insert the 4 thumb screws.
+        preTitle: Step 15
+        image: step-16.png
+        content: |
+          <ul>
+            <li>Do not over-tighten the screws.</li>
+          </ul>
+      - title: Insert Ethernet Cable
+        preTitle: Step 16
+        image: insert-ethernet-cable.png
+        content: |
+          <ul>
+            <li>Push the ethernet cable into the jack until you hear a click.</li>
+            <li>The other end of the Ethernet cable should be connected to your Router or Switch with POE.</li>
+          </ul>
 ---
 ---
