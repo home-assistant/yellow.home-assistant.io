@@ -1,42 +1,35 @@
 ---
-layout: guide
+layout: base
 description: Home Assistant Yellow
-guideName: Home Assistant Yellow
-procedures:
-- title: Setting up the hardware
-  steps:
-    - title: Unboxing the Home Assistant Yellow
-      preTitle: Step 1
-      image: unbox-yellow-std.png
-      content: |
-        <ul>
-          <li>Home Assistant Yellow</li>
-          <li>Ethernet Cable</li>
-          <li>Power Supply</li>
-        </ul>
-    - title: Insert Ethernet Cable
-      preTitle: Step 2
-      image: insert-ethernet-cable.png
-      content: |
-        <ul>
-          <li>Push the Ethernet cable into the jack until you hear a click</li>
-          <li>The other end of the Ethernet cable should be connected to your Router or Switch</li>
-        </ul>
-    - title:
-      preTitle: Step 3
-      image: insert-power.png
-      content: |
-        <ul>
-          <li>Connect the power to the wall and then to the yellow</li>
-        </ul>
-    - title: Get started with Home Assistant
-      preTitle: Step 4
-      image: home-assistant-mobile.png
-      content: |
-        <ul>
-          <li>Initial startup may take longer depending on your internet connection</li>
-          <li>Download the Home Assistant App on Android/IOS or visit <a href="http://homeassistant.local:8123">http://homeassistant.local:8123</a> in your computer's browser</li>
-          <li>Once your Yellow has initialized, the onboarding will guide you through setup on your phone or computer</li>
-          <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/">Onboarding</a></li>
-        </ul>
 ---
+
+<div class="container">
+  <div><h3 class="text-center">Choose your Home Assistant Yellow</h3></div>
+  <div class="layout horizontal justified guides">
+    <a href="/standard" class="{% if page.url == '/' %}active{% endif %}">
+      <div class="layout vertical center">
+        <img src="/images/yellow-standard.png" />
+        <h3>Standard</h3>
+      </div>
+    </a>
+    <a href="/poe" class="{% if page.url contains 'poe' %}active{% endif %}">
+      <div class="layout vertical center">
+        <img src="/images/yellow-poe-kit.png" />
+        <h3>Power-Over-Ethernet Kit</h3>
+      </div>
+    </a>
+    <a
+      href="/power-supply"
+      class="{% if page.url contains 'power-supply' %}active{% endif %}"
+    >
+      <div class="layout vertical center">
+        <img src="/images/yellow-power-supply.png" />
+        <h3>Power Supply Kit</h3>
+      </div>
+    </a>
+  </div>
+  <div class="text-center hint">
+    You can determine your Home Assistant Yellow by looking at flyer inside your
+    box or on the bottom of your Home Assistant Yellow box.
+  </div>
+</div>

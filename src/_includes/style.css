@@ -14,6 +14,10 @@ h3 {
   margin: 2rem 0 1rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* CONTENT STYLES */
 .container {
   margin: 0 auto;
@@ -124,11 +128,20 @@ h3 {
 .guides a {
   color: inherit;
   text-decoration: none;
+  border: 1px solid #e0e0e0;
+  border-radius: 24px;
+  margin: 0 8px;
 }
 
-.guides a.active h3 {
-  border-bottom: 2px solid #03a9f4;
+.guides a:hover {
+  border-color: #CCC
 }
+
+.hint {
+  margin-top: 24px;
+  font-style: italic;
+}
+
 
 /* BANNER STYLES */
 
@@ -137,11 +150,11 @@ h3 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  font-size: 48px;
+  font-size: 42px;
   font-weight: bold;
   background-color: #FBC902;
   line-height: 1.2;
-  padding: 32px;
+  padding: 24px;
   margin: 16px 0;
 }
 
@@ -196,4 +209,26 @@ hr {
 .video {
   width: 650px;
   margin: 16px;
+}
+
+.nvme-selection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nvme-selection a {
+  display: block;
+  border-radius: 16px;
+  border: 1px solid #ececec;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  margin: 8px;
+  flex: 1;
+  max-width: 30%;
+}
+
+.nvme-selection a.active {
+  border-color: #03a9f4;
 }
