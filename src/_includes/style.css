@@ -100,9 +100,21 @@ h3 {
   justify-content: space-between;
   align-items: center;
 }
+.nav-bar .logo {
+  width: 60%;
+}
 .nav-bar img {
-  height: 48px;
-  margin-left: -7px;
+  max-height: 48px;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+  .nav-bar .logo {
+    width: 100%;
+  }
 }
 .nav-bar ul {
   display: flex;
@@ -131,17 +143,29 @@ h3 {
   border: 1px solid #e0e0e0;
   border-radius: 24px;
   margin: 0 8px;
+  padding: 8px;
+  text-align: center;
 }
 
 .guides a:hover {
   border-color: #CCC
 }
 
+@media screen and (max-width: 650px) {
+  .guides {
+    flex-direction: column !important;
+    align-items: center;
+  }
+  .guides a {
+    max-width: 300px;
+    margin: 8px 0;
+  }
+}
+
 .hint {
   margin-top: 24px;
   font-style: italic;
 }
-
 
 /* BANNER STYLES */
 
