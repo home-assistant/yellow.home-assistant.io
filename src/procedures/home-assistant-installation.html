@@ -6,107 +6,78 @@ order: 4
 procedures:
   - title: Installing Home Assistant Software on Kit
   - steps:
-      - title: On your computer, install the Raspeberry Pi Imager,
-        preTitle: Step 3
+      - title: On your computer, install the Raspberry Pi Imager,
         image: rpi_imager.png
         content: |
           <ul>
             <li>as described under <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a></li>
           </ul>
       - title: Insert the USB drive into your computer.
-        preTitle: Step 3
       - title: Start the Raspberry Pi Imager.
-        preTitle: Step 4
         image: start_rpi_imager.png
       - title: In Raspberry Pi Imager, choose the <b>Choose OS</b> button.
-        preTitle: Step 5
         image: rpi_choose_ha_os.png
         content: |
           <ul>
             <li>From the dropdown menu, select <b>Home Assistant Operating System</b>.</li>
           </ul>
       - title: Choose the <b>Choose Storage</b> button.
-        preTitle: Step 6
         image: rpi_choose_storage.png
         content: |
           <ul>
             <li>From the dropdown menu, select your USB drive.</li>
           </ul>
       - title: Choose the <b>Write</b> button.
-        preTitle: Step 7
         image: rpi_choose_write.png
         content: |
           <ul>
-            <li>Wait for the Home Assistant Operating system to be written to the USB drive.</li>
+            <li>Wait for the Home Assistant Operating System Installer to be written to the USB drive.</li>
           </ul>
       - title: Eject the USB drive from your computer.
-        preTitle: Step 8
       - title: Insert the USB drive
-        preTitle: Step 9
+        image: plug-usb-flash.jpeg
         content: |
           <ul>
-            <li>..with the Home Assistant Operating System image into Home Assistant Yellow Kit.</li>
+            <li>..with the Home Assistant Operating System Installer into Home Assistant Yellow Kit.</li>
           </ul>
-        image: insert_usb.png
       - title: Connect the Ethernet cable to the Ethernet connector on Home Assistant Yellow.
-        preTitle: Step 10
-        image: insert_ethernet_cable.png
+        image: plug-usb-flash-ethernet.jpeg
       - title: If you do not have PoE,
-        preTitle: Step 11
-        image: insert_power_cable.png
+        image: plug-usb-flash-ethernet-power.jpeg
         content: |
           <ul>
             <li>connect the power supply to Home Assistant Yellow Kit.</li>
           </ul>
       - title: Wait for Home Assistant Yellow to start booting from the USB drive.
-        preTitle: Step 12
-        image: status_leds_yellow_heartbeat.gif
+        image: led-patter-boot.webp
         content: |
           <ul>
             <li>During boot, the Yellow LED blinks in a heartbeat pattern.</li>
-            <li>Once the installer is ready, the Yellow LED is on constantly.</li>
+            <li>Once the installer is ready, the yellow LED is on constantly.</li>
+            <li>Installation will start automatically after 2 seconds.</li>
           </ul>
-      - title: Press the red or the blue button.
-        preTitle: Step 13
-        image: status_leds_yellow_blinking_all_off.gif
+      - title: Wait for Home Assistant Operating System installation to finish.
+        image: led-patter-install.webp
         content: |
           <ul>
-            <li>Installation of Home Assistant OS starts automatically.</li>
             <li>The yellow LED starts to blink steadily.</li>
-            <li>Once all the LEDs turn off, the flashing process is finished.</li>
+            <li>Once the installer finished installing Home Assistant Operating System, only the red LED will be on.</li>
           </ul>
       - title: Remove the USB flash drive and disconnect power.
-        preTitle: Step 14
-        image: insert-ethernet-cable.png
+        image: plug-nothing.jpeg
         content: |
           <ul>
-            <li>If you do <b>not</b> have PoE:</li>
+            <li>Remove the USB flash drive.</li>
             <li>Remove the power cable.</li>
           </ul>
-      - title: If you <b>do</b> have PoE,
-        preTitle: Step 15
-        image: no_cables_no_usb.png
-        content: |
-          <ul>
-            <li>also remove the Ethernet cable.</li>
-          </ul>
       - title: Reconnect power.
-        preTitle: Step 16
-        image: insert-power.png
-        content: |
-          <ul>
-            <li>If you do <b>not</b> have PoE:</li>
-            <li>Reinsert the power cable to start Home Assistant.</li>
-          </ul>
-      - title: If you <b>do</b> have PoE,
-        preTitle: Step 17
-        image: insert-ethernet-cable.png
+        image: plug-ethernet-power.jpeg
         content: |
           <ul>
             <li>Reinsert the Ethernet cable.</li>
+            <li>Reinsert the power cable to start Home Assistant (if PoE is not used).</li>
           </ul>
       - title: Get started with Home Assistant.
-        preTitle: Step 17
         image: ha_onboarding.png
         content: |
           <ul>
