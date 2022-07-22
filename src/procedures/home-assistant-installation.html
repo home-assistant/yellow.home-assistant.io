@@ -6,64 +6,68 @@ order: 4
 procedures:
   - title: Installing Home Assistant Software on Kit
   - steps:
-      - title: On your computer, install the Raspberry Pi Imager,
+      - title: Install Raspberry Pi Imager
         image: rpi_imager.png
         content: |
           <ul>
-            <li>as described under <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a></li>
+            <li>Install imager on your your computer as described under <a href="https://www.raspberrypi.com/software/">https://www.raspberrypi.com/software/</a></li>
           </ul>
-      - title: Insert the USB drive into your computer.
-      - title: Start the Raspberry Pi Imager.
+      - title: Insert the USB drive into computer.
+      - title: Open Raspberry Pi Imager.
         image: start_rpi_imager.png
-      - title: In Raspberry Pi Imager, choose the <b>Choose OS</b> button.
+      - title: Choose Operating System.
         image: rpi_choose_ha_os.gif
         content: |
           <ul>
+            <li>Click Choose OS</li>
             <li>From the dropdown menu, select <b>Home Assistant Operating System</b>.</li>
           </ul>
-      - title: Choose the <b>Choose Storage</b> button.
+      - title: Choose Storage.
         image: rpi_choose_storage.png
         content: |
           <ul>
             <li>From the dropdown menu, select your USB drive.</li>
           </ul>
-      - title: Choose the <b>Write</b> button.
+      - title: Write.
         image: rpi_choose_write.png
         content: |
           <ul>
+            <li>Click the Write button to start the process.</li>
             <li>Wait for the Home Assistant Operating System Installer to be written to the USB drive.</li>
           </ul>
-      - title: Eject the USB drive from your computer.
-      - title: Insert the USB drive
+      - title: Eject the USB drive.
+      - title: Insert the USB drive.
         image: plug-usb-flash.jpeg
         content: |
           <ul>
-            <li>..with the Home Assistant Operating System Installer into Home Assistant Yellow Kit.</li>
+            <li>Insert the USB drive with the Home Assistant Operating System Installer into your Home Assistant Yellow Kit.</li>
           </ul>
-      - title: Connect the Ethernet cable to the Ethernet connector on Home Assistant Yellow.
+      - title: Connect the Ethernet cable.
         image: plug-usb-flash-ethernet.jpeg
-      - title: If you do not have PoE,
+      - title: Connect the power supply.
         image: plug-usb-flash-ethernet-power.jpeg
         content: |
           <ul>
-            <li>connect the power supply to Home Assistant Yellow Kit.</li>
+            <li>If you are not using PoE, Connect the power supply to Home Assistant Yellow Kit.</li>
           </ul>
-      - title: Wait for Home Assistant Yellow to start booting from the USB drive.
+      - title: Watch.
         image: led-patter-boot.webp
         content: |
           <ul>
+            <li>Wait for Home Assistant Yellow to start booting from the USB drive.</li>
             <li>During boot, the Yellow LED blinks in a heartbeat pattern.</li>
             <li>Once the installer is ready, the yellow LED is on constantly.</li>
             <li>Installation will start automatically after 2 seconds.</li>
           </ul>
-      - title: Wait for Home Assistant Operating System installation to finish.
+      - title: Wait.
         image: led-patter-install.webp
         content: |
           <ul>
+            <li>Wait for Home Assistant Yellow to finish installing the Home Assistant Operating System.</li>
             <li>The yellow LED starts to blink steadily.</li>
             <li>Once the installer finished installing Home Assistant Operating System, only the red LED will be on.</li>
           </ul>
-      - title: Remove the USB flash drive and disconnect power.
+      - title: Disconnect everything.
         image: plug-nothing.jpeg
         content: |
           <ul>
