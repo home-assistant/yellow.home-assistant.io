@@ -186,6 +186,11 @@ h3 {
   padding: 8px 0;
 }
 
+.banner .secondary {
+  font-size: 36px;
+  font-weight: 500;
+}
+
 
 /* STEP STYLES */
 .step {
