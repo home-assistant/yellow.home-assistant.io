@@ -10,7 +10,13 @@ layout: base
 <div class="container">
   <div>
     {% if tools %}
-    <h1>{{ tools.title }}</h1>
+    <a
+      href="#{{ tools.title | url}}"
+      id="{{ tools.title | url}}"
+      class="anchor"
+    >
+      <h1>{{ tools.title }}</h1>
+    </a>
     <div class="step">
       <div class="step-image-instruction">
         {% if tools.image %}
@@ -30,11 +36,7 @@ file.data.title == "nvme" %} {% continue %} {%- endif -%} {% for proc in
 file.data.procedures %}
 <div class="container">
   <div>
-    <a
-      href="#{{ proc.title  | url}}"
-      id="{{ proc.title  | url}}"
-      class="anchor"
-    >
+    <a href="#{{ proc.title | url}}" id="{{ proc.title | url}}" class="anchor">
       <h1>{{ proc.title }}</h1>
     </a>
     {% for item in proc.steps %}
