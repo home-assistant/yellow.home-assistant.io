@@ -7,6 +7,24 @@ layout: base
   <span>{{guideName}}</span>
 </div>
 
+
+<div class="container">
+  <div>
+    {% if tools %}
+    <h1>{{ tools.title }}</h1>
+    <div class="step">
+      <div class="step-image-instruction">
+        {% if tools.image %}
+        <div class="image-container"><img src="/images/{{tools.image}}" /></div>
+        {% endif %} {% if tools.content %}
+        <div>{{tools.content}}</div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
 {{ content }} {% assign sortedCollections = collections[collectionName] |
 sortByOrder %} {%- for file in sortedCollections -%} {% if nvme == false and
 file.data.title == "nvme" %} {% continue %} {%- endif -%} {% for proc in

@@ -214,7 +214,8 @@ h3 {
 
 .step .image-container {
   width: 100%;
-  max-width: 350px;;
+  max-width: 350px;
+  margin: 8px 20px 8px 0;
 }
 
 .step img {
@@ -222,9 +223,14 @@ h3 {
   border-radius: 8px;
 }
 
-.step ul, .step .image-container {
+.step ul, .step p {
   margin: 8px 0;
 }
+
+.step ul {
+  padding-left: 20px;
+}
+
 hr {
   border-top: 1px solid rgba(0, 0, 0, 0.12);
 }
