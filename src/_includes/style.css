@@ -243,6 +243,29 @@ hr {
   }
 }
 
+.step li.info, .step li.warning {
+  list-style: none;
+}
+
+.step li.info:before {
+  content: "\f129";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.1em;
+  width: 1.1em;
+  color: blue;
+}
+
+.step li.warning:before {
+  content: "\21";
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-left: -1.1em;
+  width: 1.1em;
+  color: red;
+}
+
+
 /* VIDEOS STYLES */
 .videos {
   display: flex;
