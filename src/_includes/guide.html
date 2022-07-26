@@ -7,7 +7,6 @@ layout: base
   <span>{{guideName}}</span>
 </div>
 
-
 <div class="container">
   <div>
     {% if tools %}
@@ -31,13 +30,25 @@ file.data.title == "nvme" %} {% continue %} {%- endif -%} {% for proc in
 file.data.procedures %}
 <div class="container">
   <div>
-    <h1>{{ proc.title }}</h1>
+    <a
+      href="#{{ proc.title  | url}}"
+      id="{{ proc.title  | url}}"
+      class="anchor"
+    >
+      <h1>{{ proc.title }}</h1>
+    </a>
     {% for item in proc.steps %}
     <div class="step">
-      <div class="layout horizontal center">
-        <h2>Step {{ forloop.index }}</h2>
-        <span class="title">{{item.title}}</span>
-      </div>
+      <a
+        href="#{{ item.title | url}}"
+        id="{{ item.title | url}}"
+        class="anchor"
+      >
+        <div class="layout horizontal center">
+          <h2>Step {{ forloop.index }}</h2>
+          <span class="title">{{item.title}}</span>
+        </div>
+      </a>
       {% if item.image or item.content %}
       <div class="step-image-instruction">
         {% if item.image %}

@@ -240,6 +240,12 @@ hr {
   flex-direction: row;
 }
 
+.anchor {
+  text-decoration: none;
+  color: initial;
+  outline: none !important;
+}
+
 @media screen and (max-width: 650px) {
   .step-image-instruction {
     flex-direction: column;
