@@ -11,8 +11,8 @@ layout: base
   <div>
     {% if tools %}
     <a
-      href="#{{ tools.title | url}}"
-      id="{{ tools.title | url}}"
+      href="#{{ tools.title | slugify }}"
+      id="{{ tools.title | slugify }}"
       class="anchor"
     >
       <h1>{{ tools.title }}</h1>
@@ -36,14 +36,18 @@ file.data.title == "nvme" %} {% continue %} {%- endif -%} {% for proc in
 file.data.procedures %}
 <div class="container">
   <div>
-    <a href="#{{ proc.title | url}}" id="{{ proc.title | url}}" class="anchor">
+    <a
+      href="#{{ proc.title | slugify }}"
+      id="{{ proc.title | slugify }}"
+      class="anchor"
+    >
       <h1>{{ proc.title }}</h1>
     </a>
     {% for item in proc.steps %}
     <div class="step">
       <a
-        href="#{{ item.title | url}}"
-        id="{{ item.title | url}}"
+        href="#{{ item.title | slugify }}"
+        id="{{ item.title | slugify }}"
         class="anchor"
       >
         <div class="layout horizontal center">
