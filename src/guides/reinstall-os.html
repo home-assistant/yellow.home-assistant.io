@@ -1,0 +1,144 @@
+---
+layout: guide
+guideName: How to re-install the operating system
+---
+
+<div class="container">
+  <p>
+    <span
+      >Note: It is very unlikely that this is necessary. Before going through
+      this step, make sure to use the built-in device wipe mechanism.</span
+    >
+  </p>
+  <p><span></span></p>
+  <p>
+    <span
+      >By default the Raspberry Pi Compute Module 4 has a fixed boot order which
+      tries to boot from the internal eMMC before booting from a USB mass
+      storage device. In rare cases it can be that the internal eMMC is deemed
+      bootable, but does not boot into a working system. In this case, there are
+      two options you can try to reinstall Home Assistant OS.</span
+    >
+  </p>
+  <p><span></span></p>
+  <ol start="1">
+    <li>
+      <span>Try using Red + Blue button (HAOS 8.5 and later)</span>
+    </li>
+    <li><span>Use rpiboot</span></li>
+  </ol>
+  <p><span></span></p>
+  <p>
+    <span>Reinstall Home Assistant OS using Red + Blue button</span>
+  </p>
+  <p><span></span></p>
+  <ol start="1">
+    <li>
+      <span>Remove power from your system</span>
+    </li>
+    <li>
+      <span>Power up the system</span>
+    </li>
+    <li>
+      <span
+        >Within 5s (or from start), press and hold the red and blue button on
+        the backside of the device simultaneously.</span
+      >
+    </li>
+    <li>
+      <span>Hold the two buttons until only the red LED is lit.</span>
+    </li>
+    <li>
+      <span>Remove power from your system</span>
+    </li>
+    <li>
+      <span
+        >Follow the instructions to install Home Assistant OS using the Home
+        Assistant OS Installer from a USB flash drive.</span
+      >
+    </li>
+  </ol>
+  <p><span></span></p>
+  <p>
+    <span>Reinstall Home Assistant OS using rpiboot</span>
+  </p>
+  <ol start="1">
+    <li>
+      <span
+        >Install rpiboot from
+        github.com/raspberrypi/usbbootca@&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span
+      >
+    </li>
+  </ol>
+  <ol start="1">
+    <li>
+      <span>Using Windwos Installer </span
+      ><span
+        ><a
+          href="https://www.google.com/url?q=https://www.raspberrypi.com/documentation/computers/compute-module.html%23windows-installer&amp;sa=D&amp;source=editors&amp;ust=1663087753862520&amp;usg=AOvVaw1bfCZcjSVw5bqm-KlHK-6z"
+          >https://www.raspberrypi.com/documentation/computers/compute-module.html#windows-installer</a
+        ></span
+      >
+    </li>
+    <li>
+      <span>From source code </span
+      ><span
+        ><a
+          href="https://www.google.com/url?q=https://www.raspberrypi.com/documentation/computers/compute-module.html%23building-rpiboot-on-your-host-system-cygwinlinux&amp;sa=D&amp;source=editors&amp;ust=1663087753862971&amp;usg=AOvVaw2bOxPoNZmb7KGEyV9r4edL"
+          >https://www.raspberrypi.com/documentation/computers/compute-module.html#building-rpiboot-on-your-host-system-cygwinlinux</a
+        ></span
+      >
+    </li>
+  </ol>
+  <ol start="2">
+    <li>
+      <span>Open Home Assistant Yellow to access jumpers on the PCB</span>
+    </li>
+    <li><span>Set JP1 to USB</span></li>
+    <li>
+      <span>Set JP2 (USB-C Rcvry)</span>
+    </li>
+    <li>
+      <span
+        >Plug-in the USB-C cable to Home Assistant Yellow and connect it to your
+        PC</span
+      >
+    </li>
+    <li><span>Run rpiboot</span></li>
+    <li>
+      <span
+        >Run Raspberry Pi Imager and flash the Home Assistant OS Installer onto
+        the eMMC</span
+      >
+    </li>
+    <li>
+      <span>Remove power from the board</span>
+    </li>
+    <li><span>Remove JP2</span></li>
+    <li><span>Set JP1 to UART</span></li>
+    <li>
+      <span
+        >The Home Assistant OS Installer is now flashed to the internal eMMC. On
+        next boot, the installer will install the latest stable version of Home
+        Assistant OS. You can now follow the instructions </span
+      ><span
+        ><a
+          href="https://www.google.com/url?q=https://yellow.home-assistant.io/power-supply/%23connecting-the-ethernet-cable&amp;sa=D&amp;source=editors&amp;ust=1663087753863964&amp;usg=AOvVaw0vksFz8A2v0KNFsj9490J5"
+          >here</a
+        ></span
+      ><span
+        >. Note that because the installer is now installed to the eMMC, no USB
+        flash drive is required.
+      </span>
+    </li>
+  </ol>
+  <p><span>Resources:</span></p>
+  <p>
+    <span
+      ><a
+        href="https://www.google.com/url?q=https://www.raspberrypi.com/documentation/computers/compute-module.html%23steps-to-flash-the-emmc&amp;sa=D&amp;source=editors&amp;ust=1663087753864525&amp;usg=AOvVaw371SkyratJXg5UHoyFxRy0"
+        >https://www.raspberrypi.com/documentation/computers/compute-module.html#steps-to-flash-the-emmc</a
+      ></span
+    >
+  </p>
+</div>
