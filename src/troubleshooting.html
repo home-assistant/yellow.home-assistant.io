@@ -1,0 +1,17 @@
+---
+layout: base
+description: Troubleshooting | Yellow
+guides:
+  - title: Reinstall Home Assistant OS
+    url: /guides/reinstall-os.html
+---
+
+<div class="container">
+  <div class="layout horizontal justified items">
+    {% for guide in guides %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>

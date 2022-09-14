@@ -1,0 +1,73 @@
+---
+layout: base
+description: Support | Yellow
+faqs:
+  - title: "I can’t access the system via http://homeassitant.local:8123, what can I do?"
+    content: "Try http://homeassistant:8123. If that does not help, you may be able to find the IP address of Home Assistant Yellow on your router."
+  - title: "Can I factory reset the system?"
+    content: "Yes: Remove power from your system, reapply power, press and hold the red button within 5 seconds. Keep the red button pressed until the Yellow led starts to flash. Make sure that Internet connection is present at this point as the Home Assistant Operating System needs to download the Supervisor and Core first."
+---
+
+<div class="container">
+  <div class="layout horizontal justified guides">
+    <a href="/troubleshooting">
+      <div class="layout vertical center">
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="/images/provision.png" width="150" />
+        </div>
+        <h3>Troubleshooting</h3>
+      </div>
+    </a>
+    <a href="/resources">
+      <div class="layout vertical center">
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="/images/file.png" width="150" />
+        </div>
+        <h3>Resources</h3>
+      </div>
+    </a>
+    <a href="../videos">
+      <div class="layout vertical center">
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="/images/online-video.png" width="150" />
+        </div>
+        <h3>Videos</h3>
+      </div>
+    </a>
+  </div>
+
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion">
+      {% for faq in faqs %}
+      <div class="accordion-item">
+        <button aria-expanded="false">
+          <span class="accordion-title">{{faq.title}}</span
+          ><span class="icon" aria-hidden="true"></span>
+        </button>
+        <div class="accordion-content">
+          <p>{{faq.content}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  const items = document.querySelectorAll(".accordion button");
+
+  function toggleAccordion() {
+    const itemToggle = this.getAttribute("aria-expanded");
+
+    for (i = 0; i < items.length; i++) {
+      items[i].setAttribute("aria-expanded", "false");
+    }
+
+    if (itemToggle == "false") {
+      this.setAttribute("aria-expanded", "true");
+    }
+  }
+
+  items.forEach((item) => item.addEventListener("click", toggleAccordion));
+</script>

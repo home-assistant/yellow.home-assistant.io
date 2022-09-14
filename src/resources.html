@@ -1,0 +1,17 @@
+---
+layout: base
+description: Resources | Yellow
+resources:
+  - title: Datasheet
+    url: /resources/datasheet.html
+---
+
+<div class="container">
+  <div class="layout horizontal justified items">
+    {% for resource in resources %}
+    <a href="{{resource.url}}">
+      <div class="layout vertical center">{{resource.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
