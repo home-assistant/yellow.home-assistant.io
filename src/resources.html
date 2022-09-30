@@ -2,14 +2,14 @@
 layout: base
 description: Resources | Yellow
 resources:
-  - title: Datasheet
-    url: /resources/datasheet.html
+- title: Datasheet
+  url: /resources/yellow_datasheet_v1_3.pdf
 ---
 
 <div class="container">
   <div class="layout horizontal justified items">
     {% for resource in resources %}
-    <a href="{{resource.url}}">
+    <a href="{{resource.url}}" target="_blank">
       <div class="layout vertical center">{{resource.title}}</div>
     </a>
     {% endfor %}
