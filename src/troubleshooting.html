@@ -2,12 +2,14 @@
 layout: base
 description: Troubleshooting | Yellow
 guides:
-  - title: Reinstall Home Assistant OS
-    url: /guides/reinstall-os.html
+- title: Home Assistant Yellow LEDs
+  url: /guides/yellow-leds.html
+- title: Reinstall Home Assistant OS
+  url: /guides/reinstall-os.html
 ---
 
 <div class="container">
-  <div class="layout horizontal justified items">
+  <div class="layout horizontal items">
     {% for guide in guides %}
     <a href="{{guide.url}}">
       <div class="layout vertical center">{{guide.title}}</div>
