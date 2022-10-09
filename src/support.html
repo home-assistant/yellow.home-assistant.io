@@ -32,7 +32,14 @@ faqs:
       press and hold both the red and the blue button at startup.
       Keep the two buttons pressed for at least 15 seconds. Now, the system
       should boot from the USB flash drive again.
-
+  - title: >
+      What is the serial port of the Zigbee radio?
+    content: >
+      The Zigbee/Thread (IEEE 802.15.4) radio is directly connected via serial
+      port to the Raspberry Pi Compute Module 4 on <code>/dev/ttyAMA1</code>.
+      Note that there is <i>no</i> <code>/dev/serial/by-id</code> path for this
+      serial port as its not connected through USB. The above tty path will
+      remain static.
 ---
 
 <div class="container">
