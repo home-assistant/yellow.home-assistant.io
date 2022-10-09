@@ -1,0 +1,77 @@
+---
+layout: guide
+guideName: "Problem: Green LED flashes 4 times short, 5 times long"
+---
+
+<div class="container">
+  
+  <p><span><h1>Reinstall Raspberri Pi CM4 EEPROM firmware</h1></span></p>
+  <p>
+    <span><b>Cause</b>: This LED pattern indicates a firmware error on the Compute Module 4 (CM4).</span
+    >
+  </p>
+  <p><span></span></p>  
+  <p>
+    <span><b>Remedy (on Windows)</b>: Flash the Raspberry Pi bootloader onto the CM4.</span>
+  </p>
+  <p><span></span></p>
+  <ol start="1">
+    <li>
+      <span>Open the procedure <a
+        href="https://yellow.home-assistant.io/guides/reinstall-os/"
+        >How to re-install the operating system.</a
+      ><li>Follow steps 1&ndash;6 of section <b>Reinstall Home Assistant OS using rpiboot</b>.</li></span>
+    </li>
+    <li>
+      <span>On Windows, open the Command Prompt window (cmd).</span>
+    </li>
+    <li>
+      <span>Run the following commands: <br>
+        <code>
+          cd \<br>
+          cd "Program Files (x86)"<br>
+          cd "Raspberry Pi"<br>
+          rpiboot.exe -d recovery<br>        
+        </code><br>
+        <p><b>Result</b>: The green LED lights up solid, then starts flashing.</p>
+      </span>
+    </li>
+    <li>
+      <span
+        >Wait for about 1 minute. <ol>
+          <li>Then, from Yellow, unplug the power cable.</li>
+          <li>Ensure JP1 is set to UART.</li>
+          <li>Unbridge JP2.</li>
+        </ol>
+        </span
+      >
+    </li>
+    <li>
+      <span>On Yellow, connect the power cable.<br>
+      <p><b>Result</b>: The error blink pattern should no longer occur. <br>
+        The LED pattern depends on what is already installed on Yellow. Typically, the system should boot now. If Home Assistant OS is installed, the yellow LED should show a heartbeat pattern after ~5 seconds.</p><br>
+    </li>
+    
+    
+  <p><span>Resources:</span></p>
+  <p>
+    <span
+      ><a href="https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes"
+      >Raspberri Pi LED Warning Flash Codes</a></span
+    >
+  </p>
+  <p>
+    <span
+      ><a href="https://www.raspberrypi.com/documentation/computers/compute-module.html#flashing-the-compute-module-emmc"
+      >Flashing the Compute Module eMMC</a></span
+    >
+  </p>
+  <p>
+    <span
+      ><a
+      href="https://yellow.home-assistant.io/guides/reinstall-os/"
+      >How to re-install the operating system</a></span
+    >
+  </p>
+  
+</div>
