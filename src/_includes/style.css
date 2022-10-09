@@ -417,3 +417,9 @@ hr {
   line-height: 1.8;
   font-size: 18px;
 }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 7px 5px 7px;
+}

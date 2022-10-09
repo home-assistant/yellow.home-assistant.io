@@ -1,0 +1,98 @@
+---
+layout: guide
+guideName: Home Assistant Yellow LEDs
+---
+
+<div class="container">
+  <p>
+    <span
+      >Home Assistant Yellow has 3 LEDs. The red and green LED's behavior is similar to
+      the red and green LED on a Raspberry Pi. The yellow LED is specific to Home Assistant Yellow.
+      It indicates Home Assistant specific information.</span
+    >
+  </p>
+  <ul>
+    <li>Red LED (D4): Power LED</li>
+    <li>Green LED (D5): Activity LED</li>
+    <li>Yellow LED (D6): Home Assistant Yellow status LED</li>
+  </ul>
+
+  <h2>Power LED (red)</h2>
+  <span
+    >The power LED indicates whether the CM4 is powered. If the LED is off, check
+    the power supply. If the LED continues to be off,
+    remove power, and check if the CM4 is properly seated on the Yellow PCB.</span
+  >
+
+  <h2>Activity LED (green)</h2>
+  <span
+    >The activity LED indicates various firmware and boot loader states at
+    startup. If CM4 fails to boot, the pattern indicates what the reason is.
+    Refer to the <a href="https://www.raspberrypi.com/documentation/computers/configuration.html#led-warning-flash-codes">
+    LED Warning Flash Codes</a> table of the Raspberry Pi documentation</span
+  >
+  <span
+    >Once Home Assistant OS has been started, the green LED indicates activity.
+    Activity is defined as disk (eMMC/NVMe) or any CPU load.</span
+  >
+  <h2>Status LED (yellow)</h2>
+  <h3>Home Assistant OS</h3>
+  <table>
+    <colgroup>
+      <col style="width: 40%">
+      <col style="width: 60%">
+    </colgroup>
+
+    <thead>
+      <th>Pattern</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Off</td>
+        <td>System is in EEPROM firmware or boot loader mode.</td>
+      </tr>
+      <tr>
+        <td>Heartbeat</td>
+        <td>Home Assistant OS is running.</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <h2>Home Assistant OS Installer for Yellow: LED patterns during installation</h2>
+  <table>
+    <colgroup>
+      <col style="width: 40%">
+      <col style="width: 60%">
+    </colgroup>
+
+    <thead>
+      <th>Yellow LED</th>
+      <th>Description</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Off</td>
+        <td>System is in EEPROM firmware or boot loader mode.</td>
+      </tr>
+      <tr>
+        <td>Heartbeat (typically ~45s)</td>
+        <td>Installer is booting.</td>
+      </tr>
+      <tr>
+        <td>Solid on (typically 3s)</td>
+        <td>Installer successfully booted and was able to connect to the Internet.</td>
+      </tr>
+      <tr>
+        <td>Steady blinking (typically ~3-5 min, depending on Internet connection speed).</td>
+        <td>Downloading Home Assistant OS and installing onto the eMMC or NVMe.</td>
+      </tr>
+      <tr>
+        <td>Off</td>
+        <td>Installer successfully finished. Green LED will blink a few times before
+          turning off. Only the red LED remains on. </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
