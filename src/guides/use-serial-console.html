@@ -1,6 +1,6 @@
 ---
 layout: guide
-guideName: Using the serial console with Yellow and Linux
+guideName: Using the serial console for debugging Yellow (Linux)
 ---
 
 <div class="container">
@@ -9,12 +9,6 @@ guideName: Using the serial console with Yellow and Linux
   </p>
 
   <p><span></span></p>
-
-  <p>
-    <span>
-      <h2>Use the serial console to connect to Yellow from Linux</h2>
-    </span>
-  </p>
   <ol start="1">
     <li>
       <span>Make sure JP1 is set to UART.</span>
@@ -38,14 +32,14 @@ guideName: Using the serial console with Yellow and Linux
     <li>
       <span>Start the screen application and point it to this USB port. E.g.: <br>
         <code>sudo screen /dev/ttyUSB0 115200</code>. <br>
-        <p><b>Note:</b> Screen typically doesn't display anything on startup. It is not unusual to only see the cursor
+        <p><b>Note:</b> Screen typically doesn't display anything on startup. You see only the cursor
           on the top left of the window.</p>
       </span>
     </li>
     <li>
       <span>Hit the <b>Enter</b> key until prompted for credentials.
         <ul>
-          <li>User: root</li>
+          <li>Homeassistant login: root</li>
           <li>No password is required. Hit the <b>Enter</b> key.</li>
         </ul>
       </span>
@@ -56,27 +50,28 @@ guideName: Using the serial console with Yellow and Linux
           <li>To print the supervisor logs, type <br>
             <code>ha supervisor logs</code>
           </li>
-          <li>To print out the network logs, type <br>
-            <code>ha network logs</code>
+          <li>To print out the network info, type <br>
+            <code>ha network info</code>
           </li>
         </ul>
       </span>
     </li>
-    <li>To print the boot log, perform the following steps:
+    <li>To save the boot log into a file, perform the following steps:
       <ol>
         <li>Power off Yellow.</li>
-        <li>Power up Yellow.</li>
         <li>Perform steps 1&ndash;6.</li>
-        <li>To print out the boot logs, type <br>
-          <code>ha boot logs</code>
+        <li>Power up Yellow.</li>
+        <li>To save the bootlogs, type <br>
+          <code>Ctrl+a</code>
+          <code>:hardcopy -h /tmp/boot.log</code>
         </li>
       </ol>
     </li>
-
-    <p><span>Resources:</span></p>
-    <p>
-      <span><a href="https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-linux">Advanced
-          Serial Console on Linux</a>
-      </span>
-    </p>
+  </ol>
+  <p><span>Resources:</span></p>
+  <p>
+    <span><a href="https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-linux">Advanced
+        Serial Console on Linux</a>
+    </span>
+  </p>
 </div>
