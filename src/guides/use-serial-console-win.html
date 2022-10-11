@@ -1,0 +1,90 @@
+---
+layout: guide
+guideName: Using the serial console for debugging (Windows)
+---
+
+<div class="container">
+  <p>
+    <span>Connecting to Yellow via serial console can be helpful for troubleshooting, e.g. to export a log.</span>
+  </p>
+
+  <p><span></span></p>
+  <ol start="1">
+    <li>On Windows, install <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html">PuTTY</a>.</li>
+    <li>Open <b>Device Manager</b>.<ul>
+        <li>Check if there is an entry under <b>Ports</b>.</li>
+        <img src="/images/win-device-manager.png" alt="Device Manager: ports" width="500">
+      </ul>
+    </li>
+    <li>
+      <span>On Yellow, make sure JP1 is set to UART.</span>
+    </li>
+    <li>
+      <span>Setup a USB connection: Yellow: USB-C, PC: USB Type-A.</span>
+    </li>
+    <li>
+      <span>The <b>Device Manager</b> should refresh and list a new entry under <b>Ports.</b><br>
+        <p>At the end of the entry, you see <b>COM#</b>. This is the port Yellow is using.</p><br>
+        <img src="/images/win-device-manager-2.png" alt="Device Manager: ports with Yellow" width="500">
+      </span>
+    </li>
+    <li>Start PuTTY.
+      <p><img src="/images/win-putty-session-settings.png" alt="Setup session settings in PuTTY" width="400"></p>
+      <ul>
+        <li>Under <b>Connection type</b>, select the <b>Serial</b> radio button.</li>
+        <li>Under <b>Serial line</b>, enter the port Yellow is using, e.g. <b>COM3</b>.</li>
+        <li>Under <b>Speed</b>, enter <b>115200</b>.</li>
+        <li>If you want to use these settings later again, you can save the session.</li>
+      </ul>
+    </li>
+    <li>Optional: Setup PuTTY logging.
+      <p><img src="/images/win-putty-logging-settings.png" alt="Settup logging settings in PuTTY" width="400"></p>
+      <ul>
+        <li>Under <b>Category</b>, select <b>Logging</b>.</li>
+        <li>Select the <b>Printable output</b> radio button.</li>
+        <li>Under <b>Log file name</b>, enter the path and filename where you want the log files to be stored.</li>
+      </ul>
+    </li>
+    <li>Start PuTTY session
+      <ul>
+      <li>To connect to the serial console, click <b>Open</b>.</li>
+      <li><b>Result</b>: The serial console opens.
+        <p><img src="/images/win-putty-2.png" alt="PuTTY: serial connection established" width="400"></p>
+      </li>
+      <li>Typically, the console does not show anything on start up.</li>
+      </ul>
+    </li>
+    <li>
+      <span>Hit the <b>Enter</b> key until prompted for credentials.
+        <ul>
+          <li>When <b>homeassistant login: </b> appears, enter <code>root</code></li>
+          <li>No password is required. Hit the <b>Enter</b> key.</li>
+        </ul>
+      </span>
+    </li>
+    <li>
+      <span>To print logs, enter one of the following commands:
+        <ul>
+          <li>To print the supervisor logs, type <br>
+            <code>ha supervisor logs</code>
+          </li>
+          <li>To print out the network info, type <br>
+            <code>ha network info</code>
+          </li>
+        </ul>
+      </span>
+    </li>
+    <li>To save the boot log into the above configured log file
+      <ul>
+        <li>To reboot Yellow, in PuTTY, enter <code>reboot</code> and press the <b>Enter</b> enter.</li>
+        <li><b>Result</b>: The system reboots and prints the boot log onto the serial console and into the log file.</li>
+      </ul>
+    </li>
+  </ol>
+  <p><span>Resources:</span></p>
+  <p>
+    <span><a href="https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-windows">Advanced
+        Serial Console on Windows</a>
+    </span>
+  </p>
+</div>
