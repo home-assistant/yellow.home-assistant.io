@@ -1,5 +1,5 @@
 {
-  "name": "Yellow sebsite",
+  "name": "Yellow website",
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:16",
   "postCreateCommand": "npm install",
   "context": "..",
