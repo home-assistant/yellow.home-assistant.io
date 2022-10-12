@@ -1,0 +1,7 @@
+{
+  "name": "home-assistant/yellow.home-assistant.io",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:16",
+  "postCreateCommand": "npm install",
+  "appPort": 5000,
+  "extensions": ["esbenp.prettier-vscode"]
+}
