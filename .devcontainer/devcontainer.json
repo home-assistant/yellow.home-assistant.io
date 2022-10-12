@@ -1,8 +1,15 @@
 {
-  "name": "Improv WiFi website",
-  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:14",
+  "name": "Yellow sebsite",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:16",
   "postCreateCommand": "npm install",
   "context": "..",
   "appPort": 5000,
-  "extensions": ["esbenp.prettier-vscode"]
+  "extensions": ["esbenp.prettier-vscode"],
+  "settings": {
+    "terminal.integrated.profiles.linux": {
+      "zsh": {
+        "path": "/usr/bin/zsh"
+      }
+    }
+  }
 }
