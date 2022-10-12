@@ -47,11 +47,11 @@ guideName: Using the serial console for debugging (Windows)
     </li>
     <li>Start PuTTY session
       <ul>
-      <li>To connect to the serial console, click <b>Open</b>.</li>
-      <li><b>Result</b>: The serial console opens.
-        <p><img src="/images/win-putty-2.png" alt="PuTTY: serial connection established" width="400"></p>
-      </li>
-      <li>Typically, the console does not show anything on start up.</li>
+        <li>To connect to the serial console, click <b>Open</b>.</li>
+        <li><b>Result</b>: The serial console opens.
+          <p><img src="/images/win-putty-2.png" alt="PuTTY: serial connection established" width="400"></p>
+        </li>
+        <li>Typically, the console does not show anything on start up.</li>
       </ul>
     </li>
     <li>
@@ -63,7 +63,7 @@ guideName: Using the serial console for debugging (Windows)
       </span>
     </li>
     <li>
-      <span>To print logs, enter one of the following commands:
+      <span>The console offers the Home Assistant CLI under the command <code>ha</code>. The command allows to get information about the state of the system. Typically useful commands are:
         <ul>
           <li>To print the supervisor logs, type <br>
             <code>ha supervisor logs</code>
@@ -74,10 +74,10 @@ guideName: Using the serial console for debugging (Windows)
         </ul>
       </span>
     </li>
-    <li>To save the boot log into the above configured log file
+    <li>To reboot Yellow
       <ul>
-        <li>To reboot Yellow, in PuTTY, enter <code>reboot</code> and press the <b>Enter</b> enter.</li>
-        <li><b>Result</b>: The system reboots and prints the boot log onto the serial console and into the log file.</li>
+        <li>In PuTTY, enter <code>reboot</code> and press the <b>Enter</b> enter.</li>
+        <li><b>Result</b>: The system reboots and you can observe the boot logs from start. If logging has been enabled, the boot process is also stored in the configured log file.</li>
       </ul>
     </li>
   </ol>
