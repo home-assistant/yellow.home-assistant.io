@@ -25,6 +25,7 @@ h3 {
   max-width: 1000px;
 }
 
+
 .content {
   margin: 32px 0;
 }
@@ -135,6 +136,12 @@ h3 {
 .nav-bar a.active {
   border-bottom-color: #03a9f4;
 }
+.nav-bar a.buy-button {
+  background-color: #ffc900;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+
 
 /* GUIDE STYLES */
 .guides a {
