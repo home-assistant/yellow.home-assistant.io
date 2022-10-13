@@ -8,7 +8,7 @@ faqs:
     content: >
       Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
       If that does not help, you may be able to find the IP address of Home
-      Assistant Yellow on your router.
+      Assistant Yellow on your router. The URL will be <code>http://&lt;IP ADDRESS>:8123</code>
   - title: >
       My Home Assistant Yellow appears broken (no LEDs, or only red LED).
       What can I do?
@@ -20,35 +20,42 @@ faqs:
         CPU/SoC) to snap the CM4 in place.
       </p>
       <p>
-        Also make sure that the JP2 is <em>not</em> bridged, with the jumper
-        positioned on a single pin.
+        Make sure that the jumper JP2 is not connected. This means the jumper is only touching one of the pins, not both.
       </p>
 
       <p><img src="/images/faq-unseated-cm4-heat-sink-press.jpeg" /></p>
   - title: Can I factory reset the system?
     content: >
-      Yes: Remove power from your system, reapply power, press and hold the red
-      button within 5 seconds. Keep the red button pressed until the yellow led
-      starts to flash. The Yellow now clears the data partition, which
-      includes Home Assistant Core, the Supervisor, and any installed add-ons.
-      Make sure that Internet connection is present at this point - the
-      Home Assistant Operating System needs to download the Home Assistant
-      Supervisor and Core after the data partition has been cleared. Due to
-      the downloads, it can take a while until Home Assistant becomes accessible
-      again.
+      <p>
+        Yes: Remove power from your system, reapply power, press and hold the red
+        button within 5 seconds. Keep the red button pressed until the yellow led
+        starts to flash.
+      </p>
+      <p>
+        The Yellow now clears the data partition, which
+        includes Home Assistant Core, the Supervisor, and any installed add-ons.
+        Make sure that Internet connection is present at this point - the
+        Home Assistant Operating System needs to download the Home Assistant
+        Supervisor and Core after the data partition has been cleared. Due to
+        the downloads, it can take a while until Home Assistant becomes accessible
+        again.
+      </p>
   - title: >
       Can I reinstall Home Assistant OS again using the USB flash drive with
       the Home Assistant OS Installer for Yellow?
     content: >
-      By default, the Raspberry Pi Compute Module 4 (CM4) tries to boot from
-      internal eMMC before trying to boot from the USB flash drive. Therefore, the
-      Home Assistant OS Installer for Yellow will only get started if the CM4
-      is empty.
-
-      Home Assistant OS 8.5 or newer versions: To clean the boot files from the internal eMMC,
-      press and hold both the red and the blue button at startup.
-      Keep the two buttons pressed for at least 15 seconds. Now, the system
-      should boot from the USB flash drive again.
+      <p>
+        By default, the Raspberry Pi Compute Module 4 (CM4) tries to boot from
+        internal eMMC before trying to boot from the USB flash drive. Therefore, the
+        Home Assistant OS Installer for Yellow will only get started if the CM4
+        is empty.
+      </p>
+      <p>
+        Home Assistant OS 8.5 or newer versions: To clean the boot files from the internal eMMC,
+        press and hold both the red and the blue button at startup.
+        Keep the two buttons pressed for at least 15 seconds. Now, the system
+        should boot from the USB flash drive again.
+      </p>
   - title: >
       What is the serial port of the Zigbee radio?
     content: >
@@ -60,7 +67,6 @@ faqs:
 ---
 
   <div class="container">
-    <h2>Frequently Asked Questions</h2>
     <div class="accordion">
       {% for faq in faqs %}
       <div class="accordion-item">
@@ -104,9 +110,15 @@ faqs:
 
   const urlParts = document.URL.split('#');
   const anchor = (urlParts.length > 1) ? urlParts[1] : null;
+  let openedItem = false;
   for (i = 0; i < items.length; i++) {
     const id = items[i].getAttribute("id");
-    if (id == anchor)
+    if (id == anchor) {
       items[i].setAttribute("aria-expanded", "true");
+      openedItem = true;
+    }
+  }
+  if (!openedItem) {
+    items[0].setAttribute("aria-expanded", "true");
   }
 </script>
