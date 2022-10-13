@@ -8,7 +8,7 @@ faqs:
     content: >
       Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
       If that does not help, you may be able to find the IP address of Home
-      Assistant Yellow on your router.
+      Assistant Yellow on your router. The URL will be <code>http://&lt;IP ADDRESS>:8123</code>
   - title: >
       My Home Assistant Yellow appears broken (no LEDs, or only red LED).
       What can I do?
@@ -67,7 +67,6 @@ faqs:
 ---
 
   <div class="container">
-    <h2>Frequently Asked Questions</h2>
     <div class="accordion">
       {% for faq in faqs %}
       <div class="accordion-item">
@@ -111,9 +110,15 @@ faqs:
 
   const urlParts = document.URL.split('#');
   const anchor = (urlParts.length > 1) ? urlParts[1] : null;
+  let openedItem = false;
   for (i = 0; i < items.length; i++) {
     const id = items[i].getAttribute("id");
-    if (id == anchor)
+    if (id == anchor) {
       items[i].setAttribute("aria-expanded", "true");
+      openedItem = true;
+    }
+  }
+  if (!openedItem) {
+    items[0].setAttribute("aria-expanded", "true");
   }
 </script>
