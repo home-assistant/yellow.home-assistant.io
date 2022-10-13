@@ -5,9 +5,4 @@ cd "$(dirname "$0")/.."
 
 rm -rf dist
 
-# Quit all background tasks when script exits
-trap "kill 0" EXIT
-
-npm exec -- serve -p 5005 dist &
-npm exec -- eleventy --watch &
-wait
+npm exec -- eleventy --serve --watch
