@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
     {
       "public/images": "images",
       "public/resources": "resources",
+      "public/_redirects": "_redirects",
     }
   );
   eleventyConfig.addFilter("sortByOrder", (arr) => {
