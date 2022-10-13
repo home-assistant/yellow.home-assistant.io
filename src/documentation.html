@@ -11,13 +11,10 @@ guides:
     url: /guides/use-serial-console-windows/
   - title: Using the serial console for debugging (Linux)
     url: /guides/use-serial-console-linux/
-  - title: Resources
-    url: /resources/
-  - title: Videos
-    url: /videos/
 ---
 
 <div class="container">
+  <h1>Guides</h1>
   <div class="layout horizontal items">
     {% for guide in guides %}
     <a href="{{guide.url}}">
@@ -25,4 +22,22 @@ guides:
     </a>
     {% endfor %}
   </div>
+  <h1>Resources</h1>
+  <div class="layout horizontal items">
+    <a href="/resources">
+      <div class="layout vertical center">
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="/images/icons/download-file.png" width="150" />
+        </div>
+        <h3>Downloads</h3>
+      </div>
+    </a>
+    <a href="/videos">
+      <div class="layout vertical center">
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="/images/icons/online-video.png" width="150" />
+        </div>
+        <h3>Videos</h3>
+      </div>
+    </div>
 </div>
