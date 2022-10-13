@@ -368,7 +368,7 @@ hr {
 }
 .accordion button[aria-expanded='true'] + .accordion-content {
   opacity: 1;
-  max-height: 9em;
+  max-height: 30em;
   transition: all 200ms linear;
   will-change: opacity, max-height;
 }

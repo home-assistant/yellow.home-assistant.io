@@ -6,8 +6,23 @@ faqs:
       I can’t access the system via http://homeassistant.local:8123, what can
       I do?
     content: >
-      Try http://homeassistant:8123. If that does not help, you may be able to
-      find the IP address of Home Assistant Yellow on your router.
+      Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
+      If that does not help, you may be able to find the IP address of Home
+      Assistant Yellow on your router.
+  - title: >
+      My Home Assistant Yellow appears broken (no or red LED). What can I do?
+    content: >
+      <p>
+        The green Compute Module 4 might gotten unseated during transportation
+        Open the Yellow enclosure and make sure the green PCB is seated correctly.
+        Press on the two marked spots (centered above the CPU/SoC) to snap the CM4
+        in place.
+      </p>
+      <p>
+        Make also sure that JP2 is <em>not</em> bridged.
+      </p>
+
+      <p><img src="/images/faq-unseated-cm4-heat-sink-press.jpeg" /></p>
   - title: Can I factory reset the system?
     content: >
       Yes: Remove power from your system, reapply power, press and hold the red
