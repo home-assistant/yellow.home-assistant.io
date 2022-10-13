@@ -6,8 +6,25 @@ faqs:
       I can’t access the system via http://homeassistant.local:8123, what can
       I do?
     content: >
-      Try http://homeassistant:8123. If that does not help, you may be able to
-      find the IP address of Home Assistant Yellow on your router.
+      Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
+      If that does not help, you may be able to find the IP address of Home
+      Assistant Yellow on your router.
+  - title: >
+      My Home Assistant Yellow appears broken (no LEDs, or only red LED).
+      What can I do?
+    content: >
+      <p>
+        The green Compute Module 4 might gotten unseated during transportation.
+        Open the Yellow enclosure and make sure the green PCB is seated correctly.
+        Press onto the heat-sink on the two marked spots (centered above the
+        CPU/SoC) to snap the CM4 in place.
+      </p>
+      <p>
+        Also make sure that the JP2 is <em>not</em> bridged, with the jumper
+        positioned on a single pin.
+      </p>
+
+      <p><img src="/images/faq-unseated-cm4-heat-sink-press.jpeg" /></p>
   - title: Can I factory reset the system?
     content: >
       Yes: Remove power from your system, reapply power, press and hold the red
@@ -47,9 +64,17 @@ faqs:
     <div class="accordion">
       {% for faq in faqs %}
       <div class="accordion-item">
-        <button aria-expanded="false">
-          <span class="accordion-title">{{faq.title}}</span
-          ><span class="icon" aria-hidden="true"></span>
+        <button
+          aria-expanded="false"
+          id="{{ faq.title | slugify }}"
+        >
+          <a
+            href="#{{ faq.title | slugify }}"
+            class="anchor"
+          >
+            <span class="accordion-title">{{faq.title}}</span
+            ><span class="icon" aria-hidden="true"></span>
+          </a>
         </button>
         <div class="accordion-content">
           <p>{{faq.content}}</p>
@@ -76,4 +101,12 @@ faqs:
   }
 
   items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+  const urlParts = document.URL.split('#');
+  const anchor = (urlParts.length > 1) ? urlParts[1] : null;
+  for (i = 0; i < items.length; i++) {
+    const id = items[i].getAttribute("id");
+    if (id == anchor)
+      items[i].setAttribute("aria-expanded", "true");
+  }
 </script>
