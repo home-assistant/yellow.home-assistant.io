@@ -4,6 +4,5 @@ set -e
 cd "$(dirname "$0")/.."
 
 rm -rf dist
-cp -r public dist
 
 NODE_ENV=production npm exec -- eleventy
