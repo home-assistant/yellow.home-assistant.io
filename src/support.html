@@ -92,9 +92,17 @@ faqs:
     <div class="accordion">
       {% for faq in faqs %}
       <div class="accordion-item">
-        <button aria-expanded="false">
-          <span class="accordion-title">{{faq.title}}</span
-          ><span class="icon" aria-hidden="true"></span>
+        <button
+          aria-expanded="false"
+          id="{{ faq.title | slugify }}"
+        >
+          <a
+            href="#{{ faq.title | slugify }}"
+            class="anchor"
+          >
+            <span class="accordion-title">{{faq.title}}</span
+            ><span class="icon" aria-hidden="true"></span>
+          </a>
         </button>
         <div class="accordion-content">
           <p>{{faq.content}}</p>
@@ -121,4 +129,12 @@ faqs:
   }
 
   items.forEach((item) => item.addEventListener("click", toggleAccordion));
+
+  const urlParts = document.URL.split('#');
+  const anchor = (urlParts.length > 1) ? urlParts[1] : null;
+  for (i = 0; i < items.length; i++) {
+    const id = items[i].getAttribute("id");
+    if (id == anchor)
+      items[i].setAttribute("aria-expanded", "true");
+  }
 </script>
