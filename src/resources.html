@@ -1,16 +1,33 @@
 ---
 layout: base
 description: Resources | Yellow
+alias: /ce
 resources:
-  - title: Datasheet
-    url: /resources/yellow_datasheet_v1_3.pdf
+- title: Datasheet
+  url: /resources/Yellow_v1.3_Datasheet.pdf
+  icon: /images/icons/datasheet.png
+- title: Circuit Diagram/Schematic
+  url: /resources/Yellow_1.2c_Schematic_git.0b4049bec10a.pdf
+  icon: /images/icons/wiring.png
+- title: Declaration of Conformity for EU
+  url: /resources/Yellow_DoC_EU.pdf
+  icon: /images/icons/good-quality.png
+- title: Declaration of Conformity for UK
+  url: /resources/Yellow_DoC_UKCA.pdf
+  icon: /images/icons/good-quality.png
 ---
 
 <div class="container">
-  <div class="layout horizontal justified items">
+  <div class="layout horizontal items">
     {% for resource in resources %}
     <a href="{{resource.url}}" target="_blank">
-      <div class="layout vertical center">{{resource.title}}</div>
+      <div class="layout vertical center">
+
+        <div style="padding: 45px 45px 16px 45px">
+          <img src="{{resource.icon}}" width="150" />
+        </div>
+        {{resource.title}}
+      </div>
     </a>
     {% endfor %}
   </div>
