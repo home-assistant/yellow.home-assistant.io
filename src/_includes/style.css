@@ -297,6 +297,13 @@ hr {
   margin: 16px;
 }
 
+/* HARDWARE STYLES */
+.hardware {
+  margin: 0 auto;
+  padding: 16px 8px;
+  max-width: 1400px;
+}
+
 /* FAQ STYLES */
 
 .accordion .accordion-item {

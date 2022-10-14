@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
     {
       "public/images": "images",
       "public/resources": "resources",
+      "public/pinion": "pinion",
       "public/_redirects": "_redirects",
     }
   );
