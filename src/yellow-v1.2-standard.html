@@ -1,0 +1,21 @@
+---
+layout: base
+title: Hardware
+description: Hardware description, pinout
+---
+
+<div class="banner">
+    <span class="secondary">Hardware overview</span>
+    <span>Yellow v1.2 Standard PCB</span>
+</div>
+
+<div class="hardware" id="yellow-hardware">
+</div>
+
+<script src="../pinion/v1.2-standard/pinion.js"></script>
+<link rel="stylesheet" href="../pinion/v1.2-standard/pinion.css">
+<script>
+    pinion.setup(document.getElementById("yellow-hardware"), {
+        source: "../pinion/v1.2-standard/"
+    });
+</script>

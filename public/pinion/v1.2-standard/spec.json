@@ -1431,36 +1431,15 @@
             "highlight": true,
             "bbox": {
                 "tl": [
-                    34.145,
+                    36.325,
                     90.614533
                 ],
                 "br": [
-                    67.095,
+                    69.275,
                     112.065467
                 ]
             },
             "groups": [],
-            "pins": []
-        },
-        {
-            "ref": "JP5",
-            "description": "PoE Class selector",
-            "front": true,
-            "back": false,
-            "highlight": true,
-            "bbox": {
-                "tl": [
-                    33.05,
-                    86.675
-                ],
-                "br": [
-                    41.75,
-                    90.325
-                ]
-            },
-            "groups": [
-                "Jumpers"
-            ],
             "pins": []
         },
         {
