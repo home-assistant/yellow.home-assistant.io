@@ -1444,7 +1444,7 @@
         },
         {
             "ref": "JP2",
-            "description": "USB boot mode jumper. Allows recovery via USB-C.\n\nSetting this jumper will force the CM4 into USB boot mode. See J3 for more\ndetails.\n\nThis jumper allows to force nRPIBOOT to GND.\n",
+            "description": "USB boot mode jumper. Allows recovery via USB-C (J3).\n\nSetting this jumper will force the CM4 into USB boot mode. See J3 for more\ndetails.\n\nThis jumper allows to force nRPIBOOT to GND.\n",
             "front": true,
             "back": false,
             "highlight": true,
