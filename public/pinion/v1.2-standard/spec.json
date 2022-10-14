@@ -1444,7 +1444,7 @@
         },
         {
             "ref": "JP2",
-            "description": "Recovery via USB-C connector",
+            "description": "USB boot mode jumper. Allows recovery via USB-C.\n\nSetting this jumper will force the CM4 into USB boot mode. See J3 for more\ndetails.\n\nThis jumper allows to force nRPIBOOT to GND.\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1465,7 +1465,7 @@
         },
         {
             "ref": "JP1",
-            "description": "USB/UART selector",
+            "description": "USB-C functionality selector\n\nSelects the functionality of the USB-C connector. See J3 for more details.\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1591,7 +1591,7 @@
         },
         {
             "ref": "SW2",
-            "description": "Wipe Button",
+            "description": "Wipe Button\n\nAllows to wipe all user data from your Home Assistant OS installation.\nPress and hold until the yellow LED starts to blink to initiate a user\ndata wipe.\n\nHold this button and the power button simultanously to delete all boot\nfiles from the internal eMMC or NVMe. This allows to reinstall HAOS using\nthe Home Assistant OS Installer for Yellow.\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1612,7 +1612,7 @@
         },
         {
             "ref": "SW1",
-            "description": "User Button",
+            "description": "Power Button\n\nWhen Home Assistant OS is running, press and hold for 5s to power off the\nsystem.\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1696,7 +1696,7 @@
         },
         {
             "ref": "J2",
-            "description": "Gigabit Ethernet connector (RJ45)\n\nPoE variant: PoE+ IEEE 802.3at-2009 Class 3 or 4\n",
+            "description": "Gigabit Ethernet connector (RJ45)\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1734,6 +1734,25 @@
             "groups": [
                 "Connectors"
             ],
+            "pins": []
+        },
+        {
+            "ref": "U11",
+            "description": "[Silicon Labs MGM210P](https://www.silabs.com/wireless/zigbee/efr32mg21-series-2-modules) wireless radio.\n\nZigbee/Thread capable IEEE 802.15.4 radio connected to the CM4 via UART.\n\nAvailable on `/dev/ttyAMA1`, typical baud rate is 115200 with hardware\nflow control.\n",
+            "front": true,
+            "back": false,
+            "highlight": true,
+            "bbox": {
+                "tl": [
+                    33.04,
+                    113.15
+                ],
+                "br": [
+                    48.5,
+                    126.85
+                ]
+            },
+            "groups": [],
             "pins": []
         },
         {
