@@ -1,0 +1,26 @@
+---
+layout: guide
+permalink: "guides/{{ page.fileSlug }}/index.html"
+description: Home Assistant Yellow
+guideName: How to add an SSD to Yellow or Yellow Kit
+nvme: true
+collectionName: add-sdd-existing-installation
+tools:
+  title: Gathering the required items
+  image: kit-poe-with-nvme.jpeg
+  content: |
+    <ul>
+      <li>Home&nbsp;Assistant Yellow</li>
+    </ul>
+    <p>Additionally, make sure you have the following items</p>
+    <ul>
+      <li>NVMe M.2 SSD drive</li>
+      <li>No. 1 hex screwdriver</li>
+    </ul>
+---
+
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureInstallNvme %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
+{% render "proc.include.liquid", proc: procedureMoveDataDisk %}
