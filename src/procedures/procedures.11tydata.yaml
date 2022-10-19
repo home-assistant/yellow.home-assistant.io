@@ -1,0 +1,300 @@
+---
+procedureStandard:
+  title: Setting up
+  steps:
+    - title: Internet
+      image: plug-ethernet.jpeg
+      content: |
+        <ul>
+          <li>Plug in your Ethernet cable and make sure it is locked into place</li>
+          <li>The other end of the Ethernet cable will need to be connected to your Router or Switch</li>
+        </ul>
+    - title: Power it up!
+      image: plug-ethernet-power.jpeg
+      content: |
+        <ul>
+          <li>Connect the power to the wall and then to the Home&nbsp;Assistant Yellow</li>
+        </ul>
+    - title: Get started with Home Assistant
+      image: home-assistant-mobile.png
+      content: |
+        <ul>
+          <li class="info">Initial startup may take longer depending on your internet connection</li>
+          <li>Download the Home&nbsp;Assistant App on Android/IOS or visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> in your phone's or computer's browser</li>
+          <li>Once your Home&nbsp;Assistant Yellow has finished setting up, the onboarding will guide you through setup on your phone or computer</li>
+          <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">Onboarding</a></li>
+        </ul>
+procedureOpeningCase:
+  title: Opening the case
+  steps:
+    - title: Protecting from ESD
+      image: step-2-esd.png
+      content: |
+        <p>Grounding protects the components from the static electricity that can be naturally present (electrostatic discharge, ESD).</p>
+        <ul>
+          <li class="warning">Always: Touch the working surface before touching electronics. </li>
+          <li>Ideally: Use ESD protective equipment, such as ESD table mats and grounding cords.</li>
+        </ul>
+    - title: Removing the case - bottom part
+      image: step-3-remove-thumb-screws.jpeg
+      content: |
+        <ul>
+          <li>Remove the 4 screws on the bottom of the Home Assistant Yellow Kit.</li>
+          <li>Keep the thumb screws close by; you will need them again later.</li>
+        </ul>
+    - title: Removing the case - top part
+      image: step-4-open.webp
+      content: |
+        <ul>
+          <li>Make sure the interfaces are facing towards your left.</li>
+          <li>Flip the case over.</li>
+          <li>Slightly lift off the enclosure on your left.</li>
+          <li>Slide the enclosure off towards your right.</li>
+        </ul>
+procedureInstallCM4:
+  title: Installing the Raspberry Pi Compute Module 4
+  steps:
+    - title: Unpacking the components
+      image: step-5-poe-unpacked.jpeg
+      content: |
+        <ul>
+          <li>Make sure you have all the components:</li>
+          <li>1 Raspberry Pi Compute Module 4 (CM4).</li>
+          <li>1 heat sink</li>
+          <li>2 thermal pads</li>
+          <li>2 push pins</li>
+        </ul>
+    - title: Installing the CM4
+      image: step-6-poe-install-cm4.jpeg
+      content: |
+        <ul>
+          <li>The raspberry icon needs to be upside down: check for correct orientation of the CM4.</li>
+          <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
+          <li>Make sure you press on both sides (the two long edges).</li>
+          <li>Make sure the CM4 is installed correctly: it needs to run parallel to the yellow board.</li>
+        </ul>
+    - title: Placing the thermal pads onto the CM4
+      image: step-7-poe-heat-pads-placement_callouts.jpeg
+      content: |
+        <ul>
+          <li>Remove the protective cover from one side of the square thermal pad.</li>
+          <li>Stick the unprotected side onto the SOC (the silver square next to the raspberry icon).</li>
+          <li>Remove the protective cover from the top side of the thermal pad.</li>
+          <li>Repeat the steps with the rectangular thermal pad. Place it on the memory (the black rectangle next to the SOC).</li>
+        </ul>
+    - title: Placing the heat sink
+      image: step-8-install-heatsink.webp
+      content: |
+        <ul>
+          <li>Push the 2 plastic push pins into the dedicated hole on the heat sink.</li>
+          <li>Start by first aligning the right plastic push pins into the dedicated hole on the carrier board.</li>
+          <li>Then, place the heat sink onto the CM4.</li>
+        </ul>
+    - title: Securing the heat sink
+      image: step-9-push-pins-heatsink.webp
+      content: |
+        <ul>
+          <li>Take the entire board off your workplace and push the pins firmly through the carrier board.</li>
+        </ul>
+procedureInstallNvme:
+  title: Installing the NVMe drive
+  steps:
+    - title: Preparation
+      image: step-8.png
+      content: |
+        <ul>
+          <li>Unscrew the stand-off nut.</li>
+        </ul>
+    - title: Inserting the drive
+      image: step-9.png
+      content: |
+        <ul>
+          <li class="warning">Notice! Do not touch the gold connector pins.</li>
+          <li>Carefully hold the NMVe M.2 SSD by the sides.</li>
+          <li>Align the notches in the SSD with the ridges in the slot.</li>
+          <li>Then, insert at a 30-degree angle.</li>
+          <li>Do not force the connection.</li>
+        </ul>
+    - title: Installing the stand-off nut
+      image: step-10.png
+      content: |
+        <ul>
+          <li>Slide the stand-off nut into the dent at the end of the SSD drive.</li>
+          <li>Make sure the thinner end of the nut is on top.</li>
+        </ul>
+    - title: Attaching the SSD drive to the board
+      image: step-12.png
+      content: |
+        <ul>
+          <li>Press the stand-off nut and the SSD drive against the board.</li>
+          <li>While pressing down the drive, turn over the board.</li>
+          <li>From the rear side of the board, insert the M2 hex screw.</li>
+          <li class="warning">Do not over-tighten the screw.</li>
+        </ul>
+proceduresInstallingHAOS:
+  title: Installing Home Assistant Software on Kit
+  steps:
+    - title: Installing the Raspberry Pi Imager
+      image: rpi_imager.png
+      content: |
+        <ul>
+          <li>Install the Raspberry Pi Imager on your computer as described under <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a></li>
+        </ul>
+    - title: Opening Raspberry Pi Imager      
+      image: start_rpi_imager.png
+      content: |
+        <ul>
+          <li>Open Raspberry Pi Imager.</li>         
+        </ul>
+    - title: Choosing the operating system
+      image: rpi_choose_ha_os.gif
+      content: |
+        <ul>
+          <li>Click Choose OS</li>
+          <li>Choose <b>Other specific-purpose OS</b>.</li>
+          <li>Choose <b>Home assistants and home automation</b>.</li>
+          <li>Choose <b>Home Assistant</b>.</li>
+          <li>Choose <b>Home Assistant OS Installer for Yellow</b>.</li>
+        </ul>
+    - title: Choosing storage
+      image: rpi_choose_storage.png
+      content: |
+        <ul>
+          <li>Insert the USB flash drive into the computer. Note: The contents of this drive will be overwritten.</li>
+          <li>From the dropdown menu, select your USB flash drive.</li>
+        </ul>
+    - title: Writing the installer onto the drive
+      image: rpi_choose_write.png
+      content: |
+        <ul>
+          <li>Click the <b>Write</b> button to start the process.</li>
+          <li>Wait for the Home&nbsp;Assistant OS Installer to be written to the USB flash drive.</li>
+        </ul>
+    - title: Eject the USB flash drive.
+    - title: Inserting the USB flash drive
+      image: plug-usb-flash.jpeg
+      content: |
+        <ul>
+          <li>Insert the USB flash drive with the Home&nbsp;Assistant OS Installer into your Home&nbsp;Assistant&nbsp;Yellow&nbsp;Kit.</li>
+        </ul>
+    - title: Connecting the Ethernet cable
+      image: plug-usb-flash-ethernet.jpeg
+      content: |
+        <ul>
+          <li>Connect the Ethernet cable to your Home&nbsp;Assistant&nbsp;Yellow&nbsp;Kit.</li>
+        </ul>
+    - title: Connecting the power supply
+      image: plug-usb-flash-ethernet-power.jpeg
+      content: |
+        <ul>
+          <li>If you are not using PoE, connect the power supply to Home&nbsp;Assistant&nbsp;Yellow&nbsp;Kit.</li>
+        </ul>
+    - title: Watching the LEDs
+      image: led-patter-boot.webp
+      content: |
+        <ul>
+          <li>Wait for Home&nbsp;Assistant Yellow to start booting from the USB flash drive.</li>
+          <li>During boot, the Yellow LED blinks in a heartbeat pattern.</li>
+          <li>Once the installer is ready, the yellow LED is on constantly.</li>
+          <li>Installation will start automatically after 2 seconds.</li>
+        </ul>
+    - title: Waiting
+      image: led-patter-install.webp
+      content: |
+        <ul>
+          <li>Wait for Home&nbsp;Assistant Yellow to finish installing the Home&nbsp;Assistant Operating System.</li>
+          <li>The yellow LED starts to blink steadily.</li>
+          <li>Once the installer finished installing Home&nbsp;Assistant Operating System, only the red LED will be on.</li>
+        </ul>
+    - title: Disconnecting everything
+      image: plug-nothing.jpeg
+      content: |
+        <ul>
+          <li>Remove the USB flash drive.</li>
+          <li>Remove the power cable.</li>
+        </ul>
+    - title: Reconnecting power
+      image: plug-ethernet-power.jpeg
+      content: |
+        <ul>
+          <li>Reinsert the Ethernet cable.</li>
+          <li>Reinsert the power cable to start Home&nbsp;Assistant  (if PoE is not used).</li>
+        </ul>
+    - title: Getting started with Home Assistant
+      image: ha_onboarding.png
+      content: |
+        <ul>
+          <li>Initial startup may take longer - depending on your internet connection.</li>
+          <li>Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> in your Browser to access the device Web frontend.</li>
+          <li>The Web frontend guides you through the initial onboarding.</li>
+          <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li>
+        </ul>
+procedureMoveDataDisk:
+  title: Configuring Home Assistant and moving your data
+  steps:
+    - title: Go to the storage configuration page
+      image: ha-config-storage.png
+      content: |
+        <ul>
+          <li>
+            Open your Home Assistant instance and navigate to the storage configuration page using the button below:<br><br>
+            <a href="https://my.home-assistant.io/redirect/storage/" target="_blank"><img
+              src="https://my.home-assistant.io/badges/storage.svg"
+              alt="Open your Home Assistant instance and show storage information."
+              style="width: initial"
+            /></a>
+            <br><br>
+            Alternatively, you can go to the storage page via <b>Configuration>System>Storage</b>.
+          </li>
+        </ul>
+    - title: Open the <b>Move to Datadisk</b> dialog
+      image: ha-config-storage-overflow-menu.png
+      content: |
+        <ul>
+          <li>
+            Open the overflow menu by clicking on
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 24px"><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
+            in the top-right of the screen.
+          </li>
+          <li>Select the <b>Move datadisk</b> option</li>
+        </ul>
+    - title: Moving to datadisk
+      image: select-new-datadisk.png
+      content: |
+        <ul>
+          <li>Select <b>nvme0n1</b> and click on <b>MOVE</b>.</li>
+          <li class="info">For a small instance of 5 GB (incl. 6 add-ons) this takes about 5 minutes.
+            <p>Depending on the size of your instance, this may take up to 30 minutes.</p>
+          </li>
+        </ul>
+procedureReassembleCase:
+  title: Reassembling your Home Assistant Yellow
+  steps:
+    - title: Preparation
+      image: reassemble-step-1-bottom-plate.jpeg
+      content: |
+        <ul>
+          <li>Place the translucent bottom part of the case onto the table.</li>
+          <li class="info">Make sure the two round notches form a line pointing towards the top right corner.</li>
+        </ul>
+    - title: Reassembling - bottom part
+      image: reassemble-step-2-pcb-on-bottom-plate.jpeg
+      content: |
+        <ul>
+          <li>Place the board onto the bottom part of the case.</li>
+          <li>Make sure the USB connectors are facing upwards, away from you.</li>
+        </ul>
+    - title: Reassembling - top part
+      image: reassemble-step-3-insert-pcb-and-bottom-plate.webp
+      content: |
+        <ul>
+          <li>Turn the enclosure upside down.</li>
+          <li>Then, slide the push buttons into the openings of the case.</li>
+        </ul>
+    - title: Mounting the case
+      image: reassemble-step-4-insert-thumb-screws.jpeg
+      content: |
+        <ul>
+          <li>Insert the 4 thumb screws.</li>
+          <li class="warning">Do not over-tighten the screws.</li>
+        </ul>

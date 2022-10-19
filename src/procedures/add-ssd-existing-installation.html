@@ -1,5 +1,6 @@
 ---
-layout: procedure
+layout: guide
+permalink: "guides/{{ page.fileSlug }}/index.html"
 description: Home Assistant Yellow
 guideName: How to add an SSD to Yellow or Yellow Kit
 nvme: true
@@ -17,3 +18,9 @@ tools:
       <li>No. 1 hex screwdriver</li>
     </ul>
 ---
+
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureInstallNvme %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
+{% render "proc.include.liquid", proc: procedureMoveDataDisk %}

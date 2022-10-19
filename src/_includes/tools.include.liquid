@@ -1,0 +1,21 @@
+<div class="container">
+  <div>
+    <a
+      href="#{{ tools.title | slugify }}"
+      id="{{ tools.title | slugify }}"
+      class="anchor"
+    >
+      <h1>{{ tools.title }}</h1>
+    </a>
+    <div class="step">
+      <div class="step-image-instruction">
+        {% if tools.image %}
+        <div class="image-container"><img src="/images/{{tools.image}}" /></div>
+        {% endif %}
+        {% if tools.content %}
+        <div>{{tools.content}}</div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
