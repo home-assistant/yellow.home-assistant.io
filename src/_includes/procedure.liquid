@@ -1,0 +1,77 @@
+---
+layout: base
+---
+
+<div class="banner">
+  <span class="secondary">Getting Started</span>
+  <span>{{guideName}}</span>
+</div>
+
+<div class="container">
+  <div>
+    {% if tools %}
+    <a
+      href="#{{ tools.title | slugify }}"
+      id="{{ tools.title | slugify }}"
+      class="anchor"
+    >
+      <h1>{{ tools.title }}</h1>
+    </a>
+    <div class="step">
+      <div class="step-image-instruction">
+        {% if tools.image %}
+        <div class="image-container"><img src="/images/{{tools.image}}" /></div>
+        {% endif %} {% if tools.content %}
+        <div>{{tools.content}}</div>
+        {% endif %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{{ content }} 
+
+{% assign sortedCollections = collections[collectionName] | sortByOrder %} 
+{%- for file in sortedCollections -%} 
+  {% if nvme == false and file.data.title == "nvme" %}
+    {% continue %}
+  {%- endif -%}
+  {% for proc in file.data.procedures %}
+  <div class="container">
+    <div>
+      <a
+        href="#{{ proc.title | slugify }}"
+        id="{{ proc.title | slugify }}"
+        class="anchor"
+      >
+        <h1>{{ proc.title }}</h1>
+      </a>
+      {% for item in proc.steps %}
+      <div class="step">
+        <a
+          href="#{{ item.title | slugify }}"
+          id="{{ item.title | slugify }}"
+          class="anchor"
+        >
+          <div class="layout horizontal center">
+            <h2>Step {{ forloop.index }}</h2>
+            <span class="title">{{item.title}}</span>
+          </div>
+        </a>
+        {% if item.image or item.content %}
+        <div class="step-image-instruction">
+          {% if item.image %}
+          <div class="image-container"><img src="/images/{{item.image}}" /></div>
+          {% endif %} {% if item.content %}
+          <div>{{item.content}}</div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      <hr />
+      {% endfor %}
+    </div>
+  </div>
+  {%- endfor -%}
+{%- endfor -%}
