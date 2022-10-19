@@ -1,6 +1,5 @@
 <div class="container">
   <div>
-    {% if tools %}
     <a
       href="#{{ tools.title | slugify }}"
       id="{{ tools.title | slugify }}"
@@ -12,11 +11,11 @@
       <div class="step-image-instruction">
         {% if tools.image %}
         <div class="image-container"><img src="/images/{{tools.image}}" /></div>
-        {% endif %} {% if tools.content %}
+        {% endif %}
+        {% if tools.content %}
         <div>{{tools.content}}</div>
         {% endif %}
       </div>
     </div>
-    {% endif %}
   </div>
 </div>
