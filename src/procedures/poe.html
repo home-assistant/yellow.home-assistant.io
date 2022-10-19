@@ -1,9 +1,7 @@
 ---
-layout: procedure
+layout: getting-started
 description: Home Assistant Yellow
 guideName: Home Assistant Yellow Kit PoE
-collectionName: poe
-nvme: false
 tools:
   title: Gathering the required items
   image: kit-poe.jpeg
@@ -20,3 +18,8 @@ tools:
       <li>Optional: Power supply (12V/2A, if PoE is not used)</li>
     </ul>
 ---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureInstallCM4 %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
+{% render "proc.include.liquid", proc: proceduresInstallingHAOS %}

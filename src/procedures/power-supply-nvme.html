@@ -1,9 +1,7 @@
 ---
-layout: procedure
+layout: getting-started
 description: Home Assistant Yellow
 guideName: Home Assistant Yellow Kit with NVMe
-collectionName: powersupply
-nvme: true
 tools:
   title: Gathering the required items
   image: kit-std-with-nvme.jpeg
@@ -22,3 +20,9 @@ tools:
       <li>No. 1 hex screwdriver</li>
     </ul>
 ---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureInstallCM4 %}
+{% render "proc.include.liquid", proc: procedureInstallNvme %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
+{% render "proc.include.liquid", proc: proceduresInstallingHAOS %}
