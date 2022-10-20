@@ -385,10 +385,10 @@ hr {
   overflow: hidden;
   transition: opacity 200ms linear, max-height 200ms linear;
   will-change: opacity, max-height;
-}
-.accordion .accordion-content p {
   font-size: 1rem;
   font-weight: 300;
+}
+.accordion .accordion-content p {
   margin: 2em 0;
 }
 

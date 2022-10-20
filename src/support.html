@@ -67,6 +67,30 @@ faqs:
       Note that there is <i>no</i> <code>/dev/serial/by-id</code> path for this
       serial port as its not connected through USB. The above tty path will
       remain static.
+  - title: >
+      Which SSDs are supported?
+    content: >
+      <p>
+        Yellow has an M.2 M-Key connector which technically supports any NVMe SSD
+        with M-Keying and length of 2230, 2242, 2260 or 2280. The Raspberry Pi
+        CM4 has a single lane PCIe 2.0 (Gen 2.0 x1). PCIe is backwards
+        compatible, NVMe SSDs supporting a newer generations of PCIe or more
+        supporting multiple lanes should generally work (e.g. Samsung 970 EVO
+        Plus MZ-V7S500BW with a PCIe Gen 3.0 x4 interface is known to work).
+        Since the CM4 has limited connectivity, a high-end NVMe is not required.
+        A low-cost NVMe is typically good enough.
+      </p>
+
+      <p>
+        We and the community have identified the following models to <b>not</b>
+        work (exact reasons are under investigation):
+        <ul>
+          <li>WD_BLACK SN850X (1TB)</li>
+          <li>WD_BLACK SN750 SE</li>
+          <li>SK Hynix BC711</li>
+          <li>Crucial P2 CT250P2SSD8</li>
+        </ul>
+      </p>
 ---
 
   <div class="container">
