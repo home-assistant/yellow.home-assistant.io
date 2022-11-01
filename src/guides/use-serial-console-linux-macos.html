@@ -1,6 +1,6 @@
 ---
 layout: guide
-guideName: Using the serial console for debugging (Linux)
+guideName: Using the serial console for debugging (Linux/macOS)
 ---
 
 <div class="container">
@@ -14,23 +14,33 @@ guideName: Using the serial console for debugging (Linux)
       <span>Make sure JP1 is set to UART.</span>
     </li>
     <li>
-      <span>On your PC, open a terminal.</span>
+      <span>Make sure <i>GNU Screen</i> is installed on your system.</span>
+      <ul>
+        <li>On Linux, use your distribution's package manager (e.g. <code>sudo apt install screen</code>).</li>
+        <li>On macOS, use <a href="https://formulae.brew.sh/formula/screen">Homebrew</a>.</li>
+      </ul>
     </li>
     <li>
-      <span>List the USB port numbers:<br>
-        <code>ls /dev/ttyUSB*</code>.
-      </span>
+      <span>On your desktop/laptop, open a terminal.</span>
+    </li>
+    <li>
+      <span>List the USB port numbers:</span>
+      <ul>
+        <li>On Linux, use <br><code>ls /dev/ttyUSB*</code></li>
+        <li>On macOS, use <br><code>ls /dev/cu.usbserial-*</code><br>(If the Silicon Labs CP2102N driver is installed, use <code>ls /dev/cu.SLAB_USBtoUART*</code>)</li>
+      </ul>
     </li>
     <li>
       <span>Setup a USB connection: Yellow: USB-C, PC: USB type A.</span>
     </li>
     <li>
-      <span>List the USB port numbers again. The new number is for Yellow.<br>
-        <code>ls /dev/ttyUSB*</code>.
-      </span>
+      <span>List the USB port numbers again (see step 4). The new entry is for Yellow.</span>
+      <p>
+        <b>Note:</b> In case no new entry appears, make sure JP1 is at the right position (step 1) and your USB-C cable supports at least USB 2.0 signals (try using a different USB-C cable if in doubt).
+      </p>
     </li>
     <li>
-      <span>Start the screen application and point it to this USB port. E.g.: <br>
+      <span>Start GNU Screen and point it to this USB port. E.g.: <br>
         <code>sudo screen /dev/ttyUSB0 115200</code>. <br>
         <p><b>Note:</b> Screen typically doesn't display anything on startup. You see only the cursor
           on the top left of the window.</p>
@@ -59,7 +69,7 @@ guideName: Using the serial console for debugging (Linux)
     <li>To save the boot log into a file, perform the following steps:
       <ol>
         <li>Power off Yellow.</li>
-        <li>Perform steps 1&ndash;6.</li>
+        <li>Perform steps 1&ndash;7.</li>
         <li>Power up Yellow.</li>
         <li>To save the bootlogs, type <br>
           <code>Ctrl+a</code>
@@ -70,8 +80,11 @@ guideName: Using the serial console for debugging (Linux)
   </ol>
   <p><span>Resources:</span></p>
   <p>
-    <span><a href="https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-linux">Advanced
-        Serial Console on Linux</a>
-    </span>
+    <ul>
+      <li><a href="https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-linux">Advanced
+        Serial Console on Linux</a></li>
+      <li><a href="https://learn.adafruit.com/welcome-to-circuitpython/advanced-serial-console-on-mac-and-linux">Advanced
+        Serial Console on Mac</a></li>
+    </ul>
   </p>
 </div>
