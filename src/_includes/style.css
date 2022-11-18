@@ -212,7 +212,7 @@ h3 {
   text-align: center;
   font-size: 42px;
   font-weight: bold;
-  background-color: ar(--accent-color);
+  background-color: var(--accent-color);
   line-height: 1.2;
   padding: 24px;
   margin: 16px 0;
