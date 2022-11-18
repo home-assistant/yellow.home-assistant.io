@@ -1,13 +1,39 @@
+html {
+  --primary-text-color: #212121;
+  --secondary-text-color: #727272;
+  --primary-background-color: #fafafa;
+  --secondary-background-color: #ffffff;
+  --divider-color: rgba(0, 0, 0, 0.12);
+  --primary-color: #03a9f4;
+  --accent-color: #ffc900;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --primary-text-color: #e1e1e1;
+    --secondary-text-color: #9b9b9b;
+    --primary-background-color: #111111;
+    --secondary-background-color: #202020;
+    --divider-color: rgba(225, 225, 225, 0.12);
+  }
+
+  .items a img {
+    filter: invert(1);
+  }
+}
+
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, sans-serif;
   padding: 0;
   margin: 0;
   line-height: 1.4;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
 }
 
 a {
-  color: #03a9f4;
+  color: var(--primary-color);
 }
 
 h3 {
@@ -39,7 +65,7 @@ h3 {
 /* FOOTER STYLES */
 .footer {
   margin-top: 24px;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var(--divider-color);
   padding-top: 24px;
   text-align: center;
 }
@@ -129,15 +155,16 @@ h3 {
   display: inline-block;
   padding: 4px;
   margin: 0 4px;
-  color: black;
+  color: var(--primary-text-color);
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
 .nav-bar a.active {
-  border-bottom-color: #03a9f4;
+  border-bottom-color: var(--primary-color);
 }
 .nav-bar a.buy-button {
-  background-color: #ffc900;
+  color: #212121;
+  background-color: var(--accent-color);
   border-radius: 8px;
   padding: 4px 8px;
 }
@@ -147,15 +174,16 @@ h3 {
 .guides a {
   color: inherit;
   text-decoration: none;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--divider-color);
   border-radius: 24px;
   margin: 0 8px;
   padding: 8px;
   text-align: center;
+  background-color: var(--secondary-background-color);
 }
 
 .guides a:hover {
-  border-color: #CCC
+  border-color: var(--primary-color)
 }
 
 @media screen and (max-width: 650px) {
@@ -184,7 +212,7 @@ h3 {
   text-align: center;
   font-size: 42px;
   font-weight: bold;
-  background-color: #FBC902;
+  background-color: ar(--accent-color);
   line-height: 1.2;
   padding: 24px;
   margin: 16px 0;
@@ -240,7 +268,7 @@ h3 {
 }
 
 hr {
-  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  border-top: 1px solid var(--secondary-text-color);
 }
 
 .step-image-instruction {
@@ -250,7 +278,7 @@ hr {
 
 .anchor {
   text-decoration: none;
-  color: initial;
+  color: var(--primary-text-color);
   outline: none !important;
 }
 
@@ -311,7 +339,7 @@ hr {
   border-bottom: 1px solid #e5e5e5;
 }
 .accordion .accordion-item button[aria-expanded='true'] {
-  border-bottom: 1px solid #03a9f4;
+  border-bottom: 1px solid var(--primary-color);
 }
 .accordion button {
   position: relative;
@@ -327,12 +355,12 @@ hr {
 }
 .accordion button:hover, .accordion button:focus {
   cursor: pointer;
-  color: #03a9f4;
+  color: var(--primary-color);
 }
 .accordion button:hover::after, .accordion button:focus::after {
   cursor: pointer;
-  color: #03a9f4;
-  border: 1px solid #03a9f4;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 .accordion button .accordion-title {
   padding: 1em 1.5em 1em 0;
@@ -369,7 +397,7 @@ hr {
   background: currentColor;
 }
 .accordion button[aria-expanded='true'] {
-  color: #03a9f4;
+  color: var(--primary-color);
 }
 .accordion button[aria-expanded='true'] .icon::after {
   width: 0;
@@ -400,8 +428,9 @@ hr {
 }
 .items a {
   color: inherit;
+  background-color: var(--secondary-background-color);
   text-decoration: none;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--primary-text-color);
   border-radius: 12px;
   margin: 8px;
   padding: 16px;
@@ -423,7 +452,7 @@ hr {
 }
 
 .items a:hover {
-  border-color: #CCC
+  border-color: var(--primary-color);
 }
 
 /* Datasheet */
@@ -434,7 +463,7 @@ hr {
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid var(--primary-text-color);
   border-collapse: collapse;
   padding: 5px 7px 5px 7px;
 }
