@@ -1,6 +1,7 @@
 html {
   --primary-text-color: #212121;
   --secondary-text-color: #727272;
+  --accent-text-color: #212121;
   --primary-background-color: #fafafa;
   --secondary-background-color: #ffffff;
   --divider-color: rgba(0, 0, 0, 0.12);
@@ -213,6 +214,7 @@ h3 {
   font-size: 42px;
   font-weight: bold;
   background-color: var(--accent-color);
+  color: var(--accent-text-color);
   line-height: 1.2;
   padding: 24px;
   margin: 16px 0;
