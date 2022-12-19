@@ -60,6 +60,27 @@ faqs:
         should boot from the USB flash drive again.
       </p>
   - title: >
+      Is Zigbee2MQTT supported by the on-board radio?
+    content: >
+      <p>
+        The Home Assistant Yellow team officially supports ZHA (Zigbee Home
+        Automation), the Zigbee stack integrated into Home Assistant Core.
+      </p>
+
+      <p>
+        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental">
+        experimental support</a> (in beta stage) for the Silicon Labs radio on
+        Home Assistant Yellow. With this setting Zigbee2MQTT is known to work
+        on Home Assistant Yellow.
+      </p>
+
+      <p>
+        Note: The Zigbee Home Automation integration is active by default! If
+        you are using Zigbee2MQTT, remember to delete and ignore the discovered
+        Zigbee Home Automation integration to avoid interference.
+      </p>
+
+  - title: >
       What is the serial port of the Zigbee radio?
     content: >
       The Zigbee/Thread (IEEE 802.15.4) radio is directly connected via serial
