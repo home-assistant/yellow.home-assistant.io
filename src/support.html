@@ -79,6 +79,15 @@ faqs:
         you are using Zigbee2MQTT, remember to delete and ignore the discovered
         Zigbee Home Automation integration to avoid interference.
       </p>
+      
+      <p>
+        Note: When setting up Zigbee2MQTT with the Home Assistant Yellow, you will
+        need to configure the adapter type in Zigbee2MQTT. Make sure the following
+        is present in your Zigbee2MQTT configuration:
+        <pre><code>serial:
+          adapter: ezsp
+          port: /dev/ttyAMA1</code></pre>
+      </p>
 
   - title: >
       What is the serial port of the Zigbee radio?
