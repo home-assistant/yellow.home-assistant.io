@@ -62,8 +62,12 @@ Home Assistant Yellow Guide
     <div class="container">
       <div class="nav-bar">
         <a class="logo" href="/"
-          ><img src="/images/yellow-logo.png" alt="Home Assistant Yellow"
-        /></a>
+          >
+          <picture>
+            <source srcset="/images/yellow-logo-white.png" media="(prefers-color-scheme: dark)">
+            <img src="/images/yellow-logo.png" alt="Home Assistant Yellow" />
+          </picture>
+        </a>
         <ul>
           {% for item in menu %}
           <li>
