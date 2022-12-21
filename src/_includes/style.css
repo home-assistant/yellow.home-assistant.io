@@ -335,6 +335,15 @@ hr {
   max-width: 1400px;
 }
 
+.hardware .bg-white[data-v-7863c359] {
+  background-color: var(--primary-background-color);
+
+}
+
+.hardware .bg-button, .hardware .bg-button-light {
+  color: var(--accent-text-color);
+}
+
 /* FAQ STYLES */
 
 .accordion .accordion-item {
