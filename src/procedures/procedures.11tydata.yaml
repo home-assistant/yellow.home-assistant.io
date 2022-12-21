@@ -64,6 +64,15 @@ procedureInstallCM4:
           <li>2 thermal pads</li>
           <li>2 push pins</li>
         </ul>
+    - title: Align the CM4
+      image: step-6-poe-align-cm4.jpeg
+      content: |
+        <ul>
+          <li>Use the outline of the chips to help find the correct orientation of the CM4.</li>
+          <li>Carefully place the CM4 without force.</li>
+          <li>Use the white outline representing the CM4 to align the CM4.</li>
+          <li>The CM4 should fall into place slightly when correctly aligned.</li>
+        </ul>
     - title: Installing the CM4
       image: step-6-poe-install-cm4.jpeg
       content: |
