@@ -13,8 +13,8 @@ html {
   html {
     --primary-text-color: #e1e1e1;
     --secondary-text-color: #9b9b9b;
-    --primary-background-color: #111111;
-    --secondary-background-color: #202020;
+    --primary-background-color: #202020;
+    --secondary-background-color: #303030;
     --divider-color: rgba(225, 225, 225, 0.12);
   }
 
