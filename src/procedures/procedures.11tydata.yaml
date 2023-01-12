@@ -64,11 +64,20 @@ procedureInstallCM4:
           <li>2 thermal pads</li>
           <li>2 push pins</li>
         </ul>
+    - title: Align the CM4
+      image: step-6-poe-align-cm4.jpeg
+      content: |
+        <ul>
+          <li>The raspberry icon needs to be upside down: check for correct orientation of the CM4.</li>
+          <li>Use the outline of the chips to help find the correct orientation of the CM4.</li>
+          <li>Carefully place the CM4 without force.</li>
+          <li>Use the white outline representing the CM4 to align the CM4.</li>
+          <li>The CM4 should fall into place slightly when correctly aligned.</li>
+        </ul>
     - title: Installing the CM4
       image: step-6-poe-install-cm4.jpeg
       content: |
         <ul>
-          <li>The raspberry icon needs to be upside down: check for correct orientation of the CM4.</li>
           <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
           <li>Make sure you press on both sides (the two long edges).</li>
           <li>Make sure the CM4 is installed correctly: it needs to run parallel to the yellow board.</li>
