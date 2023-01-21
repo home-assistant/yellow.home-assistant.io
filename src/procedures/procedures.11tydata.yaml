@@ -104,6 +104,7 @@ procedureInstallCM4:
       content: |
         <ul>
           <li>Take the entire board off your workplace and push the pins firmly through the carrier board.</li>
+          <li>Ensure that the CM4 is still fully seated after securing the heat sink.</li>
         </ul>
 procedureInstallNvme:
   title: Installing the NVMe drive
