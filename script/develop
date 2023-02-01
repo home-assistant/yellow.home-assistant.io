@@ -4,5 +4,4 @@ set -e
 cd "$(dirname "$0")/.."
 
 rm -rf dist
-
-npm exec -- eleventy --serve --watch
+./node_modules/.bin/eleventy --serve

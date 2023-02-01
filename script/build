@@ -3,6 +3,4 @@ set -e
 
 cd "$(dirname "$0")/.."
 
-rm -rf dist
-
-NODE_ENV=production npm exec -- eleventy
+./node_modules/.bin/eleventy
