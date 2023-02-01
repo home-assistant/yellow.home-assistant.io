@@ -1,15 +1,7 @@
 {
-  "name": "Yellow website",
-  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:16",
-  "postCreateCommand": "npm install",
-  "context": "..",
-  "appPort": 8080,
-  "extensions": ["esbenp.prettier-vscode"],
-  "settings": {
-    "terminal.integrated.profiles.linux": {
-      "zsh": {
-        "path": "/usr/bin/zsh"
-      }
-    }
-  }
+	"name": "yellow.home-assistant.io",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:0-16-bullseye",
+	"forwardPorts": [8080],
+	"postCreateCommand": "yarn install",
+	"remoteUser": "node"
 }
