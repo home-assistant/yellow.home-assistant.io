@@ -32,11 +32,11 @@ menu:
 {% endcapture %}
 
 {% capture full_title -%}
-  {%- if title -%}
-    {{ title }} – Home Assistant Yellow
-  {%- else -%}
-    Home Assistant Yellow Guide
-  {%- endif -%}
+{%- if title -%}
+{{ title }} – Home Assistant Yellow
+{%- else -%}
+Home Assistant Yellow Guide
+{%- endif -%}
 {%- endcapture %}
 {% comment %}
 <!-- prettier-unignore -->
@@ -57,94 +57,8 @@ menu:
   </head>
   <style>
     {{ css }}
-
     .buy-button {
       cursor: pointer;
-    }
-    #buy-dialog {
-      z-index: 1000;
-      display: none;
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      color: #222222;
-      background-color: #000;
-      background-color: rgba(0, 0, 0, 0.4);
-      overflow-y: auto;
-    }
-    #buy-dialog .dialog-content {
-      border-radius: 8px;
-      margin: auto;
-      width: 600px;
-      padding: 0;
-      overflow-y: auto;
-      display: flex;
-      flex-flow: column;
-      justify-content: space-between;
-    }
-
-    .material-card {
-      background-color: #fefefe;
-      border-radius: 2px;
-      box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%), 0 3px 1px -2px rgb(0 0 0 / 20%);
-    }
-    #buy-dialog .dialog-content .close-container {
-      position: fixed;
-      float: right;
-      width: 615px;
-      text-align: right;
-      margin-top: -17px;
-    }
-    #buy-dialog .dialog-content .dialog-header {
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 16px;
-      font-weight: bold;
-      font-size: 24px;
-    }
-    #buy-dialog .dialog-content .dialog-header svg {
-      width: 32px;
-      height: 32px;
-      cursor: pointer;
-    }
-    #buy-dialog .dialog-content .distributors a {
-      text-decoration: none;
-    }
-    #buy-dialog .dialog-content .distributors a .distributor {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 8px 16px;
-      color: #222222;
-      margin: auto;
-      box-sizing: border-box;
-    }
-    #buy-dialog .dialog-content .distributors a .distributor div {
-      display: grid;
-      line-height: 20px;
-    }
-    #buy-dialog .dialog-content .distributors a .distributor div div:nth-of-type(1) {
-      align-content: center;
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      margin-right: 8px;
-    }
-    #buy-dialog .dialog-content .distributors a .distributor div div:nth-of-type(2) {
-      grid-column: 2;
-    }
-    #buy-dialog .dialog-content .distributors a .distributor div div:nth-of-type(3) {
-      grid-column: 2;
-      color: darkslategrey;
-      font-size: small;
-    }
-    #buy-dialog .dialog-content .distributors a .distributor svg {
-      height: 100%;
-      align-self: center;
-    }
-    svg:not(:root) {
-      overflow: hidden;
     }
   </style>
   <body>
@@ -159,18 +73,19 @@ menu:
         </a>
         <ul>
           {% for item in menu %}
-            <li>
-              <a
-                class="{% if item[0] contains page.url %}active{% endif %}"
-                href="{{ item[0][0] }}"
-                >{{ item[1] }}</a
-              >
-            </li>
+          <li>
+            <a
+              class="{% if item[0] contains page.url %}active{% endif %}"
+              href="{{ item[0][0] }}"
+              >{{ item[1] }}</a
+            >
+          </li>
           {% endfor %}
           <li>
             <a
               class="buy-button"
-              onclick="showBuyDialog()"
+              target="_blank"
+              href="https://www.home-assistant.io/yellow"
               >Buy</a
             >
           </li>
@@ -192,76 +107,5 @@ menu:
         </div>
       </div>
     </div>
-
-    <div id="buy-dialog" class="dialog">
-      <div class="material-card text dialog-content">
-        <div class="close-container"></div>
-        <div class="dialog-header">
-          <span>Home Assistant Yellow</span>
-          <span
-            class="dialog-close"
-            onclick="closeDialog()"
-            title="close">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24">
-              <path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
-            </svg>
-          </span>
-        </div>
-        <div class="distributors">
-          <a href="https://www.crowdsupply.com/nabu-casa/home-assistant-yellow" target="_blank">
-            <div class="distributor">
-              <div>
-                <div>🇺🇸</div>
-                <div>Mouser</div>
-                <div>Located in USA</div>
-              </div>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24">
-                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-              </svg>
-            </div>
-          </a>
-
-          <a href="https://raspberrypi.dk/en?s=home+assistant+yellow&post_type=product" target="_blank">
-            <div class="distributor">
-              <div>
-                <div>🇩🇰</div>
-                <div>RaspberryPi.dk</div>
-                <div>Located in Denmark</div>
-              </div>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24">
-                <path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-              </svg>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      const buyDialog = document.getElementById("buy-dialog");
-
-      function showBuyDialog() {
-        buyDialog.style.display = "flex";
-      }
-
-      function closeDialog() {
-        buyDialog.style.display = "none";
-      }
-
-      window.onclick = function(event) {
-        if (event.target === buyDialog) {
-          closeDialog();
-        }
-      };
-    </script>
   </body>
 </html>
