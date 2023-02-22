@@ -75,7 +75,7 @@ procedureInstallCM4:
           <li>The CM4 should fall into place slightly when correctly aligned.</li>
         </ul>
     - title: Installing the CM4
-      image: step-6-poe-install-cm4.jpeg
+      image: install-cm4-01.webp
       content: |
         <ul>
           <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
