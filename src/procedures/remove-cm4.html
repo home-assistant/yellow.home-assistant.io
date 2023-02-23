@@ -1,0 +1,19 @@
+---
+layout: guide
+permalink: "guides/{{ page.fileSlug }}/index.html"
+description: Home Assistant Yellow
+guideName: Removing the Raspberry Pi Compute Module 4 (CM4)
+nvme: true
+collectionName: remove-cm4
+tools:
+  title: Gathering the required items
+  image: unseat-cm4-tools.jpg
+  content: |
+    <ul>
+      <li>Home&nbsp;Assistant Yellow</li>
+      <li>Flat nose pliers</li>
+    </ul>
+---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureRemoveCM4 %}
