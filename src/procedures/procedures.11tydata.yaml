@@ -243,25 +243,14 @@ proceduresInstallingHAOS:
           <li>Reinsert the power cable to start Home&nbsp;Assistant  (if PoE is not used).</li>
         </ul>
     - title: Getting started with Home Assistant
-      image: HA-onboarding-01.png
+      image: HA-get-started.png
       content: |
         <ul>
-          <li>Initial startup may take longer - depending on your internet connection.</li>
-          <li>Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> in your Browser to access the device Web frontend.</li>
-          <li>The Web frontend guides you through the initial onboarding.</li>
-          <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li>
-        </ul>
-    - title: Installing the Android app
-      image: qr-code-ha-android.png
-      content: |
-        <ul>
-          <li>If you want to access Home Assistant from your Android, you can use this barcode to locate the app in the Play Store.</li>
-        </ul>
-    - title: Installing the iOS app
-      image: qr-code-ha-apple.png
-      content: |
-        <ul>
-          <li>If you want to access Home Assistant from your iPhone, you can use this barcode to locate the app in the iOS App Store.</li>
+          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> in your browser to access the web frontend.</li>
+          <li>The web frontend guides you through the initial onboarding.</li>
+          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>
+          <li><b>Installing the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
         </ul>
 procedureMoveDataDisk:
   title: Configuring Home Assistant and moving your data
