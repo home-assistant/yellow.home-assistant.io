@@ -16,7 +16,7 @@ procedureStandard:
           <li>Connect the power to the wall and then to the Home&nbsp;Assistant Yellow.</li>
         </ul>
     - title: Get started with Home Assistant
-      image: HA-get-started.png
+      image: HA-get-started-01.png
       content: |
         <ul>
           <li class="info">Initial startup may take a while, depending on your internet connection.</li>
@@ -232,7 +232,7 @@ proceduresInstallingHAOS:
           <li>Reinsert the power cable to start Home&nbsp;Assistant  (if PoE is not used).</li>
         </ul>
     - title: Getting started with Home Assistant
-      image: HA-get-started.png
+      image: HA-get-started-01.png
       content: |
         <ul>
           <li class="info">Initial startup may take a while, depending on your internet connection.</li>
