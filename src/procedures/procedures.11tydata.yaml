@@ -15,14 +15,19 @@ procedureStandard:
         <ul>
           <li>Connect the power to the wall and then to the Home&nbsp;Assistant Yellow.</li>
         </ul>
-    - title: Get started with Home Assistant
-      image: home-assistant-mobile.png
+    - title: Getting started with Home Assistant
+      image: HA-get-started-02.png
       content: |
         <ul>
-          <li class="info">Initial startup may take longer depending on your internet connection</li>
-          <li>Download the Home&nbsp;Assistant App on Android/IOS or visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> in your phone's or computer's browser</li>
-          <li>Once your Home&nbsp;Assistant Yellow has finished setting up, the onboarding will guide you through setup on your phone or computer</li>
-          <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">Onboarding</a></li>         
+          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
+          <li><b>Select your Home Assistant Server</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. E.g. <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+            </ul>
+          <li>The Home Assistant frontend guides you through the initial onboarding.</li>
+          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 procedureOpeningCase:
   title: Opening the case
@@ -59,7 +64,7 @@ procedureInstallCM4:
       content: |
         <ul>
           <li>Make sure you have all the components:</li>
-          <li>1 Raspberry Pi Compute Module 4 (CM4).</li>
+          <li>1 Raspberry Pi Compute Module 4 (CM4)</li>
           <li>1 heat sink</li>
           <li>2 thermal pads</li>
           <li>2 push pins</li>
@@ -80,7 +85,7 @@ procedureInstallCM4:
         <ul>
           <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
           <li>Make sure you press on both sides (the two long edges).</li>
-          <li>Make sure the CM4 is installed correctly: it needs to run parallel to the yellow board.</li>
+          <li>Make sure the CM4 is installed correctly: it needs to run parallel to the Home Assistant Yellow board.</li>
         </ul>
     - title: Placing the thermal pads onto the CM4
       image: step-7-poe-heat-pads-placement_callouts.jpeg
@@ -231,13 +236,18 @@ proceduresInstallingHAOS:
           <li>Reinsert the power cable to start Home&nbsp;Assistant  (if PoE is not used).</li>
         </ul>
     - title: Getting started with Home Assistant
-      image: ha_onboarding.png
+      image: HA-get-started-02.png
       content: |
-        <ul> 
-          <li>Initial startup may take longer - depending on your internet connection.</li>
-          <li>Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> in your Browser to access the device Web frontend.</li>
-          <li>The Web frontend guides you through the initial onboarding.</li>
-          <li>For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li>     
+        <ul>
+          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
+          <li><b>Select your Home Assistant Server</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. E.g. <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+            </ul>
+          <li>The Home Assistant frontend guides you through the initial onboarding.</li>
+          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 procedureMoveDataDisk:
   title: Configuring Home Assistant and moving your data
