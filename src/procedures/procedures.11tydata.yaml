@@ -232,14 +232,19 @@ proceduresInstallingHAOS:
           <li>Reinsert the power cable to start Home&nbsp;Assistant  (if PoE is not used).</li>
         </ul>
     - title: Getting started with Home Assistant
-      image: HA-get-started-01.png
+      image: HA-get-started-02.png
       content: |
         <ul>
           <li class="info">Initial startup may take a while, depending on your internet connection.</li>
-          <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> in your browser to access the web frontend.</li>
-          <li>The web frontend guides you through the initial onboarding.</li>
+          <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
+          <li><b>Select your Home Assistant Server</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. E.g. <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+            </ul>
+          <li>The Home Assistant frontend guides you through the initial onboarding.</li>
           <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>
-          <li><b>Installing the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
+          
         </ul>
 procedureMoveDataDisk:
   title: Configuring Home Assistant and moving your data
