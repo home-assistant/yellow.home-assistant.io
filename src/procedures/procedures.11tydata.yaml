@@ -246,7 +246,8 @@ procedureMoveDataDisk:
       image: ha-config-storage.png
       content: |
         <ul>
-          <li>
+          <li class="warning"><b>CM4 Lite</b>: If you have a Raspberry&nbsp;Compute&nbsp;Module&nbsp;4&nbsp;Lite: As there is no eMMC&nbsp;flash, you can skip this and the following steps.</li>
+          <li class="info"><b>Regular CM4 modules</b>: This <i>moving your data</i> procedure is required, even if your module is new.<li>
             Open your Home Assistant instance and navigate to the storage configuration page using the button below:<br><br>
             <a href="https://my.home-assistant.io/redirect/storage/" target="_blank"><img
               src="https://my.home-assistant.io/badges/storage.svg"
