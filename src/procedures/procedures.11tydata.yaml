@@ -292,7 +292,7 @@ procedureReassembleCase:
   title: Reassembling your Home Assistant Yellow
   steps:
     - title: Preparation
-      image: reassemble-step-1-bottom-plate.jpeg
+      image: reassemble-step-1-bottom-plate-callouts.jpeg
       content: |
         <ul>
           <li>Place the translucent bottom part of the case onto the table.</li>
