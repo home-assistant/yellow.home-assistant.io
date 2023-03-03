@@ -147,7 +147,7 @@ procedureInstallNvme:
           <li class="warning">Do not over-tighten the screw.</li>
         </ul>
 proceduresInstallingHAOS:
-  title: Installing Home Assistant Software on Kit
+  title: Installing Home Assistant software on Kit
   steps:
     - title: Installing the Raspberry Pi Imager
       image: rpi_imager.png
@@ -318,6 +318,26 @@ procedureReassembleCase:
         <ul>
           <li>Insert the 4 thumb screws.</li>
           <li class="warning">Do not over-tighten the screws.</li>
+        </ul>
+procedureInstallSWNVME:
+  title: Almost done!
+  steps:
+    - title: Finished assembly!
+      image: yellow-assembled.webp
+      content: |
+        <ul>
+          <li>Congratulations! You've completed the assembly.</li>
+          <li>You can now start <a href="/install-software-nvme" target="_blank">installing the Home Assistant Software</a></li>
+        </ul>
+procedureInstallSW:
+  title: Almost done!
+  steps:
+    - title: Finished assembly!
+      image: yellow-assembled.webp
+      content: |
+        <ul>
+          <li>Congratulations! You've completed the assembly.</li>
+          <li>You can now start <a href="/install-software" target="_blank">installing the Home Assistant Software</a></li>
         </ul>
 procedureRemoveCM4:
   title: Removing the Raspberry Pi Compute Module 4
