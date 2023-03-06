@@ -149,19 +149,12 @@ procedureInstallNvme:
 proceduresInstallingHAOS:
   title: Installing Home Assistant Software on Kit
   steps:
-    - title: Installing the Home Assistant OS Installer
-      image: balena.png
-      content: |
-        <ul>
-        <li>This procedure shows how to install the Home Assistant OS Installer for Yellow using Raspberri&nbsp;Pi&nbsp;Imager. If you are using another imager, download the latest Home&nbsp;Assistant&nbsp;Yellow Installer here:
-         <a href="/power-supply/#eject-the-usb-flash-drive" target="_blank">https://github.com/NabuCasa/yellow-buildroot/releases </a></li>
-          <li>Write the image to your USB flash drive and continue with the step <a href="/power-supply/#eject-the-usb-flash-drive" target="_blank">eject the usb flash drive</a>.</li>
-        </ul>
     - title: Installing the Raspberry Pi Imager
       image: rpi_imager.png
       content: |
         <ul>
           <li>Install the Raspberry Pi Imager on your computer as described under <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a></li>
+          <li class="info">If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from GitHub releases: <a href="/power-supply/#eject-the-usb-flash-drive" target="_blank">https://github.com/NabuCasa/yellow-buildroot/releases </a>.</li>
         </ul>
     - title: Opening Raspberry Pi Imager      
       image: start_rpi_imager.png
