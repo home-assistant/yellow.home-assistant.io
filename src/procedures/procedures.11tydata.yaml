@@ -154,6 +154,7 @@ proceduresInstallingHAOS:
       content: |
         <ul>
           <li>Install the Raspberry Pi Imager on your computer as described under <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a></li>
+          <li class="info">If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from <a href="https://github.com/NabuCasa/yellow-buildroot/releases">GitHub releases</a>.</li>
         </ul>
     - title: Opening Raspberry Pi Imager      
       image: start_rpi_imager.png
