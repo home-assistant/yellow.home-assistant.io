@@ -81,7 +81,7 @@ faqs:
       </p>
 
       <p>
-        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental">
+        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental" >
         experimental support</a> (in beta stage) for the Silicon Labs radio on
         Home Assistant Yellow. With this setting Zigbee2MQTT is known to work
         on Home Assistant Yellow.
@@ -116,27 +116,36 @@ faqs:
       Which SSDs are supported?
     content: >
       <p>
-        Yellow has an M.2 M-Key connector which technically supports any NVMe SSD
-        with M-Keying and length of 2230, 2242, 2260 or 2280. The Raspberry Pi
-        CM4 has a single lane PCIe 2.0 (Gen 2.0 x1). PCIe is backwards
-        compatible, NVMe SSDs supporting a newer generations of PCIe or more
-        supporting multiple lanes should generally work (e.g. Samsung 970 EVO
-        Plus MZ-V7S500BW with a PCIe Gen 3.0 x4 interface is known to work).
-        Since the CM4 has limited connectivity, a high-end NVMe is not required.
-        A low-cost NVMe is typically good enough.
-      </p>
-
-      <p>
-        We and the community have identified the following models to <b>not</b>
-        work (exact reasons are under investigation):
+        Yellow has an <b>M.2 M-Key</b> connector which supports <b>NVMe SSDs</b> with M-Keying 
+        and length of <b>2230</b>, <b>2242</b>, <b>2260</b>, or <b>2280</b>. 
         <ul>
+          <li>The Raspberry Pi
+            CM4 has a single lane PCIe 2.0 (Gen 2.0 x1). PCIe is backwards
+            compatible.</li>
+          <li>NVMe SSDs supporting a newer generation of PCIe or more,
+            supporting multiple lanes, should generally work (e.g. Samsung 970 EVO
+            Plus MZ-V7S500BW with a PCIe Gen 3.0 x4 interface is known to work).</li>
+        </ul>
+      </p>
+      <p>A high-end NVMe is not required, since the CM4 PCIe interface is only Gen 2.0 x1.</br>
+          A low-cost NVMe is typically good enough. If you are new to NVMe SSDs and struggle to make a decision: no issues have been reported about Samsung NVMe SSDs.</p>
+      <p>Check below to see a list of models which have been reported to <a href="#which-ssds-are-not-supported" onclick="document.getElementById('which-ssds-are-not-supported').click()">
+        <b style="color: rgb(216, 93, 118);">NOT</b> work currently</a>:</p>
+  - title: >
+      Which SSDs are NOT supported?
+    content: >
+      <p>
+        All M.2 SATA SSDs are <b style="color: rgb(216, 93, 118);">NOT</b> supported. Besides the
+        following NVMe SSDs are known to <b style="color: rgb(216, 93, 118);">NOT</b> work:
+        <ul style="color: rgb(216, 93, 118);">
           <li>WD_BLACK SN850X (1TB)</li>
           <li>WD_BLACK SN770</li>
           <li>WD_BLACK SN750 SE</li>
           <li>SK Hynix BC711</li>
           <li>Crucial P2 CT250P2SSD8</li>
+          <li>Lexar NM620</li>
         </ul>
-        Usually if one model doesn't work, other models from the same product
+        Usually, if one model doesn't work, other models from the same product
         family have a high chance to be affected as well. Other models may work,
         e.g. the WD Blue SN570 reportedly works, Crucial P2 CT500P2SSD8 (512GB)
         and Crucial P5 CT1000P5SSD8 (1TB) as well. All Samsung NVMe SSDs seem
@@ -149,7 +158,6 @@ faqs:
         The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
       </p>
 ---
-
   <div class="container">
     <div class="accordion">
       {% for faq in faqs %}
