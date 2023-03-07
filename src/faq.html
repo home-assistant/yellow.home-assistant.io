@@ -116,27 +116,36 @@ faqs:
       Which SSDs are supported?
     content: >
       <p>
-        Yellow has an M.2 M-Key connector which technically supports any NVMe SSD
-        with M-Keying and length of 2230, 2242, 2260 or 2280. The Raspberry Pi
-        CM4 has a single lane PCIe 2.0 (Gen 2.0 x1). PCIe is backwards
-        compatible, NVMe SSDs supporting a newer generations of PCIe or more
-        supporting multiple lanes should generally work (e.g. Samsung 970 EVO
-        Plus MZ-V7S500BW with a PCIe Gen 3.0 x4 interface is known to work).
-        Since the CM4 has limited connectivity, a high-end NVMe is not required.
-        A low-cost NVMe is typically good enough.
+        Yellow has an <b>M.2 M-Key</b> connector which technically supports <b>any</b> NVMe SSD
+        with M-Keying and length of <b>2230</b>, <b>2242</b>, <b>2260</b>, or <b>2280</b>. 
+        <ul>
+          <li>The Raspberry Pi
+            CM4 has a single lane PCIe 2.0 (Gen 2.0 x1). PCIe is backwards
+            compatible.</li>
+          <li>NVMe SSDs supporting a newer generation of PCIe or more,
+            supporting multiple lanes, should generally work (e.g. Samsung 970 EVO
+            Plus MZ-V7S500BW with a PCIe Gen 3.0 x4 interface is known to work).</li>
+        </ul>
       </p>
-
+        <p>A high-end NVMe is not required, since the CM4 has limited connectivity.</br>
+          A low-cost NVMe is typically good enough. If you are new to NVMe SSDs and struggle to make a decision: no issues have been reported about Samsung NVMe SSDs.</p>
+      <p>Check below to see a list of models which have been reported to <a href="#which-ssds-are-not-supported">
+        <b style="color: rgb(216, 93, 118);">NOT</b> work currently</a>:</p>
+  - title: >
+      Which SSDs are NOT supported?
+    content: >
       <p>
         We and the community have identified the following models to <b>not</b>
         work (exact reasons are under investigation):
-        <ul>
+        <ul style="color: rgb(216, 93, 118);">
           <li>WD_BLACK SN850X (1TB)</li>
           <li>WD_BLACK SN770</li>
           <li>WD_BLACK SN750 SE</li>
           <li>SK Hynix BC711</li>
           <li>Crucial P2 CT250P2SSD8</li>
+          <li>Lexar NM620</li>
         </ul>
-        Usually if one model doesn't work, other models from the same product
+        Usually, if one model doesn't work, other models from the same product
         family have a high chance to be affected as well. Other models may work,
         e.g. the WD Blue SN570 reportedly works, Crucial P2 CT500P2SSD8 (512GB)
         and Crucial P5 CT1000P5SSD8 (1TB) as well. All Samsung NVMe SSDs seem
