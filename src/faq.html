@@ -81,7 +81,7 @@ faqs:
       </p>
 
       <p>
-        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental">
+        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental" >
         experimental support</a> (in beta stage) for the Silicon Labs radio on
         Home Assistant Yellow. With this setting Zigbee2MQTT is known to work
         on Home Assistant Yellow.
@@ -127,9 +127,9 @@ faqs:
             Plus MZ-V7S500BW with a PCIe Gen 3.0 x4 interface is known to work).</li>
         </ul>
       </p>
-        <p>A high-end NVMe is not required, since the CM4 has limited connectivity.</br>
+      <p>A high-end NVMe is not required, since the CM4 PCIe interface is only Gen 2.0 x1.</br>
           A low-cost NVMe is typically good enough. If you are new to NVMe SSDs and struggle to make a decision: no issues have been reported about Samsung NVMe SSDs.</p>
-      <p>Check below to see a list of models which have been reported to <a href="#which-ssds-are-not-supported">
+      <p>Check below to see a list of models which have been reported to <a href="#which-ssds-are-not-supported" onclick="document.getElementById('which-ssds-are-not-supported').click()">
         <b style="color: rgb(216, 93, 118);">NOT</b> work currently</a>:</p>
   - title: >
       Which SSDs are NOT supported?
@@ -158,7 +158,6 @@ faqs:
         The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
       </p>
 ---
-
   <div class="container">
     <div class="accordion">
       {% for faq in faqs %}
