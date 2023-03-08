@@ -212,7 +212,8 @@ proceduresInstallingHAOS:
           <li>Wait for Home&nbsp;Assistant Yellow to start booting from the USB flash drive.</li>
           <li>During boot, the Yellow LED blinks in a heartbeat pattern.</li>
           <li>Once the installer is ready, the yellow LED is on constantly.</li>
-          <li>Installation will start automatically after 2 seconds.</li>
+          <li>Installation will start automatically after 2-3 seconds.</li>
+          <li class="info">If the yellow LED does not start blinking steadily after a few seconds, but stays on constantly: This indicates that there might be a network issue.</li>
         </ul>
     - title: Waiting
       image: led-patter-install.webp
