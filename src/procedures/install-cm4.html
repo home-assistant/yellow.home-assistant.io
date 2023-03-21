@@ -1,0 +1,22 @@
+---
+layout: guide
+permalink: "guides/{{ page.fileSlug }}/index.html"
+description: Home Assistant Yellow
+guideName: Installing the Raspberry Pi Compute Module 4 (CM4)
+nvme: true
+collectionName: install-cm4
+tools:
+  title: Gathering the required items
+  image: step-5-poe-unpacked.jpeg
+  content: |
+    <ul>
+      <li>1 Raspberry Pi Compute Module 4 (CM4)</li>
+      <li>1 heat sink</li>
+      <li>2 thermal pads</li>
+      <li>2 push pins</li>
+    </ul>
+---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureInstallCM4 %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
