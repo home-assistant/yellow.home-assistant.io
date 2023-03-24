@@ -1,0 +1,19 @@
+---
+layout: guide
+permalink: "guides/{{ page.fileSlug }}/index.html"
+description: Home Assistant Yellow
+guideName: Disable multiprotocol support
+nvme: false
+collectionName: enable-multiprotocol
+tools:
+  title: Prerequisites
+  image: yellow-multiprotocol-10.png
+  content: |
+    <p>This guide assumes you have already completed the following steps:</p>
+    <ul>
+      <li>Have the <b>Zigbee Home Automation (ZHA)</b> integration up and running.</li>
+      <li>Enabled multiprotocol support</li>
+    </ul>
+---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureDisableMultiProtocol %}
