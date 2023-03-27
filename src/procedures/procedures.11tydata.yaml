@@ -340,3 +340,70 @@ procedureRemoveCM4:
           <li class="info">This requires quite a bit of strength. If it does not work, pull harder.</li>
           <li class="warning">Do not use a screw driver as a lever. It might damage the board.</li>
         </ul>
+procedureEnableMultiProtocol:
+  title: Enable Multiprotocol support
+  steps:
+    - title: Enable multiprotocol support
+      image: yellow-multiprotocol-01.png
+      content: |
+        <ul>
+          <li class="warning">Multiprotocol is an experimental feature. It may not work for you.</li>
+          <li class="info">When multiprotocol support is enabled, the Home&nbsp;Assistant Yellow's IEEE&nbsp;802.15.4 radio can be used for both Zigbee and Thread (used by Matter) at the same time. The two networks will be running on the same IEEE&nbsp;802.15.4 channel.</li>
+          <li>If the radio is already used by the ZHA Zigbee integration, ZHA will be automatically reconfigured to use the multiprotocol firmware. Your Zigbee network will continue to work.</li>
+        </ul>
+        <ol>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
+          <li>Under <b>Home Assistant Yellow</b>, select <b>Configure</b>.</li>
+          <li>Select the <b>Enable multiprotocol support</b> checkbox and select <b>Submit</b>.</li>
+        </ol>
+    - title: Wait
+      image: skyconnect-multiprotocol-02.png
+      content: |
+        <ul>
+          <li>Wait for the installation of the <b>Silicon Labs Multiprotocol</b> add-on to complete.</li>
+        </ul>
+    - title: Installation complete
+      image: skyconnect-multiprotocol-03.png
+      content: |
+        <ul>
+          <li>Once the installation is complete, select <b>Finish</b>.</li>
+        </ul>
+    - title: Locate the Yellow Multi-PAN integration
+      image: yellow-multiprotocol-05.png
+      content: |
+        <ul>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li><ul>
+          <li>You should now see a <b>Yellow Multi-PAN</b> integration as well as the <b>Open Thread Border Router</b> integration.</li></ul>
+        </ul>
+    - title: Locate the Home Assistant border router
+      image: skyconnect-multiprotocol-11.png
+      content: |
+        <ul>
+          <li class="info">Thread support is still under development. For information on Thread, refer to the <a href="https://www.home-assistant.io/integrations/thread" target="_blank">documentation</a> of the <b>Thread</b> integration.</li>
+          <li>In the <b>Thread</b> integration, select <b>Configure</b>.</li><ul>
+          <li>You should now see your Home Assistant border router.</li></ul>
+        </ul>
+procedureDisableMultiProtocol:
+  title: Disable multiprotocol support
+  steps:
+    - title: Disable Yellow Multi-PAN
+      image: skyconnect-multiprotocol-17.png
+      content: |
+        <ul>
+          <li class=info>To disable the multiprotocol feature and use Yellow for Zigbee only, make sure to follow all the steps in this procedure.</li>
+        </ul>
+        <ol>
+          <li>Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_multiprotocol" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and in the <b>Silicon Labs Multiprotocol</b> add-on, select <b>Uninstall</b>.
+        </ol>
+    - title: Flash the Silicon Labs radio firmware
+      image: yellow-multiprotocol-06.png
+      content: |
+        <ul>
+          <li>To flash the Silicon Labs radio firmware, follow this <a href="https://github.com/NabuCasa/silabs-firmware/wiki/Flash-Silicon-Labs-radio-firmware-manually" target="_blank">guide</a>.
+        </ul>
+    - title: Reconfigure the <b>Zigbee Home Automation (ZHA)</b> integration
+      image: z2m-migrate-zha-02.png
+      content: |
+        <ul>
+          <li><a href="/migrate-zigbee-zha-only" target="_blank">Reconfigure</a> the <b>Zigbee Home Automation (ZHA)</b> integration.</li>
+        </ul>
