@@ -386,24 +386,82 @@ procedureEnableMultiProtocol:
 procedureDisableMultiProtocol:
   title: Disable multiprotocol support
   steps:
-    - title: Disable Yellow Multi-PAN
+    - title: Uninstall the Silicon Labs Multiprotocol add-on
       image: skyconnect-multiprotocol-17.png
       content: |
         <ul>
           <li class=info>To disable the multiprotocol feature and use Yellow for Zigbee only, make sure to follow all the steps in this procedure.</li>
         </ul>
-        <ol>
+        <ul>
           <li>Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_multiprotocol" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and in the <b>Silicon Labs Multiprotocol</b> add-on, select <b>Uninstall</b>.
-        </ol>
+        </ul>
+    - title: Delete the OTBR integration
+      image: yellow-multiprotocol-disable-01.png
+      content: |
+        <ul>
+          <li>Delete the <b>Open Thread Border Router</b> integration.</li>
+        </ul>
     - title: Flash the Silicon Labs radio firmware
       image: yellow-multiprotocol-06.png
       content: |
         <ul>
           <li>To flash the Silicon Labs radio firmware, follow this <a href="https://github.com/NabuCasa/silabs-firmware/wiki/Flash-Silicon-Labs-radio-firmware-manually" target="_blank">guide</a>.
+            <ul>
+            <li>In the last step, use this as a <b>filename</b>: <code>EmberZNet/beta/NabuCasa_Yellow_EZSP_v7.2.1.0_PA32_ncp-uart-hw_115200.gbl</code></li>
+            </ul>
         </ul>
-    - title: Reconfigure the <b>Zigbee Home Automation (ZHA)</b> integration
+    - title: Rename the <b>Zigbee Home Automation (ZHA)</b> integration
+      image: yellow-multiprotocol-disable-02.png
+      content: |
+        <ul>
+        <li class="info">Yellow is now setup in the non-multiprotocol ZHA integration, although the title still includes <b>Multi-PAN</b>.</li>
+          
+        </ul>
+        <ol>
+        <li>Click the three-dot dropdown menu on the <b>Zigbee Home Automation (ZHA)</b> integration and select <b>Rename</b>.</li>
+        <li>Remove <b>Multi-PAN</b> from the name of the integration.</li>
+        </ol>
+    - title: Start the radio migration process
       image: z2m-migrate-zha-02.png
       content: |
         <ul>
-          <li><a href="/migrate-zigbee-zha-only" target="_blank">Reconfigure</a> the <b>Zigbee Home Automation (ZHA)</b> integration.</li>
+          <li>On the <b>Zigbee Home Automation (ZHA)</b> integration, select <b>Configure</b>.</li>
+          <li>Under <b>Network Settings</b>, select <b>Migrate radio</b>.</li>
+        </ul>
+    - title: Reconfigure ZHA
+      image: skyconnect-multiprotocol-disable-05.png
+      content: |
+        <ul>
+          <li>Select <b>submit</b>.</li>
+        </ul>
+    - title: Reconfigure the current radio
+      image: skyconnect-multiprotocol-disable-06.png
+      content: |
+        <ul>
+          <li>Select <b>Re-configure the current radio</b>.</li>
+        </ul>
+    - title: Select a serial port
+      image: yellow-multiprotocol-disable-03.png
+      content: |
+        <ul>
+          <li>Select the path with Yellow.</li>
+        </ul>
+    - title: Restore an automatic backup
+      image: skyconnect-multiprotocol-disable-08.png
+      content: |
+        <ul>
+          <li>Select <b>Restore an automatic backup</b>.</li>
+        </ul>
+    - title: Choose a backup
+      image: skyconnect-multiprotocol-disable-09.png
+      content: |
+        <ul>
+          <li>Choose the latest backup and select <b>Submit</b>.</li>
+        </ul>
+    - title: Migration complete!
+      image: skyconnect-multiprotocol-disable-10.png
+      content: |
+        <ul>
+          <li>Select <b>Finish</b> to confirm. The migration process is now complete.</li>
+          <li class="info">You won't be able to control the devices until they rejoin the network. Normally, they rejoin within one hour. You may be able to accelerate that process by power-cycling devices.</li>
         </ul>
