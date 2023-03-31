@@ -125,7 +125,7 @@ procedureInstallNvme:
       content: |
         <ul>
           <li class="warning">Notice! Do not touch the gold connector pins.</li>
-          <li>Carefully hold the NMVe M.2 SSD by the sides.</li>
+          <li>Carefully hold the NVMe M.2 SSD by the sides.</li>
           <li>Align the notches in the SSD with the ridges in the slot.</li>
           <li>Then, insert at a 30-degree angle.</li>
           <li>Do not force the connection.</li>
