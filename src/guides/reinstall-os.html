@@ -1,21 +1,21 @@
 ---
 layout: guide
-guideName: How to re-install the operating system
+guideName: How to reinstall the operating system
 ---
 
 <div class="container">
   <p>
     <span
-      >Note: It is very unlikely that this is necessary. Before going through
-      this step, make sure to use the built-in device wipe mechanism.</span
+      >Note: It is very unlikely that reinstalling the Home Assistant OS is necessary. Before going through
+      this procedure, make sure to use the built-in device wipe mechanism.</span
     >
   </p>
   <p><span></span></p>
   <p>
     <span
-      >By default the Raspberry Pi Compute Module 4 has a fixed boot order which
+      >By default, the Raspberry Pi Compute Module 4 has a fixed boot order: it
       tries to boot from the internal eMMC before booting from a USB mass
-      storage device. In rare cases it can be that the internal eMMC is deemed
+      storage device. In rare cases, the internal eMMC is deemed
       bootable, but does not boot into a working system. In this case, there are
       two options you can try to reinstall Home Assistant OS.</span
     >
@@ -28,10 +28,10 @@ guideName: How to re-install the operating system
   <p><span>This option works with Home Assistant OS 8.5 and later only.</span></p>
   <ol start="1">
     <li>
-      <span>Remove power from your system</span>
+      <span>Remove power from your system.</span>
     </li>
     <li>
-      <span>Power up the system</span>
+      <span>Power up the system.</span>
     </li>
     <li>
       <span
@@ -43,7 +43,7 @@ guideName: How to re-install the operating system
       <span>Hold the two buttons until only the red LED is lit.</span>
     </li>
     <li>
-      <span>Remove power from your system</span>
+      <span>Remove power from your system.</span>
     </li>
     <li>
       <span
@@ -84,12 +84,9 @@ guideName: How to re-install the operating system
   </ol>
   <ol start="2">
     <li>
-      <span>Open Home Assistant Yellow enclosure to access jumpers on the PCB.</span>
+      <span><a href="/power-supply/#opening-the-case">Open</a> the Home Assistant Yellow enclosure to access jumpers on the PCB.</span>
     </li>
     <li><span>Set JP1 to USB.</span></li>
-    <li>
-      <span>Bridge JP2 (USB-C Rcvry).</span>
-    </li>
     <li>
       <span
         >Plug-in a USB-C cable to Home Assistant Yellow and connect it to your
@@ -97,31 +94,34 @@ guideName: How to re-install the operating system
       >
     </li>
     <li>
+      <span>Press and hold the <b>USB-C Recvry</b> push button. Older Home Assistant Yellow versions: Bridge JP2 (USB-C Rcvry).</span>
+    </li>
+    <li>
       <span
         >Power up the board. Only the red LED should be on at this point (solid, not blinking).</span
       >
-    </li>
+    </li>    
+    <li><span>Release the <b>USB-C Recvry</b> push button. Older Home Assistant Yellow versions: Un-bridge JP2. </span></li>
     <li><span>Run rpiboot on your PC and let it run through. Afterwards, the green LED should be on.</span></li>
     <li>
       <span
-        >Run Raspberry Pi Imager and flash the <b>Home Assistant OS Installer for Yellow</b> onto
+        >Run the Raspberry Pi Imager and flash the <b>Home Assistant OS Installer for Yellow</b> onto
         the eMMC ("RPi-MSD"). Refer to 
-        <a href="https://yellow.home-assistant.io/power-supply/#installing-the-raspberry-pi-imager">
+        <a href="/power-supply/#installing-the-raspberry-pi-imager">
           Step 1 through 5</a> from the <b>Installing Home Assistant Software on Kit</b> procedure for the exact steps.
-        Windows might bring up an message asking to insert a disk, this message can be closed. The
-        Raspberry Pi Imager prompt to remove the SD card can be ignored as well. Press Continue and
+        Windows might bring up a message asking to insert a disk, this message can be closed. Ignore the
+        Raspberry Pi Imager prompt to remove the SD card. Select <b>Continue</b> and
         close the Raspberry Pi Installer.
       </span>
     </li>
     <li>
       <span>Remove power from the board.</span>
     </li>
-    <li><span>Un-bridge JP2.</span></li>
-    <li><span>Set JP1 to UART</span></li>
+    <li><span>Set JP1 to UART.</span></li>
     <li><span>Follow the instructions </span
       ><span
         ><a
-          href="https://yellow.home-assistant.io/power-supply/#connecting-the-ethernet-cable"
+          href="/power-supply/#connecting-the-ethernet-cable"
           >here</a
         ></span
       ><span
