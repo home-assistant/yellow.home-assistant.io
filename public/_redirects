@@ -2,3 +2,4 @@
 /ukca           /resources/Yellow_DoC_UKCA.pdf
 /2*             /
 /support/*	/faq/:splat
+/multiprotocol-channel-missmatch /guides/enable-multiprotocol/#limitations
