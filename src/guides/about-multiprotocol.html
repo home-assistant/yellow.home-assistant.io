@@ -7,41 +7,41 @@ guideName: About multiprotocol support
   <h2>Introduction</h2>
   <p>
     <span
-      >Home Assistant Yellow's integrated Wireless chip supports Zigbee by default.
-      By updating the firmware the Wireless chip can be used in a multiprotocol
+      >Home Assistant Yellow's integrated wireless chip supports Zigbee by default.
+      By updating the firmware, the wireless chip can be used in a multiprotocol
       setup supporting Zigbee and Thread at the same time! There are two
-      limitations: The two networks have to be on the same Channel and share the
+      limitations: The two networks have to be on the same channel and share the
       bandwidth. This page explains the background.</span
     >
   </p>
-  <h2>About Channels</h2>
-  <p><span>Both, Zigbee and Thread are low-rate wireless personal area networks
-    (LR-WPAN, IEEE 802.15.4). The standard specifies 16 channels in the 2.4GHz
-    spectrum (channel number 11-25). The standard supports multiple network on
+  <h2>About channels</h2>
+  <p><span>Both Zigbee and Thread are low-rate wireless personal area networks
+    (LR-WPAN, IEEE 802.15.4). The standard specifies 16 channels in the 2.4&nbsp;GHz
+    spectrum (channel number 11-25). The standard supports multiple networks on
     the same channel. Each network is identified by a PAN-ID (personal area network
     identifier).
   </span></p>
   <p><span>
-    The Wireless chip in Home Assistant Yellow supports all 16 channels. However
-    it can only communicate on a single channel at a time. Due to this limitation
+    The wireless chip in Home Assistant Yellow supports all 16 channels. However,
+    it can only communicate on one single channel at a time. Due to this limitation
     it is crucial that Zigbee and Thread run on the same channel for reliable
     operation!
     
-    Thanks to the PAN-ID the Zigbee and Thread networks are still separated and
-    therefor won't interfere with each other.
+    Thanks to the PAN-ID, the Zigbee and Thread networks are still separated and
+    therefore won't interfere with each other.
   </span></p>
-  <h2>About Bandwidth</h2>
+  <h2>About bandwidth</h2>
   <p><span>
     IEEE 802.15.4 (so both Zigbee and Thread) support a transfer rate of up to
-    250 kbit/s. For typical Zigbee and Thread network this is sufficient.
+    250&nbsp;kbit/s. For typical Zigbee and Thread networks this is sufficient.
     However, in the multiprotocol setup Zigbee and Thread networks need to share
-    the same channel, and therefor share the 250 kbit/s transfer rate. Furthermore
-    if Wi-Fi or other 2.4GHz networks are running in a similar frequency range,
+    the same channel, and therefor share the 250&nbsp;kbit/s transfer rate. Furthermore,
+    if Wi-Fi or other 2.4&nbsp;GHz networks are running in a similar frequency range,
     transfer rate might be further limited.
   </span></p>
   <p><span>
-    For large network it is advisable to add a second Wireless chip. This allows
-    to run Zigbee and Thread each on a dedicated Wireless chip and on separate
+    For large networks it is advisable to add a second wireless chip, for example by connecting a Home Assistant SkyConnect. This allows
+    to run Zigbee and Thread each on a dedicated wireless chip and on separate
     channels.
   </span></p>
 </div>
