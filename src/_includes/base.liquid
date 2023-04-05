@@ -40,8 +40,10 @@ menu:
 {% capture full_title -%}
 {%- if title -%}
 {{ title }} – Home Assistant Yellow
+{%- elsif guideName -%}
+{{ guideName }} – Home Assistant Yellow
 {%- else -%}
-Home Assistant Yellow Guide
+Home Assistant Yellow
 {%- endif -%}
 {%- endcapture %}
 {% comment %}
