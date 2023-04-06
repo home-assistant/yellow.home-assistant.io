@@ -2,5 +2,5 @@
 /ukca           /resources/Yellow_DoC_UKCA.pdf
 /2*             /
 /support/*	/faq/:splat
-/multiprotocol-channel-missmatch /guides/enable-multiprotocol/#limitations
+/multiprotocol-channel-missmatch /guides/about-multiprotocol/#resolve-channel-conflict
 /yellow-v1.2-standard /hardware/yellow-v1.2-standard
