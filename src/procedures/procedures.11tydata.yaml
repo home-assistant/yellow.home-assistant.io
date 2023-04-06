@@ -204,6 +204,13 @@ proceduresInstallingHAOS:
       content: |
         <ul>
           <li>If you are not using PoE, connect the power supply to Home&nbsp;Assistant&nbsp;Yellow&nbsp;Kit.</li>
+          <li class="info">For CM4 Lite Home Assistant OS is automatically installed on the NVMe SSD.
+            For regular CM4s Home Assistant OS is installed onto the eMMC by default.
+          </li>
+          <li class="info"><b>Advanced</b>: Forcing installation onto the NVMe SSD when using CM4 with eMMC:<  br>
+            Press the blue button while the yellow LED
+            is on constantly (during the 5s window, see next step).
+          </li>
         </ul>
     - title: Watching the LEDs
       image: led-patter-boot.webp
@@ -212,7 +219,7 @@ proceduresInstallingHAOS:
           <li>Wait for Home&nbsp;Assistant Yellow to start booting from the USB flash drive.</li>
           <li>During boot, the Yellow LED blinks in a heartbeat pattern.</li>
           <li>Once the installer is ready, the yellow LED is on constantly.</li>
-          <li>Installation will start automatically after 2-3 seconds.</li>
+          <li>Installation will start automatically after 5 seconds.</li>
           <li class="info">If the yellow LED does not start blinking steadily after a few seconds, but stays on constantly: This indicates that there might be a network issue.</li>
         </ul>
     - title: Waiting
