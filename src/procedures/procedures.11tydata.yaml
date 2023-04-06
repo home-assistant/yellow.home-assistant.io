@@ -204,9 +204,13 @@ proceduresInstallingHAOS:
       content: |
         <ul>
           <li>If you are not using PoE, connect the power supply to Home&nbsp;Assistant&nbsp;Yellow&nbsp;Kit.</li>
-          <li class="info">Advanced: Home Assistant OS is installed onto the eMMC if available on your CM4. If you 
-          prefer installing the complete Home Assistant OS onto the NVMe SSD, press the blue button while the yellow LED
-          is on constantly (during the 5s window, see next step).</li>
+          <li class="info">For CM4 Lite Home Assistant OS is automatically installed on the NVMe SSD.
+            For regular CM4s Home Assistant OS is installed onto the eMMC by default.
+          </li>
+          <li class="info"><b>Advanced</b>: Forcing installation onto the NVMe SSD when using CM4 with eMMC:<  br>
+            Press the blue button while the yellow LED
+            is on constantly (during the 5s window, see next step).
+          </li>
         </ul>
     - title: Watching the LEDs
       image: led-patter-boot.webp
