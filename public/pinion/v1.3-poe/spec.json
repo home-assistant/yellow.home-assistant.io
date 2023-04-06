@@ -1486,7 +1486,7 @@
         },
         {
             "ref": "D25",
-            "description": "Radio LED (blue)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) documentation for\ndetailed description of the meaning of their blinking patterns.\n",
+            "description": "Radio LED (blue)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) the documentation for a\ndetailed description of the meaning of their blinking patterns.\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1507,7 +1507,7 @@
         },
         {
             "ref": "D6",
-            "description": "Status LED (yellow)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) documentation for\ndetailed description of the meaning of their blinking patterns.\n",
+            "description": "Status LED (yellow)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) the documentation for a\ndetailed description of the meaning of their blinking patterns.\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1528,7 +1528,7 @@
         },
         {
             "ref": "D5",
-            "description": "Activity LED (green)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) documentation for\ndetailed description of the meaning of their blinking patterns.\n",
+            "description": "Activity LED (green)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) the documentation for a\ndetailed description of the meaning of their blinking patterns.\n",
             "front": true,
             "back": false,
             "highlight": true,
@@ -1549,7 +1549,7 @@
         },
         {
             "ref": "D4",
-            "description": "Power LED (red)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) documentation for\ndetailed description of the meaning of their blinking patterns.\n",
+            "description": "Power LED (red)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) the documentation for a\ndetailed description of the meaning of their blinking patterns.\n",
             "front": true,
             "back": false,
             "highlight": true,
