@@ -1,0 +1,19 @@
+---
+layout: base
+---
+
+<div class="banner">
+  <span class="secondary">Documentation</span>
+  <span>{{pinionName}}</span>
+</div>
+
+<div class="hardware" id="yellow-hardware">
+</div>
+
+<script src="{{ pinionPath }}/pinion.js"></script>
+<link rel="stylesheet" href="{{ pinionPath }}/pinion.css">
+<script>
+    pinion.setup(document.getElementById("yellow-hardware"), {
+        source: "{{ pinionPath }}/"
+    });
+</script>
