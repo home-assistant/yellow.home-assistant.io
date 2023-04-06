@@ -7,40 +7,41 @@ guideName: How to reinstall the operating system
   <p>
     <span
       >Note: It is very unlikely that reinstalling the Home Assistant OS is necessary. Before going through
-      this procedure, make sure to use the built-in device wipe mechanism.</span
+      this procedure, make sure to use the built-in <a href="/faq/#can-i-factory-reset-the-system">device wipe mechanism</a>.</span
     >
   </p>
-  <p><span></span></p>
   <p>
-    <span
-      >By default, the Raspberry Pi Compute Module 4 has a fixed boot order: it
-      tries to boot from the internal eMMC before booting from a USB mass
-      storage device. In rare cases, the internal eMMC is deemed
-      bootable, but does not boot into a working system. In this case, there are
-      two options you can try to reinstall Home Assistant OS.</span
-    >
+    <span>
+      To reinstall Home Assistant OS, the <b>Home Assistant OS Installer for
+      Yellow</b> flashed on a USB flash drive needs to be used. However, the
+      Raspberry Pi Compute Module 4 has a fixed boot order: <b>eMMC</b> -> <b>NVMe SSD</b> -> <b>USB flash drive</b>.
+    </span>
   </p>
-  
-  <p><span></span></p>
+  <p>
+    <span>
+      Option 1 disables booting of Home Assistant OS (from eMMC or NVMe SSD),
+      which makes it possible to start the Installer again from a USB flash drive.
+      This option only works if you currently have Home Assistant OS installed!
+    </span>
+  </p>
   <p>
     <span><h2>Option 1 (recommended): Reinstall Home Assistant OS using Red + Blue button</h2></span>
   </p>
-  <p><span>This option works with Home Assistant OS 8.5 and later only.</span></p>
   <ol start="1">
     <li>
-      <span>Remove power from your system.</span>
+      <span>Make sure no USB device is plugged into the device. Remove power from your system. </span>
     </li>
     <li>
       <span>Power up the system.</span>
     </li>
     <li>
       <span
-        >Within 5s (or from start), press and hold the red and blue button on
+        >Within 3s (or from start), press and hold the red and blue button on
         the backside of the device simultaneously.</span
       >
     </li>
     <li>
-      <span>Hold the two buttons until only the red LED is lit.</span>
+      <span>Hold the two buttons for approximately 10s. The Yellow LED should not start blinking!</span>
     </li>
     <li>
       <span>Remove power from your system.</span>
@@ -48,12 +49,11 @@ guideName: How to reinstall the operating system
     <li>
       <span
         >Follow the instructions to <a href="/power-supply#installing-home-assistant-software-on-kit">
-          install Home Assistant OS</a> using the Home
-          Assistant OS Installer from a USB flash drive.</span
+          install Home Assistant OS</a> using the <b>Home Assistant OS Installer
+          for Yellow</b> from a USB flash drive.</span
       >
     </li>
   </ol>
-  <p><span></span></p>
   <p>
     <span><h2>Option 2: Reinstall Home Assistant OS using rpiboot</h2></span>
   </p>
