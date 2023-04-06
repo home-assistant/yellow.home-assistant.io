@@ -13,6 +13,7 @@ setup:
     url: /guides/install-cm4/
   - title: Finding a Raspberry Pi Compute Module 4
     url: /guides/find-a-cm4/
+multiprotocol:
   - title: About multiprotocol support
     url: /guides/about-multiprotocol/
   - title: Enable multiprotocol support
@@ -38,6 +39,14 @@ troubleshooting:
     </a>
     {% endfor %}
   </div>
+  <h2>Multiprotocol</h2>
+  <div class="layout horizontal items">
+    {% for guide in multiprotocol %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
   <h2>Troubleshooting</h2>
   <div class="layout horizontal items">
     {% for guide in troubleshooting %}
@@ -48,7 +57,7 @@ troubleshooting:
   </div>
   <h1>Resources</h1>
   <div class="layout horizontal items">
-    <a href="/hardware">
+    <a href="/yellow-v1.2-standard">
       <div class="layout vertical center">
         <div style="padding: 45px 45px 16px 45px">
           <img src="/images/icons/hardware.png" width="150" />
