@@ -207,7 +207,7 @@ proceduresInstallingHAOS:
           <li class="info">For CM4 Lite Home Assistant OS is automatically installed on the NVMe SSD.
             For regular CM4s Home Assistant OS is installed onto the eMMC by default.
           </li>
-          <li class="info"><b>Advanced</b>: Forcing installation onto the NVMe SSD when using CM4 with eMMC:<  br>
+          <li class="info"><b>Advanced</b>: Forcing installation onto the NVMe SSD when using CM4 with eMMC:<br>
             Press the blue button while the yellow LED
             is on constantly (during the 5s window, see next step).
           </li>
