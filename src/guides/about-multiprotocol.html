@@ -52,15 +52,24 @@ guideName: About multiprotocol support
       <li><b>Option 1</b>: Reset the Thread network. This will make sure Thread uses the same channel as ZHA.
         <ol>
           <li>To reset the Thread network, select the <b>Reset border router</b> button. <img src="/images/multiprotocol-reset-thread-network.png"/></li>
-          <li>Re-pair your devices.</li>
+          <li>Re-pair your Thread devices.</li>
         </ol>
       </li>
-      <li><b>Option 2</b>: Use two separate chips, one for each network.
+      <li><b>Option 2</b>: Use two separate wireless chips, one for each network. For example by adding a Home Assistant SkyConnect as a second wireless chip.
         <ol>
-          <li>On your Home Assistant Yellow, <a href="/guides/disable-multiprotocol/" target="_blank">disable multiprotocol support</a> and restore the Zigbee network.</li>
-          <li>Plug in a SkyConnect and setup a new Thread network there.</li>
+            <li>On your Home Assistant Yellow, <a href="/guides/disable-multiprotocol/" target="_blank">disable
+                    multiprotocol support</a> and restore the Zigbee network.</li>
+            <li>Plug in a SkyConnect.</li>
+            <li>Go to <a class="my"
+                    href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_openthread_border_router"
+                    target="_blank"><b>Add-ons</b></a> and install the experimental <b>OpenThread Border Router</b>
+                add-on.
+                <li>Select the <b>Configuration</b> tab and pick the serial port with SkyConnect.</li>
+                <li>Select <b>Save</b>.</li>
+                <li>Start the add-on. Your Home Assistant SkyConnect is now set up to work exclusively with Thread.
+                     You can now start adding your Thread devices.</li>
         </ol>
-      </li>
+    </li>
     </ul>
   </p>  
 </div>
