@@ -414,12 +414,10 @@ procedureDisableMultiProtocol:
         <ol>
           <li>You can update the firmware of the Silicon Labs radio firmware to work with Zigbee only. Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_flasher" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and install the <b>Silicon Labs Flasher</b> add-on.</li>
           <li>Make sure the <b>Start on boot</b> and the <b>Auto update</b> options are disabled.</li>
-          <li>To start flashing the firmware, select <b>Start</b>.</li>
-          <li>In the <b>Go to configuration</b> dialog, select <b>Edit config</b>.</li>
-          <li>In the <b>Devices</b> dropdown menu, select <b>ttyAMA1</b> and select <b>Save</b>.</li>
-          <li>To observe the flashing process, open the <b>Logs</b> tab.</li>
-          <li>Start the Silicon Labs Flasher.</li>
-          <li>Wait for the flashing process to complete. This may a while. To view the progress, in the <b>Logs</b> tab, select <b>Refresh</b>.<ul>
+          <li>In the <b>Configuration</b> tab, select the serial port <b>ttyAMA1</b> and save the changes.</li>
+          <li>To observe the flashing process, open the <b>Logs</b> tab in a separate window.</li>
+          <li>On the <b>Info</b> tab, start the Silicon Labs Flasher.</li>
+          <li>Wait for the flashing process to complete. This may take a while. To view the progress, in the <b>Logs</b> tab, select <b>Refresh</b>.<ul>
           <li>When you reload the add-on UI (Ctrl+Shift+R), the dot on the top right should have changed from green to red. If it is still green, the process is not finished.</li></ul>
           </li>
           <li>Once you see the red dot, the flashing process is complete. Continue with the next step.</li>
