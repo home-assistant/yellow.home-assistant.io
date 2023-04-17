@@ -173,6 +173,15 @@ faqs:
       <p>
         The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
       </p>
+  - title: >
+        Multiprotocol: I get a notification stating that the OTBR and ZHA share the same radio, but use different channels. What can I do?
+    content: >
+      <p>
+        Note: The multiprotocol feature is still experimental.
+      </p>
+      <p>OTBR and ZHA on separate channels can cause an unreliable network connection. To resolve this issue, you can try resetting the Thread network or use two separate wireless chips, one for ZHA and one for Thread. See <a href="/guides/about-multiprotocol/#resolve-channel-conflict" target="_blank">About
+        multiprotocol support - resolve channel conflict</a>.</p>
+      <p>Note: The OpenThread Border Router add-on used to setup a Thread-only network on a wireless chip is still experimental.</p>
 ---
   <div class="container">
     <div class="accordion">
