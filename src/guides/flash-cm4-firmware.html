@@ -18,9 +18,13 @@ guideName: "Problem: Green LED flashes 4 times short, 5 times long"
   <ol start="1">
     <li>
       <span>Open the procedure <a
-        href="https://yellow.home-assistant.io/guides/reinstall-os/"
+        href="/guides/reinstall-os/"
         >How to re-install the operating system.</a
-      ><li>Follow steps 1&ndash;6 of section <b>Reinstall Home Assistant OS using rpiboot</b>.</li></span>
+      ><li>Follow steps 1&ndash;7 of the section <a
+        href="/guides/reinstall-os/#install-os-rpiboot"
+        >Reinstall Home Assistant OS using rpiboot</a
+      >.</li>
+    </span>
     </li>
     <li>
       <span>On Windows, open the Command Prompt window (cmd).</span>
@@ -32,24 +36,24 @@ guideName: "Problem: Green LED flashes 4 times short, 5 times long"
           cd "Program Files (x86)"<br>
           cd "Raspberry Pi"<br>
           rpiboot.exe -d recovery<br>        
-        </code><br>
+        </code>
         <p><b>Result</b>: The green LED lights up solid, then starts flashing.</p>
       </span>
     </li>
     <li>
       <span
         >Wait for about 1 minute. <ol>
-          <li>Then, from Yellow, unplug the power cable.</li>
+          <li>Then, from Home Assistant Yellow, unplug the power cable.</li>
           <li>Ensure JP1 is set to UART.</li>
-          <li>Unbridge JP2.</li>
         </ol>
         </span
       >
     </li>
     <li>
-      <span>On Yellow, connect the power cable.<br>
+      <span>On Home Assistant Yellow, connect the power cable.<br>
       <p><b>Result</b>: The error blink pattern should no longer occur. <br>
-        The LED pattern depends on what is already installed on Yellow. Typically, the system should boot now. If Home Assistant OS is installed, the yellow LED should show a heartbeat pattern after ~5 seconds.</p><br>
+        The LED pattern depends on what is already installed on Yellow. Typically, the system should boot now. If Home Assistant OS is installed, the yellow LED should show a heartbeat pattern after ~5 seconds.</p><br></span
+        >
     </li>
     
     
