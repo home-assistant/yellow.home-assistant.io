@@ -182,6 +182,19 @@ faqs:
       <p>OTBR and ZHA on separate channels can cause an unreliable network connection. To resolve this issue, you can try resetting the Thread network or use two separate wireless chips, one for ZHA and one for Thread. See <a href="/guides/about-multiprotocol/#resolve-channel-conflict" target="_blank">About
         multiprotocol support - resolve channel conflict</a>.</p>
       <p>Note: The OpenThread Border Router add-on used to setup a Thread-only network on a wireless chip is still experimental.</p>
+  - title: >
+        How do I find a Raspberry Pi Compute Module 4?
+    content: >
+      <p>A chip shortage still impacts the availability of the CM4. Our recommendation is to use <a href="https://rpilocator.com/" target="_blank">rpilocator</a>. This website tracks the stock of official Raspberry Pi distributors. Follow them on Twitter and enable push notifications. You will be notified as soon as the bot tweets that products are in stock.
+      </p>
+      <p>
+        We recommend purchasing a Raspberry Pi Compute Module 4 with the following characteristics: 
+        <ul>
+          <li>Min. 2&nbsp;GB of RAM.</li>
+          <li>Min. 16&nbsp;GB of eMMC flash space.</li>
+          <li>If you opt for the CM4 Lite: as it does not have an eMMC module, you must use an NVMe SSD hard drive. Some users reported that the <a href="/faq/#which-ssds-are-not-supported">following SSDs</a> are not working on the Home Assistant Yellow.</li>
+        </ul>
+      </p>
 ---
   <div class="container">
     <div class="accordion">
