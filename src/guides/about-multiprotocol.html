@@ -18,16 +18,14 @@ guideName: About multiprotocol support
   </p>
   <h2>About channels</h2>
   <p><span>Both Zigbee and Thread are low-rate wireless personal area networks
-    (LR-WPAN, IEEE 802.15.4), shown in orange in the illustration below. The standard specifies 16 channels in the 2.4&nbsp;GHz
+    (LR-WPAN, IEEE 802.15.4). The standard specifies 16 channels in the 2.4&nbsp;GHz
     spectrum (channel number 11-25). The standard supports multiple networks on
     the same channel. Each network is identified by a PAN-ID (personal area network
     identifier).
   </span></p>
   <p><span>
     The wireless chip in Home Assistant Yellow supports all 16 channels. However,
-    it can only communicate on one single channel at a time. Due to this limitation
-    it is crucial that Zigbee and Thread run on the same channel for reliable
-    operation!
+    it can only communicate on one single channel at a time. Due to this limitation, it is crucial that Zigbee and Thread run on the same channel for reliable operation!
     
     Thanks to the PAN-ID, the Zigbee and Thread networks are still separated and
     therefore won't interfere with each other. <br>
@@ -38,7 +36,7 @@ guideName: About multiprotocol support
       <li>Blue sections mark the channels used by Bluetooth Low Energy.</li>
       <li>Orange sections mark the channels used both by Zigbee and Thread.</li>
     </ul>
-    As you can see, channels 15, 20, and 25 are used only by Zigbee and Thread. They do not have to be shared with Wi-Fi.
+    As you can see, channels 15, 20, and 25 are used by Zigbee and Thread. These channels are less likely to be affected by Wi-Fi interference.
     <p class="img">
       <picture>
         <img src="/images/802-15-4_802-11_channels.png">
@@ -52,7 +50,7 @@ guideName: About multiprotocol support
     IEEE 802.15.4 (so both Zigbee and Thread) support a transfer rate of up to
     250&nbsp;kbit/s. For typical Zigbee and Thread networks this is sufficient.
     However, in the multiprotocol setup Zigbee and Thread networks need to share
-    the same channel, and therefor share the 250&nbsp;kbit/s transfer rate. Furthermore,
+    the same channel, and therefore share the 250&nbsp;kbit/s transfer rate. Furthermore,
     if Wi-Fi or other 2.4&nbsp;GHz networks are running in a similar frequency range,
     transfer rate might be further limited.
   </span></p>
