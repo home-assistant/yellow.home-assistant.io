@@ -25,19 +25,32 @@ guideName: About multiprotocol support
   </span></p>
   <p><span>
     The wireless chip in Home Assistant Yellow supports all 16 channels. However,
-    it can only communicate on one single channel at a time. Due to this limitation
-    it is crucial that Zigbee and Thread run on the same channel for reliable
-    operation!
+    it can only communicate on one single channel at a time. Due to this limitation, it is crucial that Zigbee and Thread run on the same channel for reliable operation!
     
     Thanks to the PAN-ID, the Zigbee and Thread networks are still separated and
-    therefore won't interfere with each other.
+    therefore won't interfere with each other. <br>
+    <p>
+    The illustration below shows on which frequency range each channel operates. It also shows on which channels a specific protocol operates. 
+    <ul>
+      <li>Grey sections mark the channels used by Wi-Fi.</li>
+      <li>Blue sections mark the channels used by Bluetooth Low Energy.</li>
+      <li>Orange sections mark the channels used both by Zigbee and Thread.</li>
+    </ul>
+    Zigbee/Thread channels 15, 20, and 25 are less likely to be affected by Wi-Fi interference since they are in between the most commonly Wi-Fi channels 1, 6 and 11.
+    <p class="img">
+      <picture>
+        <img src="/images/802-15-4_802-11_channels.png">
+      </picture>
+      <br>
+      <small>Illustration by Radhakrishnan & Zand, Pouria & Nabi, Majid. (2016). <cite>Analysis of coexistence between IEEE 802.15.4, BLE and IEEE 802.11 in the 2.4 GHz ISM band</cite>. <a href="https://ieeexplore.ieee.org/document/7793984">6025-6032. 10.1109/IECON.2016.7793984</a>.</small>
+    </p></p>
   </span></p>
   <h2>About bandwidth</h2>
   <p><span>
     IEEE 802.15.4 (so both Zigbee and Thread) support a transfer rate of up to
     250&nbsp;kbit/s. For typical Zigbee and Thread networks this is sufficient.
     However, in the multiprotocol setup Zigbee and Thread networks need to share
-    the same channel, and therefor share the 250&nbsp;kbit/s transfer rate. Furthermore,
+    the same channel, and therefore share the 250&nbsp;kbit/s transfer rate. Furthermore,
     if Wi-Fi or other 2.4&nbsp;GHz networks are running in a similar frequency range,
     transfer rate might be further limited.
   </span></p>
@@ -49,13 +62,21 @@ guideName: About multiprotocol support
   <h2 id="resolve-channel-conflict">Resolve channel conflict</h2>
   <p>You may get a notification stating that the OTBR and ZHA share the same  radio, but use different channels. This mode of operation may cause an unreliable network connection. To resolve this issue, you can try one of the following methods: 
     <ul>
-      <li><b>Option 1</b>: Reset the Thread network. This will make sure Thread uses the same channel as ZHA.
+      <li><b>Option 1</b>: Make sure Zigbee and Thread are on the same channel.
+        <ol>
+          <li>On the Thread integration, select <b>Configure</b>, then select the info button.</li>
+          <li>Take note of the number listed under <b>Channel</b>  <img src="/images/thread-show-channel.png"/></li>
+          <li>On the Zigbee integration, select <b>Configure</b>.</li>
+          <li>If the <b>Channel</b> number is not same as for Thread, change the channel. <img src="/images/zigbee-edit-channel.png"/></li>
+        </ol>
+      </li>
+      <li><b>Option 2</b>: Reset the Thread network. This will make sure Thread uses the same channel as ZHA.
         <ol>
           <li>To reset the Thread network, select the <b>Reset border router</b> button. <img src="/images/multiprotocol-reset-thread-network.png"/></li>
           <li>Re-pair your Thread devices.</li>
         </ol>
       </li>
-      <li><b>Option 2</b>: Use two separate wireless chips, one for each network. For example by adding a Home Assistant SkyConnect as a second wireless chip.
+      <li><b>Option 3</b>: Use two separate wireless chips, one for each network. For example by adding a Home Assistant SkyConnect as a second wireless chip.
         <ol>
             <li>On your Home Assistant Yellow, <a href="/guides/disable-multiprotocol/" target="_blank">disable
                     multiprotocol support</a> and restore the Zigbee network.</li>
