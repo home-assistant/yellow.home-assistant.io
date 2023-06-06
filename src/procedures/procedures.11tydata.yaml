@@ -423,11 +423,10 @@ procedureDisableMultiProtocol:
       image: yellow-multiprotocol-disable-new-02.png
       content: |
         <ul>
-        <li class="info">Yellow is now setup in the non-multiprotocol ZHA integration, although the title still includes <b>Multi-PAN</b>.</li>
-          
+        <li class="info">Yellow is now setup in the non-multiprotocol ZHA integration, although the title still includes <b>Multi-PAN</b>.</li>          
         </ul>
         <ol>
-        <li>On the <b>Zigbee Home Automation</b> integration, select the cogwheel. Click the three-dot dropdown menu on the <b>Zigbee Home Automation (ZHA)</b> integration and select <b>Rename</b>.</li>
+        <li>On the <b>Zigbee Home Automation</b> integration, select the cogwheel.</li>
         <li>Select the three-dot dropdown menu and select <b>Rename</b>.</li>
         <li>Remove <b>Multi-PAN</b> from the name of the integration.</li>
         </ol>
