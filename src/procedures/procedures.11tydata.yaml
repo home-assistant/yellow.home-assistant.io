@@ -405,12 +405,6 @@ procedureDisableMultiProtocol:
         <ul>
           <li>Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_multiprotocol" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and in the <b>Silicon Labs Multiprotocol</b> add-on, select <b>Uninstall</b>.
         </ul>
-    - title: Delete the OTBR integration
-      image: yellow-multiprotocol-disable-01.png
-      content: |
-        <ul>
-          <li>Delete the <b>Open Thread Border Router</b> integration.</li>
-        </ul>
     - title: Flash the Silicon Labs radio firmware
       image: silabs-flasher-add-on-02.png
       content: |
@@ -426,21 +420,22 @@ procedureDisableMultiProtocol:
           <li>Once you see the red dot, the flashing process is complete. Continue with the next step.</li>
         </ol>
     - title: Rename the <b>Zigbee Home Automation (ZHA)</b> integration
-      image: yellow-multiprotocol-disable-02.png
+      image: yellow-multiprotocol-disable-new-02.png
       content: |
         <ul>
         <li class="info">Yellow is now setup in the non-multiprotocol ZHA integration, although the title still includes <b>Multi-PAN</b>.</li>
           
         </ul>
         <ol>
-        <li>Click the three-dot dropdown menu on the <b>Zigbee Home Automation (ZHA)</b> integration and select <b>Rename</b>.</li>
+        <li>On the <b>Zigbee Home Automation</b> integration, select the cogwheel. Click the three-dot dropdown menu on the <b>Zigbee Home Automation (ZHA)</b> integration and select <b>Rename</b>.</li>
+        <li>Select the three-dot dropdown menu and select <b>Rename</b>.</li>
         <li>Remove <b>Multi-PAN</b> from the name of the integration.</li>
         </ol>
     - title: Start the radio migration process
       image: z2m-migrate-zha-02.png
       content: |
         <ul>
-          <li>On the <b>Zigbee Home Automation (ZHA)</b> integration, select <b>Configure</b>.</li>
+          <li>Select <b>Configure</b>.</li>
           <li>Under <b>Network Settings</b>, select <b>Migrate radio</b>.</li>
         </ul>
     - title: Reconfigure ZHA
