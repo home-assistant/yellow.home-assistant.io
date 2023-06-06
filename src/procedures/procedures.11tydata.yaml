@@ -361,6 +361,7 @@ procedureEnableMultiProtocol:
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
           <li>Under <b>Home Assistant Yellow</b>, select <b>Configure</b>.</li>
+          <li>Select the <b>Configure IEEE 802.15.4 radio multiprotocol support</b> option.</li>
           <li>Select the <b>Enable multiprotocol support</b> checkbox and select <b>Submit</b>.</li>
         </ol>
     - title: Wait
@@ -376,18 +377,20 @@ procedureEnableMultiProtocol:
           <li>Once the installation is complete, select <b>Finish</b>.</li>
         </ul>
     - title: Locate the Yellow Multi-PAN integration
-      image: yellow-multiprotocol-05.png
+      image: yellow-multiprotocol-new-05.png
       content: |
         <ul>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li><ul>
-          <li>You should now see a <b>Yellow Multi-PAN</b> integration as well as the <b>Open Thread Border Router</b> integration.</li></ul>
+          <li>You should now see the <b>Open Thread Border Router</b> integration.</li>
+          <li>In the ZHA integration, select the cogwheel. You should now see the <b>Yellow Multi-PAN</b> label.</li>
+          </ul>
         </ul>
     - title: Locate the Home Assistant border router
       image: skyconnect-multiprotocol-11.png
       content: |
         <ul>
           <li class="info">Thread support is still under development. For information on Thread, refer to the <a href="https://www.home-assistant.io/integrations/thread" target="_blank">documentation</a> of the <b>Thread</b> integration.</li>
-          <li>In the <b>Thread</b> integration, select <b>Configure</b>.</li><ul>
+          <li>In the <b>Thread</b> integration, select the cogwheel. Then select <b>Configure</b>.</li><ul>
           <li>You should now see your Home Assistant border router.</li></ul>
         </ul>
 procedureDisableMultiProtocol:
