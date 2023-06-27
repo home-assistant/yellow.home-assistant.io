@@ -1717,7 +1717,7 @@
         },
         {
             "ref": "J1",
-            "description": "Power DC 12V/2A (5.1/2.1mm barrel connector)",
+            "description": "Power DC 12V/2A (5.5/2.1mm barrel connector)",
             "front": true,
             "back": false,
             "highlight": true,
