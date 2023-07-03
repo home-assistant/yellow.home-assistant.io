@@ -1675,7 +1675,7 @@
         },
         {
             "ref": "J3",
-            "description": "USB-C connector (USB 2.0 device only)\n\nDepending on JP1 configuration this connector allows to:\n\n* UART: Access the serial console via USB to UART connector. See the following guides for how to use the serial console:\n  * [Using the serial console for debugging (Windows)](/guides/use-serial-console-windows/)\n  * [Using the serial console for debugging (Linux)](/guides/use-serial-console-linux/)\n* USB: Access the CM4 as an USB device (e.g. for recovery)\n  * [How to re-install the operating system](/guides/reinstall-os/)\n",
+            "description": "USB-C connector (USB 2.0 device only)\n\nDepending on JP1 configuration this connector allows to:\n\n* UART: Access the serial console via USB to UART connector. See the following guides for how to use the serial console:\n  * [Using the serial console for debugging (Windows)](/guides/use-serial-console-windows/)\n  * [Using the serial console for debugging (Linux)](/guides/use-serial-console-linux-macos/)\n* USB: Access the CM4 as an USB device (e.g. for recovery)\n  * [How to re-install the operating system](/guides/reinstall-os/)\n",
             "front": true,
             "back": false,
             "highlight": true,
