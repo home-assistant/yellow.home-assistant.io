@@ -1,0 +1,39 @@
+---
+layout: guide
+guideName: "Symptom: Installation on Yellow kit: yellow LED keeps blinking"
+---
+
+<div class="container">
+  
+  <p><span><h1>Symptom</h1></span></p>
+  <p>
+    <span> During installation on a Yellow Kit, the yellow LED keeps blinking in a heartbeat pattern.</span
+    >
+  </p>
+  <p><span></span></p>  
+  <p><span><h1>Cause</h1></span></p>
+  <p>
+    <span>If this LED pattern persists during the installation, and the LED never changes to solid on, this indicates an issue with the installer. It may not be able to connect to the internet.</span>
+  </p>
+  <p><span><h1>Resolution</h1></span></p>
+  <p>
+    <span>You can install Home Assistant OS directly onto the internal eMMC using the `rpiboot` boot method. Follow this steps to do so:</span
+    >
+  </p>
+  <p>
+    <span>
+      <ol>
+        <li>Download the Yellow operating system.
+          <ul><li>Go to the <a href="https://github.com/home-assistant/operating-system/releases">operating system page</a> on github and download the latest version of the `haos_yellow-xx.x.img.xz` file.
+          </li></ul></li>
+          <li>Reinstall the operating system on Yellow. <ul><li>Open the procedure on <a href="/guides/reinstall-os/#install-os-rpiboot">how to reinstall the operating system</a>. </li><li>Follow the procedure <i>Option 2: Reinstall Home Assistant OS using rpiboot</i>  up to step 8.</li>
+          <li>In step 9, use the downloaded image instead of the image provided by the Raspberry Pi Imager.</li>
+          <li>Follow the rest of the steps to finish reinstalling the Yellow operating system.</li>
+            </ul></li>
+        </li>
+        <li>Your system should now start up.</li>
+    </ol>
+      </span
+    >
+  </p>
+</div>
