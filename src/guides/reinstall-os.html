@@ -36,12 +36,12 @@ guideName: How to reinstall the operating system
     </li>
     <li>
       <span
-        >Within 3s (or from start), press and hold the red and blue button on
+        >Within 3 s (or from start), press and hold the red and blue button on
         the backside of the device simultaneously.</span
       >
     </li>
     <li>
-      <span>Hold the two buttons for approximately 10s. The Yellow LED should not start blinking!</span>
+      <span>Hold the two buttons for approximately 10 s. The Yellow LED should not start blinking!</span>
     </li>
     <li>
       <span>Remove power from your system.</span>
@@ -102,16 +102,22 @@ guideName: How to reinstall the operating system
       >
     </li>    
     <li><span>Release the <b>USB-C Recvry</b> push button. Older Home Assistant Yellow versions: Un-bridge JP2. </span></li>
-    <li><span>Run rpiboot on your PC and let it run through. Afterwards, the green LED should be on.</span></li>
+    <li><span>Run rpiboot on your PC and let it run through.<ul>
+      <li>If you are on a Windows, it might ask you if you want to reformat the disk. Select <b>Cancel</b> each time.</li>
+      <li><span>Afterwards, the green LED should be on.</span></li></ul>
+    </span></li>
     <li>
       <span
-        >Run the Raspberry Pi Imager and flash the <b>Home Assistant OS Installer for Yellow</b> onto
-        the eMMC ("RPi-MSD"). Refer to 
+        >To flash the <b>Home Assistant OS Installer for Yellow</b> onto
+        the eMMC ("RPi-MSD"), run the Raspberry Pi Imager. Refer to 
         <a href="/power-supply/#installing-the-raspberry-pi-imager">
-          Step 1 through 5</a> from the <b>Installing Home Assistant Software on Kit</b> procedure for the exact steps.
-        Windows might bring up a message asking to insert a disk, this message can be closed. Ignore the
-        Raspberry Pi Imager prompt to remove the SD card. Select <b>Continue</b> and
-        close the Raspberry Pi Installer.
+          Step 1 through 5</a> from the <b>Installing Home Assistant Software on Kit</b> procedure for the exact steps.<ul>
+            <li>Windows might bring up a message asking to insert a disk. Close this message. </li>
+            <li>Ignore the
+              Raspberry Pi Imager prompt to remove the SD card.</li>
+              <li>Select <b>Continue</b> and
+                close the Raspberry Pi Installer.</li>
+          </ul>
       </span>
     </li>
     <li>

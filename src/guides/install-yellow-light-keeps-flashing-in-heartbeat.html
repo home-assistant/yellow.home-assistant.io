@@ -24,16 +24,42 @@ guideName: "Symptom: Installation on Yellow kit: yellow LED keeps blinking"
     <span>
       <ol>
         <li>Download the Yellow operating system.
-          <ul><li>Go to the <a href="https://github.com/home-assistant/operating-system/releases">operating system page</a> on github and download the latest version of the `haos_yellow-xx.x.img.xz` file.
-          </li></ul></li>
-          <li>Reinstall the operating system on Yellow. <ul><li>Open the procedure on <a href="/guides/reinstall-os/#install-os-rpiboot">how to reinstall the operating system</a>. </li><li>Follow the procedure <i>Option 2: Reinstall Home Assistant OS using rpiboot</i>  up to step 8.</li>
-          <li>In step 9, use the downloaded image instead of the image provided by the Raspberry Pi Imager.</li>
-          <li>Follow the rest of the steps to finish reinstalling the Yellow operating system.</li>
+          <ul><li>Go to the <a href="https://github.com/home-assistant/operating-system/releases">operating system page</a> on github and download the latest stable version of the `haos_yellow-xx.x.img.xz` file.
+          </li></ul>
+        </li>        
+        <li>
+          <span>Install rpiboot onto your computer.</span>
+          <ul>
+            <li>
+              <span
+                >Using
+                <a
+                  href="https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe"
+                  >Windows Installer</a
+                ></span
+              >
+            </li>
+            <li>
+              <span
+                >From 
+                <a
+                  href="https://www.raspberrypi.com/documentation/computers/compute-module.html#building-rpiboot-on-your-host-system-cygwinlinux"
+                  >source code</a
+                ></span
+              >
+            </li>
+          </ul>
+        </li>
+        <li>Reinstall the operating system on Yellow. 
+          <ul>
+            <li>Open the procedure on <a href="/guides/reinstall-os/#install-os-rpiboot">how to reinstall the operating system</a>. </li>
+            <li>Follow the procedure <i>Option 2: Reinstall Home Assistant OS using rpiboot</i>  up to step 8.</li>
+            <li>In step 9, use the downloaded image instead of the image provided by the Raspberry Pi Imager.</li>
+            <li>Follow the rest of the steps to finish reinstalling the Yellow operating system.</li>
             </ul></li>
         </li>
         <li>Your system should now start up.</li>
     </ol>
-      </span
-    >
+      </span>
   </p>
 </div>

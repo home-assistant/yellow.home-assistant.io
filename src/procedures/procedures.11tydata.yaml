@@ -221,6 +221,7 @@ proceduresInstallingHAOS:
           <li>Once the installer is ready, the yellow LED is on constantly.</li>
           <li>Installation will start automatically after 5 seconds.</li>
           <li class="info">If the yellow LED does not start blinking steadily after a few seconds, but stays on constantly: This indicates that there might be a network issue.</li>
+          <li class="info">If the LED keeps blinking in a heartbeat pattern for an extended period of time, this could indicate that the installer cannot connect to the internet. Follow <a href="/guides/install-yellow-light-keeps-flashing-in-heartbeat/" target="_blank">this procedure</a> to troubleshoot.</li>
         </ul>
     - title: Waiting
       image: led-patter-install.webp
