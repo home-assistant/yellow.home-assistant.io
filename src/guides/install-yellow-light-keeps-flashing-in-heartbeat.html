@@ -54,11 +54,23 @@ guideName: "Symptom: Installation on Yellow kit: yellow LED keeps blinking"
           <ul>
             <li>Open the procedure on <a href="/guides/reinstall-os/#install-os-rpiboot">how to reinstall the operating system</a>. </li>
             <li>Follow the procedure <i>Option 2: Reinstall Home Assistant OS using rpiboot</i>  up to step 8.</li>
-            <li>In step 9, use the downloaded image instead of the image provided by the Raspberry Pi Imager.</li>
-            <li>Follow the rest of the steps to finish reinstalling the Yellow operating system.</li>
+            <li>To install the operating system, run <a href="/power-supply/#installing-the-raspberry-pi-imager">
+              Step 1 through 5</a> from the <b>Installing Home Assistant Software on Kit</b> procedure.<ul>
+                <li>In step 3, use the image you just downloaded, instead of the image provided by the Raspberry Pi imager.</li>
+                <li>Windows might bring up a message asking to insert a disk. Close this message. </li>
+                <li>Ignore the
+                  Raspberry Pi Imager prompt to remove the SD card.</li>
+                  <li>Select <b>Continue</b> and
+                    close the Raspberry Pi Installer.</li>
+              </ul></li>
             </ul></li>
+            <li>Remove power from the board.</li>
+            <li>Set JP1 to UART.</li>
+            <li>Power up your board.</li>
         </li>
         <li>Your system should now start up.</li>
+        <li><a href="/poe/#getting-started-with-home-assistant">
+          Get started with Home Assistant</a></li>
     </ol>
       </span>
   </p>
