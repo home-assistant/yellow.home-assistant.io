@@ -1,0 +1,64 @@
+---
+layout: guide
+guideName: About firmware options
+---
+
+<div class="container">
+
+    <p>This section has two goals: 
+        <ol>
+            <li>List the currently available firmware options for Home Assistant Yellow and SkyConnect.</li>
+            <li>List the different add-ons and integrations related to these options and show their relationships.</li>
+        </ol></p>
+    <h1>Currently available firmware</h1>
+    
+    <p>
+        <span>
+            There are currently 3 different firmware options available for Home Assistant Yellow:
+            <ol>
+                <li><b>Zigbee firmware</b>
+                    <ul>
+                        <li>This is the firmware that runs a Zigbee network. It is preinstalled on SkyConnect and Yellow.</li>
+                        <li>Bundled in the <b>Silicon Labs Flasher</b> add-on. In case you have installed one of the other two options at some point, this add-on allows you to re-install the Zigbee firmware. Note that the add-on is only used to flash the firmware. It is never used during operation: <abbr title="Zigbee Home Automation">ZHA</abbr> communicates with the Zigbee firmware directly.</li>
+                        <li>Other terms you may have seen to designate this firmware: EmberZNet firmware, <abbr title="EmberZnet serial protocol">EZSP</abbr> firmware, Zigbee EZSP.</li>
+                    </ul>
+                </li>
+                <li><b>Multiprotocol firmware</b>
+                    <ul>
+                        <li>This is the firmware that enables Yellow and SkyConnect to run both a Thread and a Zigbee network. Both networks run on the same <abbr title="radio frequency">RF</abbr> channel.</li>
+                        <li>Bundled and automatically installed with the <b>Silicon Labs Multiprotocol</b> add-on.  This add-on comes with the Thread border router component, as well as with the Zigbee stack. The <abbr title="Zigbee Home Automation">ZHA</abbr> integration communicates with the Zigbee stack running inside the add-on.</li>
+                        <li>This firmware is currently experimental. For more information, refer to the documentation <a href="/about-multiprotocol/" target="_blank">About
+                            multiprotocol support</a></li>
+                        <li>Other terms you may have seen to designate this firmware: multi-<abbr title="personal area network">PAN</abbr>, RCP multi-<abbr title="personal area network">PAN</abbr></li>
+                    </ul>
+                </li>
+                <li><b>Thread firmware</b>
+                    <ul>
+                        <li>This firmware allows to use Yellow or SkyConnect as a dedicated Thread border router when used with the <b>Open Thread Border Router addon</b>.</li>
+                        <li>Bundled in the <b>Open Thread Border Router</b> add-on.</li>
+                        <li>Other terms you may have seen to designate this firmware: OpenThread RCP, RCP OT</li>
+                    </ul>
+                </li>
+            </ol>
+            <p class="img">
+                <picture>
+                  <img src="/images/zigbee-thread-firmware-add-ons-integrations_02.png">
+                </picture>
+                <br>
+                <small>Overview of Zigbee and Thread firmware options, add-ons, and integrations in Home Assistant.</small>
+              </p></p>
+
+            <h1>Why are there multiple firmware options?</h1>
+            <p>You might wonder why there are different firmware options. After all, you could just run Zigbee and Thread on one device and be done with it. Zigbee and Thread devices run on the same <abbr title="radio frequency">RF</abbr> channel. If you have a large network, this can lead to <abbr title="radio frequency">RF</abbr> channel conflicts. For more information, refer to the documenetation <a href="/about-multiprotocol/" target="_blank">about
+                multiprotocol support</a>. For large networks, it can help to run the Zigbee and the Thread network on separate devices, for example on a SkyConnect and a Yellow.</p>
+            
+                <h1>Related topics</h1>
+                <p><ul>
+                    <li><a href="/guides/about-multiprotocol/" target="_blank">About
+                        multiprotocol support</a>
+                    </li>
+                    <li><a href="https://www.home-assistant.io/integrations/zha/" target="_blank">Zigbee Home Automation integration documentation</a>
+                    <li><a href="https://www.home-assistant.io/integrations/thread/" target="_blank">Thread integration documentation</a>
+                    </li>
+                </ul></p>
+</div>
