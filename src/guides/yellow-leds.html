@@ -61,6 +61,7 @@ guideName: Home Assistant Yellow LEDs
 
 
   <h2>Home Assistant OS Installer for Yellow: LED patterns during installation</h2>
+  <p>These LED pattern apply only while you are running the installer. They do not apply during operation.</p>
   <table>
     <colgroup>
       <col style="width: 40%">
@@ -77,19 +78,19 @@ guideName: Home Assistant Yellow LEDs
         <td>System is in EEPROM firmware or boot loader mode.</td>
       </tr>
       <tr>
-        <td>Heartbeat (typically ~30s)</td>
+        <td>Steady blinking (typically ~30 s)</td>
         <td>Installer is booting.</td>
       </tr>
       <tr>
-        <td>Solid on (typically 5s)</td>
+        <td>Solid on (typically 5 s)</td>
         <td>Installer successfully booted and was able to connect to the Internet.</td>
       </tr>
       <tr>
-        <td>Solid on (much longer than 5s)</td>
-        <td>After the heartbeat sequence, the yellow LED should be solid on for about 3s and then switch to steady blinking. A yellow LED that does not switch to steady blinking but stays solid on indicates a network issue.</td>
+        <td>Solid on (much longer than 5 s)</td>
+        <td>After the steady blinking sequence, the yellow LED should be solid on for about 5 s and then switch to fast blinking. A yellow LED that does not switch to fast blinking but stays solid on indicates a network issue.</td>
       </tr>
       <tr>
-        <td>Steady blinking (typically ~3-5 min, depending on Internet connection speed).</td>
+        <td>Fast blinking (typically ~3-5 min, depending on Internet connection speed).</td>
         <td>Downloading Home Assistant OS and installing onto the eMMC or NVMe.</td>
       </tr>
       <tr>
