@@ -21,6 +21,10 @@ html {
   .items a img {
     filter: invert(1);
   }
+
+  .image-container-filtered img {
+    filter: invert(1);
+  }
 }
 
 body {

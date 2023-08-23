@@ -22,7 +22,11 @@
       {% if item.image or item.content %}
       <div class="step-image-instruction">
         {% if item.image %}
-        <div class="image-container"><img src="/images/{{item.image}}" /></div>
+          {% if item.image-apply-filter %}
+            <div class="image-container image-container-filtered"><img src="/images/{{item.image}}" /></div>
+          {% else %}
+            <div class="image-container"><img src="/images/{{item.image}}" /></div>
+          {% endif %}
         {% endif %} {% if item.content %}
         <div>{{item.content}}</div>
         {% endif %}
