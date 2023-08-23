@@ -213,21 +213,20 @@ proceduresInstallingHAOS:
           </li>
         </ul>
     - title: Watching the LEDs
-      image: led-patter-boot.webp
+      image: led-pattern-blink-steady.webp
       content: |
         <ul>
           <li>Wait for Home&nbsp;Assistant Yellow to start booting from the USB flash drive.</li>
           <li>During boot, the Yellow LED is blinking steadily.</li>
           <li>Once the installer is ready, the yellow LED will be constantly on for 5 seconds.</li>
-          <li>During installation the LED will blink fast.</li>
           <li class="info">If the LED is stuck in steady blinking or constantly on for an extended period of time, this could indicate that the installer cannot connect to the internet. Follow <a href="/guides/issue-while-installing-os-on-emmc/" target="_blank">this procedure</a> to troubleshoot.</li>
         </ul>
     - title: Waiting
-      image: led-patter-install.webp
+      image: led-pattern-install-blink-fast.webp
       content: |
         <ul>
+          <li>During installation the LED will blink fast.</li>
           <li>Wait for Home&nbsp;Assistant Yellow to finish installing the Home&nbsp;Assistant Operating System.</li>
-          <li>The yellow LED starts to blink steadily.</li>
           <li>Once the installer finished installing Home&nbsp;Assistant Operating System, only the red LED will be on.</li>
         </ul>
     - title: Disconnecting everything
