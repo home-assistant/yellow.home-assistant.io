@@ -223,7 +223,7 @@ proceduresInstallingHAOS:
           <li class="info">If the LED is stuck in steady blinking or constantly on for an extended period of time, this could indicate that the installer cannot connect to the internet. Follow <a href="/guides/issue-while-installing-os-on-emmc/" target="_blank">this procedure</a> to troubleshoot.</li>
         </ul>
     - title: Waiting
-      image: led-patter-install.webp
+      image: led-pattern-blink-steady.webp
       content: |
         <ul>
           <li>Wait for Home&nbsp;Assistant Yellow to finish installing the Home&nbsp;Assistant Operating System.</li>
