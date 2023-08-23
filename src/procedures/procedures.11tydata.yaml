@@ -213,7 +213,7 @@ proceduresInstallingHAOS:
           </li>
         </ul>
     - title: Watching the LEDs
-      image: led-patter-boot.webp
+      image: led-pattern-install-blink-fast.webp
       content: |
         <ul>
           <li>Wait for Home&nbsp;Assistant Yellow to start booting from the USB flash drive.</li>
