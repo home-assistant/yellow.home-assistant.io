@@ -33,6 +33,7 @@ procedureOpeningCase:
   title: Opening the case
   steps:
     - title: Protecting from ESD
+      image-apply-filter: true
       image: step-2-esd.png
       content: |
         <p>Grounding protects the components from the static electricity that can be naturally present (electrostatic discharge, ESD).</p>
