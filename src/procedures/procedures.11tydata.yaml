@@ -156,6 +156,10 @@ proceduresInstallingHAOS:
         <ul>
           <li>Install the Raspberry Pi Imager on your computer as described under <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a></li>
           <li class="info">If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from <a href="https://github.com/NabuCasa/yellow-buildroot/releases">GitHub releases</a>.</li>
+          <li class="warning">If you are using a Raspberry Pi Compute Module 4 (CM4) that already has software on it, this procedure does not work. Ignore this and the following steps.<ul>
+          <li>Instead, follow the procedure <a href="/guides/reinstall-os/">Option 2: Reinstall Home Assistant OS using rpiboot</a></li>
+          <li>The reason is that by default, the CM4 tries to boot from the internal eMMC before booting from the USB flash drive.</li>
+          </ul></li>
         </ul>
     - title: Opening Raspberry Pi Imager      
       image: start_rpi_imager.png
