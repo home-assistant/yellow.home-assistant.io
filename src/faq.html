@@ -3,46 +3,20 @@ layout: base
 title: FAQ
 description: FAQ | Yellow
 faqs:
-  - title: >
-      Is Zigbee2MQTT supported by the on-board radio?
-    content: >
-      <p>
-        The Home Assistant Yellow team officially supports ZHA (Zigbee Home
-        Automation), the Zigbee stack integrated into Home Assistant Core.
-      </p>
-
-      <p>
-        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental" >
-        experimental support</a> (in beta stage) for the Silicon Labs radio on
-        Home Assistant Yellow. With this setting Zigbee2MQTT is known to work
-        on Home Assistant Yellow.
-      </p>
-
-      <p>
-        Note: The Zigbee Home Automation integration is active by default! If
-        you are using Zigbee2MQTT, remember to delete and ignore the discovered
-        Zigbee Home Automation integration to avoid interference.
-      </p>
-      
-      <p>
-        Note: When setting up Zigbee2MQTT with the Home Assistant Yellow, you will
-        need to configure the adapter type in Zigbee2MQTT. Make sure the following
-        is present in your Zigbee2MQTT configuration:
-        <pre><code>serial:
-          adapter: ezsp
-          port: /dev/ttyAMA1
-          baudrate: 115200
-          rtscts: true</code></pre>
-      </p>
 
   - title: >
-      What is the serial port of the Zigbee radio?
+      How do I find a Raspberry Pi Compute Module 4?
     content: >
-      The Zigbee/Thread (IEEE 802.15.4) radio is directly connected via serial
-      port to the Raspberry Pi Compute Module 4 on <code>/dev/ttyAMA1</code>.
-      Note that there is <i>no</i> <code>/dev/serial/by-id</code> path for this
-      serial port as its not connected through USB. The above tty path will
-      remain static.
+      <p>A chip shortage still impacts the availability of the CM4. Our recommendation is to use <a href="https://rpilocator.com/" target="_blank">rpilocator</a>. This website tracks the stock of official Raspberry Pi distributors. Follow them on Twitter and enable push notifications. You will be notified as soon as the bot tweets that products are in stock.
+      </p>
+      <p>
+      We recommend purchasing a Raspberry Pi Compute Module 4 with the following characteristics: 
+      <ul>
+        <li>Min. 2&nbsp;GB of RAM.</li>
+        <li>Min. 16&nbsp;GB of eMMC flash space.</li>
+        <li>If you opt for the CM4 Lite: as it does not have an eMMC module, you must use an NVMe SSD hard drive. Some users reported that the <a href="/faq/#which-ssds-are-not-supported">following SSDs</a> are not working on the Home Assistant Yellow.</li>
+      </ul>
+      </p>
   - title: >
       Which SSDs are supported?
     content: >
@@ -82,25 +56,51 @@ faqs:
         e.g. the WD Blue SN570 reportedly works, Crucial P2 CT500P2SSD8 (512GB)
         and Crucial P5 CT1000P5SSD8 (1TB) as well. Also Samsung NVMe SSDs other
         than the 980 Pro series seem to work.
+      </p>  
+  - title: >
+      Is Zigbee2MQTT supported by the on-board radio?
+    content: >
+      <p>
+        The Home Assistant Yellow team officially supports ZHA (Zigbee Home
+        Automation), the Zigbee stack integrated into Home Assistant Core.
       </p>
+
+      <p>
+        The Zigbee2MQTT project has <a href="https://www.zigbee2mqtt.io/guide/adapters/#experimental" >
+        experimental support</a> (in beta stage) for the Silicon Labs radio on
+        Home Assistant Yellow. With this setting Zigbee2MQTT is known to work
+        on Home Assistant Yellow.
+      </p>
+
+      <p>
+        Note: The Zigbee Home Automation integration is active by default! If
+        you are using Zigbee2MQTT, remember to delete and ignore the discovered
+        Zigbee Home Automation integration to avoid interference.
+      </p>
+      
+      <p>
+        Note: When setting up Zigbee2MQTT with the Home Assistant Yellow, you will
+        need to configure the adapter type in Zigbee2MQTT. Make sure the following
+        is present in your Zigbee2MQTT configuration:
+        <pre><code>serial:
+          adapter: ezsp
+          port: /dev/ttyAMA1
+          baudrate: 115200
+          rtscts: true</code></pre>
+      </p>
+  - title: >
+      What is the serial port of the Zigbee radio?
+    content: >
+      The Zigbee/Thread (IEEE 802.15.4) radio is directly connected via serial
+      port to the Raspberry Pi Compute Module 4 on <code>/dev/ttyAMA1</code>.
+      Note that there is <i>no</i> <code>/dev/serial/by-id</code> path for this
+      serial port as its not connected through USB. The above tty path will
+      remain static.
   - title: >
         When do I need to replace the CR2032 coin-cell battery?
     content: >
       <p>
         The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
-      </p>
-  - title: >
-        How do I find a Raspberry Pi Compute Module 4?
-    content: >
-      <p>A chip shortage still impacts the availability of the CM4. Our recommendation is to use <a href="https://rpilocator.com/" target="_blank">rpilocator</a>. This website tracks the stock of official Raspberry Pi distributors. Follow them on Twitter and enable push notifications. You will be notified as soon as the bot tweets that products are in stock.
-      </p>
-      <p>
-        We recommend purchasing a Raspberry Pi Compute Module 4 with the following characteristics: 
-        <ul>
-          <li>Min. 2&nbsp;GB of RAM.</li>
-          <li>Min. 16&nbsp;GB of eMMC flash space.</li>
-          <li>If you opt for the CM4 Lite: as it does not have an eMMC module, you must use an NVMe SSD hard drive. Some users reported that the <a href="/faq/#which-ssds-are-not-supported">following SSDs</a> are not working on the Home Assistant Yellow.</li>
-        </ul>
       </p>
 
 faqs_trouble:
