@@ -4,90 +4,6 @@ title: FAQ
 description: FAQ | Yellow
 faqs:
   - title: >
-      I can’t access the system via http://homeassistant.local:8123, what can
-      I do?
-    content: >      
-      <p>
-        <ol>
-          <li>Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
-            If that does not help, you may be able to find the IP address of Home
-            Assistant Yellow on your router. The URL will be <code>http://&lt;IP ADDRESS>:8123</code></li>
-          <li>Check if the Home Assistant Yellow is plugged in and the yellow LED blinks in a heartbeat pattern. For more information on the LED patterns, see <a href="/guides/yellow-leds/" >Home Assistant Yellow LEDs</a>.</li>
-          <li>Check if the LED on the Ethernet port is green. If it is not green:
-            <ul>
-              <li>Try using a different port on your router.</li>
-              <li>Try using a different Ethernet cable.</li>
-            </ul>
-          </li>
-          <li>Check if the Raspberry Pi Compute Module 4 is seated correctly.</li>
-          <li>For further debugging, perform the steps described in the procedure <a href="/documentation/" >Using the serial console for debugging</a>.</li>
-        </ol>
-      </p>
-  - title: >
-      My Home Assistant Yellow appears broken, no LED is lighting up. What can I do?
-    content: >
-      <p>
-        The green Compute Module 4 (CM4) might not be seated correctly.
-        Open the Yellow enclosure and check if the green CM4 PCB is parallel to
-        the Yellow PCB.
-      </p>
-
-      <p><img src="/images/faq-unseated-side-view.jpeg" /></p>
-
-      <p>
-        If this is not the case, check if the CM4 is well aligned with the
-        white outline on the Yellow PCB. If the CM4 is not aligned, align it
-        first before pressing onto the heat-sink. For that you will have to
-        remove the heat-sink first. If the green PCB is aligned, press onto
-        the heat-sink on the two marked spots (centered above the CPU/SoC) to
-        snap the CM4 in place.
-      </p>
-
-      <p><img src="/images/faq-unseated-cm4-heat-sink-press.jpeg" /></p>
-  - title: >
-      My Home Assistant Yellow lights up the red LED only. What can I do?
-    content: >
-      <p><b>Note</b>: The resolution described below only applies to revision 1.2 and older. Starting with revision 1.3, there is no JP2 jumper that could cause this issue.</p>
-      <p>
-        Most likely your Compute Module 4 is in USB boot mode. Make sure that
-        the jumper JP2 is not connected. This means the jumper is only touching
-        one of the pins, not both.
-      </p>
-
-      <p><img src="/images/faq-check-jp2.jpeg" /></p>
-  - title: Can I factory reset the system?
-    content: >
-      <p>
-        Yes: Remove power from your system, reapply power, press and hold the red
-        button within 5 seconds. Keep the red button pressed until the yellow led
-        starts to flash.
-      </p>
-      <p>
-        The Yellow now clears the data partition, which
-        includes Home Assistant Core, the Supervisor, and any installed add-ons.
-        Make sure that Internet connection is present at this point - the
-        Home Assistant Operating System needs to download the Home Assistant
-        Supervisor and Core after the data partition has been cleared. Due to
-        the downloads, it can take a while until Home Assistant becomes accessible
-        again.
-      </p>
-  - title: >
-      Can I reinstall Home Assistant OS again using the USB flash drive with
-      the Home Assistant OS Installer for Yellow?
-    content: >
-      <p>
-        By default, the Raspberry Pi Compute Module 4 (CM4) tries to boot from
-        internal eMMC before trying to boot from the USB flash drive. Therefore, the
-        Home Assistant OS Installer for Yellow will only get started if the CM4
-        is empty.
-      </p>
-      <p>
-        Home Assistant OS 8.5 or newer versions: To clean the boot files from the internal eMMC,
-        press and hold both the red and the blue button at startup.
-        Keep the two buttons pressed for at least 15 seconds. Now, the system
-        should boot from the USB flash drive again.
-      </p>
-  - title: >
       Is Zigbee2MQTT supported by the on-board radio?
     content: >
       <p>
@@ -174,15 +90,6 @@ faqs:
         The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
       </p>
   - title: >
-        Multiprotocol: I get a notification stating that the OTBR and ZHA share the same radio, but use different channels. What can I do?
-    content: >
-      <p>
-        Note: The multiprotocol feature is still experimental.
-      </p>
-      <p>OTBR and ZHA on separate channels can cause an unreliable network connection. To resolve this issue, you can try resetting the Thread network or use two separate wireless chips, one for ZHA and one for Thread. See <a href="/guides/about-multiprotocol/#resolve-channel-conflict" target="_blank">About
-        multiprotocol support - resolve channel conflict</a>.</p>
-      <p>Note: The OpenThread Border Router add-on used to setup a Thread-only network on a wireless chip is still experimental.</p>
-  - title: >
         How do I find a Raspberry Pi Compute Module 4?
     content: >
       <p>A chip shortage still impacts the availability of the CM4. Our recommendation is to use <a href="https://rpilocator.com/" target="_blank">rpilocator</a>. This website tracks the stock of official Raspberry Pi distributors. Follow them on Twitter and enable push notifications. You will be notified as soon as the bot tweets that products are in stock.
@@ -194,6 +101,101 @@ faqs:
           <li>Min. 16&nbsp;GB of eMMC flash space.</li>
           <li>If you opt for the CM4 Lite: as it does not have an eMMC module, you must use an NVMe SSD hard drive. Some users reported that the <a href="/faq/#which-ssds-are-not-supported">following SSDs</a> are not working on the Home Assistant Yellow.</li>
         </ul>
+      </p>
+
+faqs_trouble:
+  - title: >
+      I can’t access the system via http://homeassistant.local:8123, what can
+      I do?
+    content: >      
+      <p>
+        <ol>
+          <li>Try <a href="http://homeassistant:8123" target="_blank">http://homeassistant:8123</a>.
+            If that does not help, you may be able to find the IP address of Home
+            Assistant Yellow on your router. The URL will be <code>http://&lt;IP ADDRESS>:8123</code></li>
+          <li>Check if the Home Assistant Yellow is plugged in and the yellow LED blinks in a heartbeat pattern. For more information on the LED patterns, see <a href="/guides/yellow-leds/" >Home Assistant Yellow LEDs</a>.</li>
+          <li>Check if the LED on the Ethernet port is green. If it is not green:
+            <ul>
+              <li>Try using a different port on your router.</li>
+              <li>Try using a different Ethernet cable.</li>
+            </ul>
+          </li>
+          <li>Check if the Raspberry Pi Compute Module 4 is seated correctly.</li>
+          <li>For further debugging, perform the steps described in the procedure <a href="/documentation/" >Using the serial console for debugging</a>.</li>
+        </ol>
+      </p>
+  - title: >
+        Multiprotocol: I get a notification stating that the OTBR and ZHA share the same radio, but use different channels. What can I do?
+    content: >
+      <p>
+        Note: The multiprotocol feature is still experimental.
+      </p>
+      <p>OTBR and ZHA on separate channels can cause an unreliable network connection. To resolve this issue, you can try resetting the Thread network or use two separate wireless chips, one for ZHA and one for Thread. See <a href="/guides/about-multiprotocol/#resolve-channel-conflict" target="_blank">About
+        multiprotocol support - resolve channel conflict</a>.</p>
+      <p>Note: The OpenThread Border Router add-on used to setup a Thread-only network on a wireless chip is still experimental.</p>
+  - title: >
+      My Home Assistant Yellow appears broken, no LED is lighting up. What can I do?
+    content: >
+      <p>
+        The green Compute Module 4 (CM4) might not be seated correctly.
+        Open the Yellow enclosure and check if the green CM4 PCB is parallel to
+        the Yellow PCB.
+      </p>
+
+      <p><img src="/images/faq-unseated-side-view.jpeg" /></p>
+
+      <p>
+        If this is not the case, check if the CM4 is well aligned with the
+        white outline on the Yellow PCB. If the CM4 is not aligned, align it
+        first before pressing onto the heat-sink. For that you will have to
+        remove the heat-sink first. If the green PCB is aligned, press onto
+        the heat-sink on the two marked spots (centered above the CPU/SoC) to
+        snap the CM4 in place.
+      </p>
+
+      <p><img src="/images/faq-unseated-cm4-heat-sink-press.jpeg" /></p>
+  - title: >
+      My Home Assistant Yellow lights up the red LED only. What can I do?
+    content: >
+      <p><b>Note</b>: The resolution described below only applies to revision 1.2 and older. Starting with revision 1.3, there is no JP2 jumper that could cause this issue.</p>
+      <p>
+        Most likely your Compute Module 4 is in USB boot mode. Make sure that
+        the jumper JP2 is not connected. This means the jumper is only touching
+        one of the pins, not both.
+      </p>
+
+      <p><img src="/images/faq-check-jp2.jpeg" /></p>
+  
+  - title: Can I factory reset the system?
+    content: >
+      <p>
+        Yes: Remove power from your system, reapply power, press and hold the red
+        button within 5 seconds. Keep the red button pressed until the yellow led
+        starts to flash.
+      </p>
+      <p>
+        The Yellow now clears the data partition, which
+        includes Home Assistant Core, the Supervisor, and any installed add-ons.
+        Make sure that Internet connection is present at this point - the
+        Home Assistant Operating System needs to download the Home Assistant
+        Supervisor and Core after the data partition has been cleared. Due to
+        the downloads, it can take a while until Home Assistant becomes accessible again.
+      </p>
+  - title: >
+      Can I reinstall Home Assistant OS again using the USB flash drive with
+      the Home Assistant OS Installer for Yellow?
+    content: >
+      <p>
+        By default, the Raspberry Pi Compute Module 4 (CM4) tries to boot from
+        internal eMMC before trying to boot from the USB flash drive. Therefore, the
+        Home Assistant OS Installer for Yellow will only get started if the CM4
+        is empty.
+      </p>
+      <p>
+        Home Assistant OS 8.5 or newer versions: To clean the boot files from the internal eMMC,
+        press and hold both the red and the blue button at startup.
+        Keep the two buttons pressed for at least 15 seconds. Now, the system
+        should boot from the USB flash drive again.
       </p>
 ---
   <div class="container">
@@ -219,6 +221,32 @@ faqs:
       {% endfor %}
     </div>
   </div>
+</div>
+
+<div class="container">
+  <h1>Troubleshooting</h1>
+  <div class="accordion">
+    {% for faq in faqs_trouble %}
+    <div class="accordion-item">
+      <button
+        aria-expanded="false"
+        id="{{ faq.title | slugify }}"
+      >
+        <a
+          href="#{{ faq.title | slugify }}"
+          class="anchor"
+        >
+          <span class="accordion-title">{{faq.title}}</span
+          ><span class="icon" aria-hidden="true"></span>
+        </a>
+      </button>
+      <div class="accordion-content">
+        <p>{{faq.content}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 </div>
 
 <script>
