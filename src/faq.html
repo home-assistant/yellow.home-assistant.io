@@ -272,11 +272,11 @@ faqs_trouble:
   for (i = 0; i < items.length; i++) {
     const id = items[i].getAttribute("id");
     if (id == anchor) {
-      items[i].setAttribute("aria-expanded", "true");
-      openedItem = true;
+      items[i].setAttribute("aria-expanded", "false");
+      openedItem = false;
     }
   }
   if (!openedItem) {
-    items[0].setAttribute("aria-expanded", "true");
+    items[0].setAttribute("aria-expanded", "false");
   }
 </script>
