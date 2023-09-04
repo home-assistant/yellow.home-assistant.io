@@ -17,9 +17,6 @@ guideName: Using the serial console for debugging (Windows)
       </ul>
     </li>
     <li>
-      <span>On Yellow, make sure JP1 is set to UART.</span>
-    </li>
-    <li>
       <span>Setup a USB connection: Yellow: USB-C, PC: USB Type-A.</span>
     </li>
     <li>
@@ -27,6 +24,21 @@ guideName: Using the serial console for debugging (Windows)
         <p>At the end of the entry, you see <b>COM#</b>. This is the port Yellow is using.</p><br>
         <img src="/images/win-device-manager-2.png" alt="Device Manager: ports with Yellow" width="500">
       </span>
+    </li>
+    <li>If the device doesn't appear in the Device Manager, check if the jumper JP1 is set to UART:
+      <ol>
+        <li>
+          <span>Power off and unplug Yellow. <a href="/power-supply/#opening-the-case">Open the case</a>.</span>
+        </li>
+        <li>
+          <span>Make sure JP1 is set to UART.</span>
+        </li>
+        <li>
+          <span><a href="/power-supply/#reassembling-your-home-assistant-yellow">Close the case</a>.</span>
+        </li>
+        <li>Connect Yellow to your router again via Ethernet.</li>
+        <li>Plug power back in.</li>
+      </ol>
     </li>
     <li>Start PuTTY.
       <p><img src="/images/win-putty-session-settings.png" alt="Setup session settings in PuTTY" width="400"></p>
