@@ -11,16 +11,6 @@ guideName: Using the serial console for debugging (Linux/macOS)
   <p><span></span></p>
   <ol start="1">
     <li>
-      <span>Power off and unplug Yellow. <a href="/power-supply/#opening-the-case">Open the case</a>.</span>
-    </li>
-    <li>
-      <span>Make sure JP1 is set to UART.</span>
-    </li>
-    <li>
-      <span><a href="/power-supply/#reassembling-your-home-assistant-yellow">Close the case</a>.</span>
-    </li>
-    <li>Connect Yellow to your router via Ethernet.</li>
-    <li>
       <span>Make sure <i>GNU Screen</i> is installed on your system.</span>
       <ul>
         <li>On Linux, use your distribution's package manager (e.g. <code>sudo apt install screen</code>).</li>
@@ -56,6 +46,20 @@ guideName: Using the serial console for debugging (Linux/macOS)
         <p><b>Note:</b> Screen typically doesn't display anything on startup. You see only the cursor
           on the top left of the window.</p>
       </span>
+    </li>
+    <li>If you could not connect via USB C, check if the jumper is set to UART:
+      <ol>
+        <li>
+          <span>Power off and unplug Yellow. <a href="/power-supply/#opening-the-case">Open the case</a>.</span>
+        </li>
+        <li>
+          <span>Make sure JP1 is set to UART.</span>
+        </li>
+        <li>
+          <span><a href="/power-supply/#reassembling-your-home-assistant-yellow">Close the case</a>.</span>
+        </li>
+        <li>Connect Yellow to your router again via Ethernet.</li>
+      </ol>
     </li>
     <li>
       <span>Power the Yellow back on with either the DC adapter or Power over Ethernet (if supported).</span>
