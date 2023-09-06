@@ -1507,7 +1507,7 @@
         },
         {
             "ref": "D6",
-            "description": "Status LED (yellow)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) documentation for\ndetailed description on patterns their meaning.\n",
+            "description": "System health LED (yellow)\n\nSee [Home Assistant Yellow LEDs](/guides/yellow-leds/) documentation for\ndetailed description on patterns their meaning.\n",
             "front": true,
             "back": false,
             "highlight": true,
