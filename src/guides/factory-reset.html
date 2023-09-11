@@ -1,0 +1,41 @@
+---
+layout: guide
+guideName: Resetting a device
+---
+
+<div class="container">
+    <p>
+        <span><h2>About factory reset</h2></span>
+      <span
+        >A factory reset clears the data partition of your device. This includes all user data as well as Home Assistant Core, Supervisor, and any installed add-ons.</p> 
+        <p>The Home Assistant operating system stays on the system.</p></span
+      >
+    </p>
+    <p>
+      <span><h2>Resetting a device to the factory settings</h2></span>
+    </p>
+    <ol start="1">
+      <li>
+        <span>Make sure you do not lose your automations and configuration settings: <a href="/guides/create-backup/">
+            Create a backup</a>.</span>
+      </li>
+      <li>
+        <span>Shut down the system.
+          <ul><li>Go to <b>Settings</b> > <b>System</b>, and in the top right corner, select the shut down icon. Select <b>Shut down system</b>.</li></ul></span>
+      </li>
+      <li>Remove power from the system.</li>
+      <li>Perform these steps in close sequence:
+        <ul>
+          <li>Reapply power and make sure the system has an Internet connection.</li>
+          <li>Within 5 seconds, press and hold the red button.</li>
+          <li>Keep the button pressed until the yellow LED starts to flash.</li><ul><li>The Home Assistant operating system now downloads the Supervisor and the Core. Due to the downloads, it can take a while until Home Assistant becomes accessible again.</li></ul>
+        </ul>
+      </li>
+    </ol>
+      <p></p>
+    <h1>Related topics</h1>
+    <p><ul>
+        <li><a href="/guides/create-backup/">Creating a backup</a>
+        </li>
+    </ul></p>
+</div>
