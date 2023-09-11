@@ -219,6 +219,11 @@ h3 {
   max-width: 450px;
 }
 
+.subtitle {
+  font-style:var(--secondary-text-color)
+}
+
+
 /* BANNER STYLES */
 
 .banner {
