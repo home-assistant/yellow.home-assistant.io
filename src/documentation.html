@@ -20,6 +20,9 @@ multiprotocol:
     url: /guides/enable-multiprotocol/
   - title: Disable multiprotocol support
     url: /guides/disable-multiprotocol/
+data:
+  - title: Creating a backup
+    url: /guides/create-backup/
 troubleshooting:
   - title: Using the serial console for debugging (Windows)
     url: /guides/use-serial-console-windows/
@@ -44,6 +47,14 @@ troubleshooting:
   <h2>Multiprotocol</h2>
   <div class="layout horizontal items">
     {% for guide in multiprotocol %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+  <h2>Handling data</h2>
+  <div class="layout horizontal items">
+    {% for guide in data %}
     <a href="{{guide.url}}">
       <div class="layout vertical center">{{guide.title}}</div>
     </a>
