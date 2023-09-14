@@ -2,6 +2,10 @@
 layout: base
 title: Documentation
 description: Troubleshooting, resources, and videos
+
+system_description:
+  - title: About Home Assistant Yellow
+    url: /documentation/about_home-assistant_yellow/
 setup:
   - title: Adding an SSD to your Yellow or Yellow Kit
     url: /guides/add-ssd-existing-installation/
@@ -37,7 +41,15 @@ troubleshooting:
 ---
 
 <div class="container">
-  <h1>Guides</h1>
+  <h1>System description</h1>
+  <div class="layout horizontal items">
+    {% for guide in system_description %}
+    <a href="{{guide.url}}">
+      <div class="layout vertical center">{{guide.title}}</div>
+    </a>
+    {% endfor %}
+  </div>
+  <h1>Operation</h1>
   <h2>Setup</h2>
   <div class="layout horizontal items">
     {% for guide in setup %}
