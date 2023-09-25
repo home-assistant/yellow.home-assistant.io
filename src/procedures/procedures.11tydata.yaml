@@ -400,81 +400,23 @@ procedureEnableMultiProtocol:
 procedureDisableMultiProtocol:
   title: Disable multiprotocol support
   steps:
-    - title: Uninstall the Silicon Labs Multiprotocol add-on
-      image: skyconnect-multiprotocol-17.png
-      content: |
-        <ul>
-          <li class=info>To disable the multiprotocol feature and use Yellow for Zigbee only, make sure to follow all the steps in this procedure.</li>
-        </ul>
-        <ul>
-          <li>Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_multiprotocol" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and in the <b>Silicon Labs Multiprotocol</b> add-on, select <b>Uninstall</b>.
-        </ul>
-    - title: Flash the Silicon Labs radio firmware
-      image: silabs-flasher-add-on-02.png
+    - title: Configure radio multiprotocol support
+      image: disable_multiprotocol_01.png
       content: |
         <ol>
-          <li>You can update the firmware of the Silicon Labs radio firmware to work with Zigbee only. Go to <a class="my" href=" https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_silabs_flasher" target="_blank"><b>Settings</b> > <b>Add-ons</b></a>, and install the <b>Silicon Labs Flasher</b> add-on.</li>
-          <li>Make sure the <b>Start on boot</b> and the <b>Auto update</b> options are disabled.</li>
-          <li>In the <b>Configuration</b> tab, select the serial port <b>ttyAMA1</b> and save the changes.</li>
-          <li>To observe the flashing process, open the <b>Logs</b> tab in a separate window.</li>
-          <li>On the <b>Info</b> tab, start the Silicon Labs Flasher.</li>
-          <li>Wait for the flashing process to complete. This may take a while. To view the progress, in the <b>Logs</b> tab, select <b>Refresh</b>.<ul>
-          <li>When you reload the add-on UI (Ctrl+Shift+R), the dot on the top right should have changed from green to red. If it is still green, the process is not finished.</li></ul>
-          </li>
-          <li>Once you see the red dot, the flashing process is complete. Continue with the next step.</li>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
+          <li>Under <b>Home Assistant Yellow</b>, select <b>Configure</b>.</li>
+          <li>Select the <b>Configure IEEE 802.15.4 radio multiprotocol support</b> option.</li>
+          
         </ol>
-    - title: Rename the <b>Zigbee Home Automation (ZHA)</b> integration
-      image: yellow-multiprotocol-disable-new-02.png
+    - title: Remove multiprotocol support
+      image: disable_multiprotocol_02.png
       content: |
-        <ul>
-        <li class="info">Yellow is now setup in the non-multiprotocol ZHA integration, although the title still includes <b>Multi-PAN</b>.</li>          
-        </ul>
         <ol>
-        <li>Select the <b>Zigbee Home Automation</b>.</li>
-        <li>Select the three-dot dropdown menu and select <b>Rename</b>.</li>
-        <li>Remove <b>Multi-PAN</b> from the name of the integration.</li>
+          <li>Select <b>Remove 802.15.4 radio multiprotocol support</b>.</li>
+          <li>Then, select the <b>Disable multiprotocol support</b> checkbox.</li>
+          <li>Wait for the setup to complete.</li>
         </ol>
-    - title: Start the radio migration process
-      image: z2m-migrate-zha-02.png
-      content: |
         <ul>
-          <li>Select <b>Configure</b>.</li>
-          <li>Under <b>Network Settings</b>, select <b>Migrate radio</b>.</li>
-        </ul>
-    - title: Reconfigure ZHA
-      image: skyconnect-multiprotocol-disable-05.png
-      content: |
-        <ul>
-          <li>Select <b>submit</b>.</li>
-        </ul>
-    - title: Reconfigure the current radio
-      image: skyconnect-multiprotocol-disable-06.png
-      content: |
-        <ul>
-          <li>Select <b>Re-configure the current radio</b>.</li>
-        </ul>
-    - title: Select a serial port
-      image: yellow-multiprotocol-disable-03.png
-      content: |
-        <ul>
-          <li>Select the path with Yellow.</li>
-        </ul>
-    - title: Restore an automatic backup
-      image: skyconnect-multiprotocol-disable-08.png
-      content: |
-        <ul>
-          <li>Select <b>Restore an automatic backup</b>.</li>
-        </ul>
-    - title: Choose a backup
-      image: skyconnect-multiprotocol-disable-09.png
-      content: |
-        <ul>
-          <li>Choose the latest backup and select <b>Submit</b>.</li>
-        </ul>
-    - title: Migration complete!
-      image: skyconnect-multiprotocol-disable-10.png
-      content: |
-        <ul>
-          <li>Select <b>Finish</b> to confirm. The migration process is now complete.</li>
-          <li class="info">You won't be able to control the devices until they rejoin the network. Normally, they rejoin within one hour. You may be able to accelerate that process by power-cycling devices.</li>
+          <li class=info>Your Zigbee devices will continue to work. Your Thread devices will continue working only if you have another Thread border router set up.</li>
         </ul>
