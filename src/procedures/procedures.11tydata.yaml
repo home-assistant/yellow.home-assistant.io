@@ -403,9 +403,6 @@ procedureDisableMultiProtocol:
     - title: Configure radio multiprotocol support
       image: disable_multiprotocol_01.png
       content: |
-        <ul>
-          <li class=info>To disable the multiprotocol feature and use Yellow for Zigbee only, make sure to follow all the steps in this procedure.</li>
-        </ul>
         <ol>
           <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
           <li>Under <b>Home Assistant Yellow</b>, select <b>Configure</b>.</li>
