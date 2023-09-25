@@ -258,15 +258,10 @@ faqs_trouble:
 
   const urlParts = document.URL.split('#');
   const anchor = (urlParts.length > 1) ? urlParts[1] : null;
-  let openedItem = false;
   for (i = 0; i < items.length; i++) {
     const id = items[i].getAttribute("id");
     if (id == anchor) {
-      items[i].setAttribute("aria-expanded", "false");
-      openedItem = false;
+      items[i].setAttribute("aria-expanded", "true");
     }
-  }
-  if (!openedItem) {
-    items[0].setAttribute("aria-expanded", "true");
   }
 </script>
