@@ -418,6 +418,8 @@ procedureDisableMultiProtocol:
         <ol>
           <li>Select <b>Remove 802.15.4 radio multiprotocol support</b>.</li>
           <li>Then, select the <b>Disable multiprotocol support</b> checkbox.</li>
-          <li>Wait for the setup to complete.</li><ul>
-          <li>Your Zigbee devices will continue to work. Your Thread devices will continue working only if you have another Thread border router set up.</li></ul>
+          <li>Wait for the setup to complete.</li>
         </ol>
+        <ul>
+          <li class=info>Your Zigbee devices will continue to work. Your Thread devices will continue working only if you have another Thread border router set up.</li>
+        </ul>
