@@ -3,8 +3,9 @@ layout: base
 title: FAQ
 description: FAQ | Yellow
 faqs:
-
-  - title: >
+  - section: >
+      General
+    title: >
       How do I find a Raspberry Pi Compute Module 4?
     content: >
       <p>A chip shortage still impacts the availability of the CM4. Our recommendation is to use <a href="https://rpilocator.com/" target="_blank">rpilocator</a>. This website tracks the stock of official Raspberry Pi distributors. Follow them on Twitter and enable push notifications. You will be notified as soon as the bot tweets that products are in stock.
@@ -103,8 +104,9 @@ faqs:
         The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
       </p>
 
-faqs_trouble:
-  - title: >
+  - section: >
+      Troubleshooting
+    title: >
       I can’t access the system via http://homeassistant.local:8123, what can
       I do?
     content: >      
@@ -188,55 +190,31 @@ faqs_trouble:
         should boot from the USB flash drive again.
       </p>
 ---
-  <div class="container">
-    <div class="accordion">
-      {% for faq in faqs %}
-      <div class="accordion-item">
-        <button
-          aria-expanded="false"
-          id="{{ faq.title | slugify }}"
-        >
-          <a
-            href="#{{ faq.title | slugify }}"
-            class="anchor"
-          >
-            <span class="accordion-title">{{faq.title}}</span
-            ><span class="icon" aria-hidden="true"></span>
-          </a>
-        </button>
-        <div class="accordion-content">
-          <p>{{faq.content}}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
 <div class="container">
-  <h1>Troubleshooting</h1>
-  <div class="accordion">
-    {% for faq in faqs_trouble %}
-    <div class="accordion-item">
-      <button
-        aria-expanded="false"
-        id="{{ faq.title | slugify }}"
-      >
-        <a
-          href="#{{ faq.title | slugify }}"
-          class="anchor"
-        >
-          <span class="accordion-title">{{faq.title}}</span
-          ><span class="icon" aria-hidden="true"></span>
-        </a>
-      </button>
-      <div class="accordion-content">
-        <p>{{faq.content}}</p>
+      <div class="accordion">
+        {% for faq in faqs %}
+        <div class="section">
+          <h2>{{faq.section}}</h2>
+        </div>            
+        <div class="accordion-item">
+          <button
+            aria-expanded="false"
+            id="{{ faq.title | slugify }}"
+          >
+            <a
+              href="#{{ faq.title | slugify }}"
+              class="anchor"
+            >
+              <span class="accordion-title">{{faq.title}}</span
+              ><span class="icon" aria-hidden="true"></span>
+            </a>
+          </button>
+          <div class="accordion-content">
+            <p>{{faq.content}}</p>
+          </div>
+        </div>
+        {% endfor %}
       </div>
-    </div>
-    {% endfor %}
-  </div>
-</div>
 </div>
 
 <script>
