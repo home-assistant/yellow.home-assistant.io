@@ -75,7 +75,7 @@ procedureInstallCM4:
       content: |
         <ul>
           <li>The raspberry icon needs to be face up, oriented away from you: check for correct orientation of the CM4.</li>
-          <li>Use the outline of the chips to help find the correct orientation of the CM4.</li>
+          <li>Use the outline of the chips to help find the correct orientation of the CM4 (note: on Lite variants, the chips on the bottom edge are in a different location).</li>
           <li>Carefully place the CM4 without force.</li>
           <li>Use the white outline representing the CM4 to align the CM4.</li>
           <li>The CM4 should fall into place slightly when correctly aligned.</li>
