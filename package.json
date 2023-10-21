@@ -3,6 +3,7 @@
     "test": "true"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "netlify-cli": "^16.9.1"
   }
 }
