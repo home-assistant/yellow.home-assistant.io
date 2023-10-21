@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "true"
+    "test": "true",
+    "preview": "netlify dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",

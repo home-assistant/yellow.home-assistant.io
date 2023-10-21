@@ -4,3 +4,6 @@ dist
 .DS_Store
 manifest.json
 .vscode/settings.json
+
+# Local Netlify folder
+.netlify
