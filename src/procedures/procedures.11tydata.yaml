@@ -166,13 +166,14 @@ proceduresInstallingHAOS:
       image: start_rpi_imager.png
       content: |
         <ul>
-          <li>Open Raspberry Pi Imager.</li>         
+          <li>Open Raspberry Pi Imager.</li>
+          <li>Under <b>Raspberry Pi Device</b>, select </b>Raspberry Pi 4</b>.</li>     
         </ul>
     - title: Choosing the operating system
       image: rpi_choose_ha_os.gif
       content: |
         <ul>
-          <li>Click Choose OS</li>
+          <li>Select <b>Choose OS</b></li>
           <li>Choose <b>Other specific-purpose OS</b>.</li>
           <li>Choose <b>Home assistants and home automation</b>.</li>
           <li>Choose <b>Home Assistant</b>.</li>
@@ -186,10 +187,10 @@ proceduresInstallingHAOS:
           <li>From the dropdown menu, select your USB flash drive.</li>
         </ul>
     - title: Writing the installer onto the drive
-      image: rpi_choose_write.png
+      image: rpi_choose_next.png
       content: |
         <ul>
-          <li>Click the <b>Write</b> button to start the process.</li>
+          <li>Select the <b>Next</b> button to start the process.</li>
           <li>Wait for the Home&nbsp;Assistant OS Installer to be written to the USB flash drive.</li>
         </ul>
     - title: Eject the USB flash drive.
