@@ -2,13 +2,13 @@ blank_issues_enabled: true
 contact_links:
   - name: I have an issue setting up my Home Assistant Yellow
     url: https://yellow.home-assistant.io/
-    about: Check out the documentation
+    about: Read the documentation
   - name: I have a question or need support with Home Assistant in general
     url: https://www.home-assistant.io/help
-    about: Check out the Home Assistant help page
+    about: Read the Home Assistant help page
   - name: I would like to report an issue with Home Assistant Yellow documentation
     url: https://github.com/home-assistant/yellow.home-assistant.io/issues/new
     about: Create a documentation issue
   - name: I'm unsure where to go
     url: https://www.home-assistant.io/join-chat
-    about: If you are unsure where to go, then joining our chat is recommended; Just ask!
+    about: If you are unsure where to go, then joining our chat is recommended. Just ask!
