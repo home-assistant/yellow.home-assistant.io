@@ -8,7 +8,7 @@ This website is built using [11ty](https://www.11ty.dev/). The website is automa
 
 ## Development
 
-The easiest way to edit the documentation is to open the environment in Github Codespaces.
+The easiest way to edit the documentation is to open the environment in Github Codespaces. Codespaces work in your browser, no installation required.
 1. Further up on this page, select the green **Code** button. 
 2. On the **Codespaces** tab, select **Open in codesapce**.
 3. Make your changes and push them.
