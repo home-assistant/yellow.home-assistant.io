@@ -5,10 +5,7 @@ contact_links:
     about: Read the documentation
   - name: I have a question or need support with Home Assistant in general
     url: https://www.home-assistant.io/help
-    about: Read the Home Assistant help page
-  - name: I would like to report an issue with Home Assistant Yellow documentation
-    url: https://github.com/home-assistant/yellow.home-assistant.io/issues/new
-    about: Create a documentation issue
+    about: Read the Home Assistant help page  
   - name: I'm unsure where to go
     url: https://www.home-assistant.io/join-chat
     about: If you are unsure where to go, then joining our chat is recommended. Just ask!

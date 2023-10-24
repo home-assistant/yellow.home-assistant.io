@@ -1,5 +1,5 @@
 name: Report an issue with the documentation of Home Assistant Yellow
-description: Report an issue with the documentation of Home Assistant Yellow
+description: Report a documentation issue
 body:
   - type: markdown
     attributes:
