@@ -1,0 +1,26 @@
+name: Report an issue with the documentation of Home Assistant Yellow
+description: Report a documentation issue
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue form is for reporting documentation isses only!
+
+        If you have a feature or enhancement request, please use the [feature request][fr] section of our [Community Forum][fr].
+
+        [fr]: https://community.home-assistant.io/c/feature-requests
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: The problem
+      description: >-
+        Describe the issue you spotted in the documentation.
+        Provide a clear and concise description of what the problem is.
+  - type: textarea
+    validations:
+      required: true
+    attributes:
+      label: Link to the page
+      description: >-
+        Provide a link to the page where you spotted the issue.
