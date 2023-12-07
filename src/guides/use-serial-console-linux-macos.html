@@ -6,6 +6,7 @@ guideName: Using the serial console for debugging (Linux/macOS)
 <div class="container">
   <p>
     <span>Connecting to Yellow via serial console can be helpful for troubleshooting, e.g. to export a log.</span>
+    <li><b>Precondition: </b> This procedure assumes Yellow <b>is powered off</b>.</li>
   </p>
 
   <p><span></span></p>
@@ -36,18 +37,18 @@ guideName: Using the serial console for debugging (Linux/macOS)
     <li>
       <span>List the USB port numbers again (see step 5). The new entry is for Yellow.</span>
       <p>
-        <b>Note:</b> In case no new entry appears, make sure JP1 is at the right position (step 2) and your USB-C cable supports at least USB 2.0 signals (try using a different USB-C cable if in doubt).
+        <b>Troubleshooting:</b> In case no new entry appears, make sure JP1 is at the right position (step 2) and your USB-C cable supports at least USB 2.0 signals (try using a different USB-C cable if in doubt).
       </p>
     </li>
     <li>
       <span>Start GNU Screen and point it to this USB port. E.g.:
         <pre><code>screen /dev/ttyUSB0 115200</code></pre>
-        <p><b>Note:</b> If your account does not have permission to access serial ports, you may have to run the command with <code>sudo</code>. If Screen immediately prints <code>[screen is terminating]</code>, this is likely the problem.</p>
+        <p><b>Troubleshooting:</b> If your account does not have permission to access serial ports, you may have to run the command with <code>sudo</code>. If Screen immediately prints <code>[screen is terminating]</code>, this is likely the problem.</p>
         <p><b>Note:</b> Screen typically doesn't display anything on startup. You see only the cursor
           on the top left of the window.</p>
       </span>
     </li>
-    <li>If the device doesn't appear, check if the jumper JP1 is set to UART:
+    <li><b>Troubleshooting: </b>If the device doesn't appear, check if the jumper JP1 is set to UART:
       <ol>
         <li>
           <span>Power off and unplug Yellow. <a href="/power-supply/#opening-the-case">Open the case</a>.</span>
@@ -58,13 +59,10 @@ guideName: Using the serial console for debugging (Linux/macOS)
         <li>
           <span><a href="/power-supply/#reassembling-your-home-assistant-yellow">Close the case</a>.</span>
         </li>
-        <li>Connect Yellow to your router again via Ethernet.</li>
-        <li>Plug power back in.</li>
+        <li>Connect Yellow to your router again via Ethernet.</li>        
       </ol>
     </li>
-    <li>
-      <span>Power the Yellow back on with either the DC adapter or Power over Ethernet (if supported).</span>
-    </li>
+    <li>Power the Yellow back on with either the DC adapter or Power over Ethernet (if supported).</li>
     <li>
       <span>After the Yellow finishes booting, hit the <b>Enter</b> key until prompted for credentials.
         <ul>
