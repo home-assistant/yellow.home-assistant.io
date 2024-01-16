@@ -471,7 +471,7 @@ procedureEnableThreadSupport:
       content: |
         <ul>
           <li>Select the <b>Configuration</b> tab.</li>
-          <li>Under <b>Options</b>, choose the port of the radio. Typically, it is on <b>ttyAMA1</b>.</li>
+          <li>Under <b>Options</b>, choose the <b>ttyAMA1</b> port of the radio.</li>
           <li>Select <b>Save</b> on the bottom right of the <b>Options</b> card.</li>
         </ul>
     - title: Start the OpenThread Border Router add-on
