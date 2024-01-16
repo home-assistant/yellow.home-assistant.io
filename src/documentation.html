@@ -15,31 +15,39 @@ setup:
     url: /guides/remove-cm4/
   - title: Installing the Raspberry Pi Compute Module 4 (CM4)
     url: /guides/install-cm4/
-multiprotocol:
-  - title: About multiprotocol support
-    url: /guides/about-multiprotocol/  
-  - title: About firmware options
-    url: /guides/about-firmware-options/
-  - title: Enable multiprotocol support
-    url: /guides/enable-multiprotocol/
-  - title: Disable multiprotocol support
-    url: /guides/disable-multiprotocol/
-data:
-  - title: Creating a backup
-    url: /guides/create-backup/
-  - title: Resetting the device
-    url: /guides/factory-reset/
-  - title: Restoring/migrating from a backup
-    url: /guides/restore-backup
-troubleshooting:
-  - title: Using the serial console for debugging (Windows)
-    url: /guides/use-serial-console-windows/
-  - title: Using the serial console for debugging (Linux/macOS)
-    url: /guides/use-serial-console-linux-macos/
-  - title: Home Assistant Yellow LEDs
-    url: /guides/yellow-leds/
-  - title: Reinstall Raspberri Pi CM4 EEPROM firmware
-    url: /guides/flash-cm4-firmware/
+sections:
+  - title: Thread
+    guides:
+      - title: Enable Thread support
+        url: /procedures/enable-thread/
+  - title: Multiprotocol
+    guides:
+      - title: About multiprotocol support
+        url: /guides/about-multiprotocol/  
+      - title: About firmware options
+        url: /guides/about-firmware-options/
+      - title: Enable multiprotocol support
+        url: /guides/enable-multiprotocol/
+      - title: Disable multiprotocol support
+        url: /guides/disable-multiprotocol/
+  - title: Data
+    guides:
+    - title: Creating a backup
+      url: /guides/create-backup/
+    - title: Resetting the device
+      url: /guides/factory-reset/
+    - title: Restoring/migrating from a backup
+      url: /guides/restore-backup
+  - title: Troubleshooting
+    guides:
+    - title: Using the serial console for debugging (Windows)
+      url: /guides/use-serial-console-windows/
+    - title: Using the serial console for debugging (Linux/macOS)
+      url: /guides/use-serial-console-linux-macos/
+    - title: Home Assistant Yellow LEDs
+      url: /guides/yellow-leds/
+    - title: Reinstall Raspberri Pi CM4 EEPROM firmware
+      url: /guides/flash-cm4-firmware/
 ---
 
 <div class="container">
@@ -60,31 +68,16 @@ troubleshooting:
     </a>
     {% endfor %}
   </div>
-  <h2>Multiprotocol</h2>
-  <div class="subtitle">Running Zigbee and Thread on the same wireless chip</div>
+  {% for section in sections %}
+  <h2>{{section.title}}</h2>
   <div class="layout horizontal items">
-    {% for guide in multiprotocol %}
+    {% for guide in section.guides %}
     <a href="{{guide.url}}">
       <div class="layout vertical center">{{guide.title}}</div>
     </a>
     {% endfor %}
   </div>
-  <h2>Handling data</h2>
-  <div class="layout horizontal items">
-    {% for guide in data %}
-    <a href="{{guide.url}}">
-      <div class="layout vertical center">{{guide.title}}</div>
-    </a>
-    {% endfor %}
-  </div>
-  <h2>Troubleshooting</h2>
-  <div class="layout horizontal items">
-    {% for guide in troubleshooting %}
-    <a href="{{guide.url}}">
-      <div class="layout vertical center">{{guide.title}}</div>
-    </a>
-    {% endfor %}
-  </div>
+  {% endfor %}
   <h1>Resources</h1>
   <div class="layout horizontal items">
     <a href="/hardware">

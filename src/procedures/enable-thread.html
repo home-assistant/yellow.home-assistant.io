@@ -1,0 +1,52 @@
+---
+layout: guide
+description: Home Assistant Yellow
+guideName: Enable Thread support
+tools:
+  title: Prerequisites
+  image: yellow-zha-setup.png
+  content: |
+    <p>This guide assumes you have the following setup:</p>
+    <ul>
+      <li>Home Assistant Yellow up and running.</li>
+      <li>Home Assistant OS installation.</li>
+      <li>Multiprotocol support disabled: Refer to the <a href="/guides/disable-multiprotocol/">Disable multiprotocol support</a> procedure.</li>
+      <li class="info">This guide installs a firmware which supports only Thread! If you use your Yellow
+        to control Zigbee devices, you will no longer be able to control them after installing the Thread
+        firmware. If you'd like to keep using Zigbee, add a SkyConnect or a different radio, or try the
+        Multiprotocol support (experimental).
+      </li>
+      <li class="warning">Home Assistant Supervised: The Thread border router has some specific requirements
+        on IPv6 configuration (for example, IPv6 routing needs to be enabled). The add-on is being tested on the Home Assistant OS.
+        If you experience connectivity issues, try using a Home Assistant OS installation.
+      </li>
+    </ul>
+---
+
+<div class="container">
+  <p>
+    This guide outlines the steps for configuring the Home Assistant Yellow for dedicated Thread support.
+    This setup facilitates the connection of Matter-over-Thread devices to your network.
+  </p>
+</div>
+
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureEnableThreadSupport %}
+
+
+<div class="container">
+  <h1>Related topics</h1>
+  <p><ul>
+      <li><a href="/guides/about-multiprotocol/" target="_blank">About
+          multiprotocol support</a>
+      </li>
+      <li><a href="/guides/about-firmware-options/" target="_blank">About
+          firmware options</a>
+      </li>
+      <li><a href="/guides/disable-multiprotocol/" target="_blank">Disable
+          multiprotocol support</a>
+      </li>
+      <li><a href="https://www.home-assistant.io/integrations/thread/" target="_blank">Thread integration documentation</a>
+      </li>
+  </ul></p>
+  </div>

@@ -422,3 +422,66 @@ procedureDisableMultiProtocol:
         <ul>
           <li class=info>Your Zigbee devices will continue to work. Your Thread devices will continue working only if you have another Thread border router set up.</li>
         </ul>
+procedureEnableThreadSupport:
+  title: Install dedicated Thread support
+  steps:
+    - title: Delete Zigbee Home Automation (ZHA) integration
+      image: yellow-zha-delete.png
+      content: |
+        <ul>
+          <li>If you have a new Yellow or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 3.</li>
+          <li>If you are using the Yellow with Zigbee Home Automation (ZHA), this step removes ZHA from the integration list.</li>
+        </ul>
+        <ol>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li>
+          <li>Select the <b>Zigbee Home Automation</b> integration card.</li>
+          <li>Select the menu behind the <b>Yellow</b> integration and choose <b>Delete</b>.</li>
+          <li>On the pop-up menu, select <b>Delete</b> again to confirm deletion.</li>
+        </ol>
+    - title: Restart Home Assistant Core to trigger discovery
+      image: yellow-zha-discovered.png
+      content: |
+        <ul>
+          <li class="info">Discovery will suggest Zigbee Home Automation (ZHA) by default. To avoid future interference from ZHA, this and the next step
+          make sure that the device is ignored for Zigbee.</li>
+        </ul>
+        <ol>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/hardware/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Hardware</b></a>.</li>
+          <li>In the top right corner, select the power menu.</li>
+          <li>Select <b>Restart Home Assistant</b> and select <b>Restart</b>.</li>
+          <li>Verify that the Yellow is discovered as a ZHA device.</li>
+        </ol>
+    - title: Ignore Yellow as a Zigbee Home Automation (ZHA) device
+      image: yellow-zha-delete-discovery.png
+      content: |
+        <ul>
+          <li>Select <b>Ignore</b> in the Yellow ZHA card.</li>
+          <li>Confirm ignoring the Yellow for Zigbee Home Automation (ZHA) usage by selecting <b>Ignore</b> again.</li>
+        </ul>
+    - title: Install the OpenThread Border Router add-on
+      image: otbr-add-on-installation.png
+      content: |
+        <ul>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/supervisor_addon/?addon=core_openthread_border_router" target="_blank">
+          <b>Settings</b> > <b>Add-ons</b> > <b>Add-on Store</b> and choose the <b>OpenThread Border Router</b> add-on</a>.</li>
+          <li>Select <b>Install</b> to install the OpenThread Border Router add-on.</li>
+        </ul>
+    - title: Configure the OpenThread Border Router add-on
+      image: otbr-configuration.png
+      content: |
+        <ul>
+          <li>Select the <b>Configuration</b> tab.</li>
+          <li>Under <b>Options</b>, choose the port of the radio. Typically, it is on <b>ttyAMA1</b>.</li>
+          <li>Select <b>Save</b> on the bottom right of the <b>Options</b> card.</li>
+        </ul>
+    - title: Start the OpenThread Border Router add-on
+      image: otbr-add-on-start.png
+      content: |
+        <ul>
+          <li>Select the <b>Info</b> tab.</li>
+          <li>Select <b>Start</b> to start the OpenThread Border Router add-on.</li>
+        </ul>
+        <ul>
+          <li class="info">The OpenThread Border Router add-on will automatically install the OpenThread RCP (Radio
+          Co-Processor) firmware for dedicated Thread support.</li>
+        </ul>
