@@ -283,25 +283,27 @@ procedureMoveDataDisk:
             Alternatively, you can go to the storage page via <b>Configuration>System>Storage</b>.
           </li>
         </ul>
-    - title: Open the <b>Move to Datadisk</b> dialog
-      image: ha-config-storage-overflow-menu.png
+    - title: Select <b>Move data disk</b>
+      image: move-datadisk.png
       content: |
         <ul>
-          <li>
-            Open the overflow menu by clicking on
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 24px"><path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z" /></svg>
-            in the top-right of the screen.
-          </li>
-          <li>Select the <b>Move datadisk</b> option</li>
+          <li>Select the <b>Move datadisk</b> button</li>
         </ul>
-    - title: Moving to datadisk
+    - title: Moving to data disk
       image: select-new-datadisk.png
       content: |
         <ul>
-          <li>Select <b>nvme0n1</b> and click on <b>MOVE</b>.</li>
+          <li>Select your NVMe drive. If it does not show the full name of your dsik, select <b>nvme0n1</b> and select <b>MOVE</b>.</li>
           <li class="info">For a small instance of 5 GB (incl. 6 add-ons) this takes about 5 minutes.
             <p>Depending on the size of your instance, this may take up to 30 minutes.</p>
           </li>
+        </ul>
+    - title: View new disk
+      image: move-datadisk-02.png
+      content: |
+        <ul>
+          <li>Once the transfer has been completed, hover over the status bar to see how much free disk space there is available.</li>
+          <li>Note that the eMMC section has disappeared.</li>          
         </ul>
 procedureReassembleCase:
   title: Reassembling your Home Assistant Yellow
