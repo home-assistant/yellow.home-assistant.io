@@ -14,22 +14,13 @@ guideName: About firmware options
     
     <p>
         <span>
-            There are currently 3 different firmware options available for Home Assistant Yellow:
+            There are currently 2 different recommended firmware options available for Home Assistant Yellow:
             <ol>
                 <li><b>Zigbee firmware</b>
                     <ul>
                         <li>This is the firmware that runs a Zigbee network. It is preinstalled on SkyConnect and Yellow.</li>
                         <li>Bundled in the <b>Silicon Labs Flasher</b> add-on. In case you have installed one of the other two options at some point, this add-on allows you to re-install the Zigbee firmware. Note that the add-on is only used to flash the firmware. It is never used during operation: <abbr title="Zigbee Home Automation">ZHA</abbr> communicates with the Zigbee firmware directly.</li>
                         <li>Other terms you may have seen to designate this firmware: EmberZNet firmware, <abbr title="EmberZnet serial protocol">EZSP</abbr> firmware, Zigbee EZSP.</li>
-                    </ul>
-                </li>
-                <li><b>Multiprotocol firmware</b>
-                    <ul>
-                        <li>This is the firmware that enables Yellow and SkyConnect to run both a Thread and a Zigbee network. Both networks run on the same <abbr title="radio frequency">RF</abbr> channel.</li>
-                        <li>Bundled and automatically installed with the <b>Silicon Labs Multiprotocol</b> add-on.  This add-on comes with the Thread border router component, as well as with the Zigbee stack. The <abbr title="Zigbee Home Automation">ZHA</abbr> integration communicates with the Zigbee stack running inside the add-on.</li>
-                        <li>This firmware is currently experimental. For more information, refer to the documentation <a href="/about-multiprotocol/" target="_blank">About
-                            multiprotocol support</a></li>
-                        <li>Other terms you may have seen to designate this firmware: multi-<abbr title="personal area network">PAN</abbr>, RCP multi-<abbr title="personal area network">PAN</abbr></li>
                     </ul>
                 </li>
                 <li><b>Thread firmware</b>
@@ -40,16 +31,34 @@ guideName: About firmware options
                     </ul>
                 </li>
             </ol>
+            <p><b>There is also an experimental firmware, which is not recommended: the Multiprotocol firmware</b>
+                <ul>
+                    <li>This is the firmware that enables Yellow and SkyConnect to run both a Thread and a Zigbee network. Both networks run on the same <abbr title="radio frequency">RF</abbr> channel.</li>
+                    <li>Bundled and automatically installed with the <b>Silicon Labs Multiprotocol</b> add-on. This add-on comes with the Thread border router component, as well as with the Zigbee stack. The ZHA integration communicates with the Zigbee stack running inside the add-on.</li>
+                    <li>This firmware is currently experimental. For more information, refer to the documentation <a href="/guides/about-multiprotocol/" target="_blank">about
+                        multiprotocol issues</a>.</li>
+                    <li>Other terms you may have seen to designate this firmware: multi-<abbr title="personal area network">PAN</abbr>, RCP multi-<abbr title="personal area network">PAN</abbr></li>
+                </ul>
+            </p>
+
+            <h3>Overview of Zigbee and Thread firmware options, add-ons, and integrations in Home Assistant.</h3>
             <p class="img">
                 <picture>
                   <img src="/images/zigbee-thread-firmware-add-ons-integrations_02.png">
                 </picture>
                 <br>
-                <small>Overview of Zigbee and Thread firmware options, add-ons, and integrations in Home Assistant.</small>
-              </p></p>
+                <small>Chart illustrating the relationships between Zigbee and Thread firmware options, add-ons, and integrations in Home Assistant.</small>
+              </p></p>            
+
+            <h1>Why is it best to use only one protocol at once?</h1>
+            <p>When we launched Home Assistant Yellow, we announced our intent to release firmware supporting multiprotocol, which allows the device's Silicon Labs chip to connect to both Zigbee and Thread networks with one radio.</p>
+            <p>This experimental firmware has been available since December 2022. Through extensive testing, we have found that although it works in some circumstances, it has technical limitations that lead to a worse user experience. We now do not recommend using this firmware, and it will be experimental for the foreseeable future. Instead, we will focus on making sure the dedicated Zigbee and Thread firmware for Home Assistant Yellow delivers the best user experience.
+            </p>
+            <p>There are other key limitations to using Zigbee and Thread simultaneously we explain in this article: <a href="/guides/about-multiprotocol/" target="_blank">About multiprotocol issues</a>.</p>  
+  
 
             <h1>Why are there multiple firmware options?</h1>
-            <p>You might wonder why there are different firmware options. After all, you could just run the Multiprotocol firmware to use Zigbee and Thread on one device and be done with it. Zigbee and Thread devices run on the same <abbr title="radio frequency">RF</abbr> channel. If you have a large network, this can lead to bandwidth bottlenecks. For more information, refer to the documentation <a href="/about-multiprotocol/" target="_blank">about
+            <p>You might wonder why there are different firmware options. After all, you could just run the Multiprotocol firmware to use Zigbee and Thread on one device and be done with it. Zigbee and Thread devices run on the same <abbr title="radio frequency">RF</abbr> channel. If you have a large network, this can lead to bandwidth bottlenecks. For more information, refer to the documentation <a href="/guides/about-multiprotocol/" target="_blank">about
                 multiprotocol support</a>. For large networks, it can help to run the Zigbee and the Thread network on separate devices, for example on a SkyConnect and a Yellow.</p>
             
                 <h1>Related topics</h1>
