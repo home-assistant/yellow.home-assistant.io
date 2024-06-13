@@ -7,7 +7,7 @@ guideName: About firmware options
 
     <p>This section has two goals: 
         <ol>
-            <li>List the currently available firmware options for Home Assistant Yellow and SkyConnect.</li>
+            <li>List the currently available firmware options for Home Assistant Yellow and Connect&nbsp;ZBT-1.</li>
             <li>List the different add-ons and integrations related to these options and show their relationships.</li>
         </ol></p>
     <h1>Currently available firmware</h1>
@@ -18,14 +18,14 @@ guideName: About firmware options
             <ol>
                 <li><b>Zigbee firmware</b>
                     <ul>
-                        <li>This is the firmware that runs a Zigbee network. It is preinstalled on SkyConnect and Yellow.</li>
+                        <li>This is the firmware that runs a Zigbee network. It is preinstalled on Connect&nbsp;ZBT-1 and Yellow.</li>
                         <li>Bundled in the <b>Silicon Labs Flasher</b> add-on. In case you have installed one of the other two options at some point, this add-on allows you to re-install the Zigbee firmware. Note that the add-on is only used to flash the firmware. It is never used during operation: <abbr title="Zigbee Home Automation">ZHA</abbr> communicates with the Zigbee firmware directly.</li>
                         <li>Other terms you may have seen to designate this firmware: EmberZNet firmware, <abbr title="EmberZnet serial protocol">EZSP</abbr> firmware, Zigbee EZSP.</li>
                     </ul>
                 </li>
                 <li><b>Thread firmware</b>
                     <ul>
-                        <li>This firmware allows to use Yellow or SkyConnect as a dedicated Thread border router when used with the <b>Open Thread Border Router addon</b>.</li>
+                        <li>This firmware allows to use Yellow or Connect&nbsp;ZBT-1 as a dedicated Thread border router when used with the <b>Open Thread Border Router addon</b>.</li>
                         <li>Bundled in the <b>Open Thread Border Router</b> add-on.</li>
                         <li>Other terms you may have seen to designate this firmware: OpenThread RCP, RCP OT</li>
                     </ul>
@@ -33,7 +33,7 @@ guideName: About firmware options
             </ol>
             <p><b>There is also an experimental firmware, which is not recommended: the Multiprotocol firmware</b>
                 <ul>
-                    <li>This is the firmware that enables Yellow and SkyConnect to run both a Thread and a Zigbee network. Both networks run on the same <abbr title="radio frequency">RF</abbr> channel.</li>
+                    <li>This is the firmware that enables Yellow and Connect&nbsp;ZBT-1 to run both a Thread and a Zigbee network. Both networks run on the same <abbr title="radio frequency">RF</abbr> channel.</li>
                     <li>Bundled and automatically installed with the <b>Silicon Labs Multiprotocol</b> add-on. This add-on comes with the Thread border router component, as well as with the Zigbee stack. The ZHA integration communicates with the Zigbee stack running inside the add-on.</li>
                     <li>This firmware is currently experimental. For more information, refer to the documentation <a href="/guides/about-multiprotocol/" target="_blank">about
                         multiprotocol issues</a>.</li>
@@ -59,7 +59,7 @@ guideName: About firmware options
 
             <h1>Why are there multiple firmware options?</h1>
             <p>You might wonder why there are different firmware options. After all, you could just run the Multiprotocol firmware to use Zigbee and Thread on one device and be done with it. Zigbee and Thread devices run on the same <abbr title="radio frequency">RF</abbr> channel. If you have a large network, this can lead to bandwidth bottlenecks. For more information, refer to the documentation <a href="/guides/about-multiprotocol/" target="_blank">about
-                multiprotocol support</a>. For large networks, it can help to run the Zigbee and the Thread network on separate devices, for example on a SkyConnect and a Yellow.</p>
+                multiprotocol support</a>. For large networks, it can help to run the Zigbee and the Thread network on separate devices, for example on a Connect&nbsp;ZBT-1 and a Yellow.</p>
             
                 <h1>Related topics</h1>
                 <p><ul>
