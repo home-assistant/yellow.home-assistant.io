@@ -391,7 +391,7 @@ procedureEnableThreadSupport:
           <li>If you are using the Yellow with Zigbee Home Automation (ZHA), this step removes ZHA from the integration list.</li>
         </ul>
         <ol>
-          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & Services</b></a>.</li>
+          <li>Go to <a class="my" href="https://my.home-assistant.io/redirect/integrations/" target="_blank"><b>Settings</b> > <b>Devices & services</b></a>.</li>
           <li>Select the <b>Zigbee Home Automation</b> integration card.</li>
           <li>Select the menu behind the <b>Yellow</b> integration and choose <b>Delete</b>.</li>
           <li>On the pop-up menu, select <b>Delete</b> again to confirm deletion.</li>
