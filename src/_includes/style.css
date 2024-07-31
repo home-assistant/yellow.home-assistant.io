@@ -7,6 +7,7 @@ html {
   --divider-color: rgba(0, 0, 0, 0.12);
   --primary-color: #03a9f4;
   --accent-color: #ffc900;
+  --background-color-alert-note: #e7f2fa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +17,8 @@ html {
     --primary-background-color: #202020;
     --secondary-background-color: #303030;
     --divider-color: rgba(225, 225, 225, 0.12);
+    --background-color-alert-note: #144660;
+    ;
   }
 
   .items a img {
@@ -594,6 +597,6 @@ div.alert {
       color: #6ab0de;
     }
 
-    background-color: #e7f2fa;
+    background-color: var(--background-color-alert-note);
   }
 }
