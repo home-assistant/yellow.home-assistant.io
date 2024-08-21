@@ -121,7 +121,7 @@ procedureReseatCM4:
       image: step-6-poe-align-cm4.jpeg
       content: |
         <ul>
-          <li>Place the board in front of you, the connectors facing to the right.</li>
+          <li>Place the board in front of you, the red and blue buttons facing to the right.</li>
           <li>Orient the CM4: The CE mark needs to be on the bottom.</li>
           <li>Use the outline of the chips to help find the correct orientation of the CM4. Note: on CM4 Lite variants, the chips on the bottom edge are in a different location.</li>
           <li>Carefully place the CM4 without force.</li>
