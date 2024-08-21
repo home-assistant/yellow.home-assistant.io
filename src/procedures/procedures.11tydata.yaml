@@ -114,6 +114,43 @@ procedureInstallCM4:
           <li>Take the entire board off your workplace and push the pins firmly through the carrier board.</li>
           <li>Ensure that the CM4 is still fully seated after securing the heat sink.</li>
         </ul>
+procedureReseatCM4:
+  title: Re-seating the Raspberry Pi Compute Module 4
+  steps:
+    - title: Align the CM4
+      image: step-6-poe-align-cm4.jpeg
+      content: |
+        <ul>
+          <li>Place the board in front of you, the connectors facing to the right.</li>
+          <li>Orient the CM4: The CE mark needs to be on the bottom.</li>
+          <li>Use the outline of the chips to help find the correct orientation of the CM4. Note: on CM4 Lite variants, the chips on the bottom edge are in a different location.</li>
+          <li>Carefully place the CM4 without force.</li>
+          <li>The CM4 should fall into place slightly when correctly aligned.</li>
+        </ul>
+    - title: Installing the CM4
+      image: install-cm4-01.webp
+      content: |
+        <ul>
+          <li>Press the CM4 board onto the board-to-board connectors until it clicks into place.</li>
+          <li>Make sure you press on both sides (the two long edges).</li>
+          <li>This requires quite a bit of force. If you don't hear a loud click, it is most likely not fully seated.</li>
+          <li>Do a visual check to make sure the CM4 is installed correctly: it needs to run parallel to the Home Assistant Yellow board.</li>
+        </ul>
+    - title: Placing the heat sink
+      image: step-8-install-heatsink.webp
+      content: |
+        <ul>
+          <li>Push the 2 plastic push pins into the dedicated hole on the heat sink.</li>
+          <li>Start by first aligning the right plastic push pins into the dedicated hole on the carrier board.</li>
+          <li>Then, place the heat sink onto the CM4.</li>
+        </ul>
+    - title: Securing the heat sink
+      image: step-9-push-pins-heatsink.webp
+      content: |
+        <ul>
+          <li>Take the entire board off your workplace and push the pins firmly through the carrier board.</li>
+          <li>Ensure that the CM4 is still fully seated after securing the heat sink.</li>
+        </ul>
 procedureInstallNvme:
   title: Installing the NVMe drive
   steps:
