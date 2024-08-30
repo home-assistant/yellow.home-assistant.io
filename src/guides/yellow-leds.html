@@ -15,9 +15,12 @@ guideName: Home Assistant Yellow LEDs
     <li>Red LED (D4): Power LED</li>
     <li>Green LED (D5): Activity LED</li>
     <li>Yellow LED (D6): Home Assistant Yellow system health LED</li>
-    <li>Blue LED (D2): Radio LED. Indicates network traffic on the radio. The radio can be used for Zigbee or Thread. The behavior of the LED is the same for either.</li>
+    <li>Blue LED (D2): Radio LED. Indicates network traffic on the radio. The radio can be used for Zigbee or Thread. The behavior of the LED is the same for either.
+      </li>
   </ul>
-
+  <div style="padding: 8px 0px 0px 0px">
+    <img src="/images/yellow_heartbeat_yellow_led.webp" width="300"/>
+</div>
   <h2>Power LED (red)</h2>
   <span
     >The power LED indicates whether the CM4 is powered. If the LED is off, check
@@ -54,7 +57,11 @@ guideName: Home Assistant Yellow LEDs
         <td>System is in EEPROM firmware or boot loader mode.</td>
       </tr>
       <tr>
-        <td>Heartbeat</td>
+        <td>Heartbeat
+          <div style="padding: 8px 0px 0px 0px">
+            <img src="/images/yellow_heartbeat_yellow_led.webp" width="300"/>
+          </div>
+        </td>
         <td>Home Assistant OS is running.</td>
       </tr>
     </tbody>
@@ -79,7 +86,10 @@ guideName: Home Assistant Yellow LEDs
         <td>System is in EEPROM firmware or boot loader mode.</td>
       </tr>
       <tr>
-        <td>Steady blinking (typically ~30 s)</td>
+        <td>Steady blinking (typically ~30 s)
+          <div style="padding: 8px 0px 0px 0px">
+            <img src="/images/led-pattern-blink-steady.webp" />
+        </div></td>
         <td>Installer is booting.</td>
       </tr>
       <tr>
@@ -91,7 +101,10 @@ guideName: Home Assistant Yellow LEDs
         <td>After the steady blinking sequence, the yellow LED should be solid on for about 5 s and then switch to fast blinking. A yellow LED that does not switch to fast blinking but stays solid on indicates a network issue.</td>
       </tr>
       <tr>
-        <td>Fast blinking (typically ~3-5 min, depending on Internet connection speed).</td>
+        <td>Fast blinking (typically ~3-5 min, depending on Internet connection speed).
+          <div style="padding: 8px 0px 0px 0px">
+            <img src="/images/led-pattern-install-blink-fast.webp" />
+        </div></td>
         <td>Downloading Home Assistant OS and installing onto the eMMC or NVMe.</td>
       </tr>
       <tr>
