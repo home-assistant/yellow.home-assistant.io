@@ -206,6 +206,24 @@ sections:
             Keep the two buttons pressed for at least 15 seconds. Now, the system
             should boot from the USB flash drive again.
           </p>
+      - title: >
+          I forgot the owner password for Home Assistant. How can I reset it?
+        content: >      
+          <p>
+            <ol>
+              <li>If you forgot the owner's password, you need to reset the password via a terminal. 
+                <ul>
+                  <li>To connect a terminal using a Windows computer, follow the steps on <a href="/guides/use-serial-console-windows/" target="_blank">Using the serial console for debugging (Windows)</a> up to  (and including) step 9.</li>
+                  <li>To connect a terminal using a Mac or Linux computer, follow the steps on <a href="/guides/use-serial-console-linux-macos/" target="_blank">Using the serial console for debugging (Linux/macOS)</a> up to (and including) step 9.</li>
+                </ul>                
+              </li>
+              <li>To reset the password, enter <code>ha auth reset --username existing_user --password new_password</code>.</li>
+              <li><b>Note</b>: <code>existing_user</code> and <code>new_password</code> are placeholders. Replace them with your username and desired password.
+                <div style="padding: 8px 0px 0px 0px">
+                  <img src="/images/ha_auth_reset.webp" />
+                </div></li>
+            </ol>
+          </p>
 ---
 <div class="container">
   {% for section in sections %}
