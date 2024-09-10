@@ -424,7 +424,7 @@ procedureEnableThreadSupport:
       image: yellow-zha-delete.png
       content: |
         <ul>
-          <li>If you have a new Yellow or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 3.</li>
+          <li>If you have a new Yellow or did not setup Zigbee Home Automation (ZHA) yet, skip to Step 2.</li>
           <li>If you are using the Yellow with Zigbee Home Automation (ZHA), this step removes ZHA from the integration list.</li>
         </ul>
         <ol>
