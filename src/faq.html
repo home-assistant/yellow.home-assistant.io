@@ -59,6 +59,32 @@ sections:
             and Crucial P5 CT1000P5SSD8 (1TB) as well.
           </p>  
       - title: >
+            When do I need to replace the CR2032 coin-cell battery?
+        content: >
+          <p>
+            The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
+          </p>
+          <p>In case you do replace the battery, make sure the positive side is facing upwards. You should see the plus sign.</p>
+      - title: >
+            What is the purpose of the 3.5 mm barrel audio jack?
+        content: >
+          <p>
+            The 3.5 mm barrel audio jack can be connected to an amplifier and used in combination with the <a href="https://www.home-assistant.io/integrations/vlc_telnet#home-assistant-add-on" target="_blank">VLC</a> add-on. This exposes the output as a media player in Home Assistant Core.
+          </p>
+      - title: >
+          Can I buy the Home Assistant Yellow pre-assembled?
+        content: >
+          <p>No. We previously offered a Home Assistant Yellow Standard model that came pre-assembled with a Raspberry Pi CM4, but this model is no longer manufactured. It is now recommended that if you want a more plug-and-play experience, you purchase a <a href="https://www.home-assistant.io/green" target="_blank">Home Assistant Green</a>, as it requires no assembly and matches many of the capabilities of the Yellow, especially if you add a <a href="https://www.home-assistant.io/connectzbt1/" target="_blank">Home Assistant Connect ZBT-1</a> to give it Zigbee/Thread capability.
+          </p>
+      - title: >
+          What happened to Home Assistant Yellow Standard, and will it still be supported?
+        content: >
+          <p>The Home Assistant Yellow Standard was originally designed to be the beginner option in our product line, as it was pre-assembled and easier to get started with. In 2023, we launched the <a href="https://www.home-assistant.io/green" target="_blank">Home Assistant Green</a>, which offered similar features, including easy setup, but at a lower price point. This led us to end the manufacture of the Home Assistant Yellow Standard and focus on Yellow Kit versions for advanced users. Rest assured, as the Home Assistant Yellow Standard hardware is identical to our Kits, it will continue to receive the same support and software updates.
+          </p>
+
+  - name: Connectivity
+    faqs:
+      - title: >
           Is Zigbee2MQTT supported by the on-board radio?
         content: >
           <p>
@@ -98,28 +124,15 @@ sections:
           serial port as its not connected through USB. The above tty path will
           remain static.
       - title: >
-            When do I need to replace the CR2032 coin-cell battery?
+          Does Home Assistant Yellow have a Z-Wave or Bluetooth radio?
         content: >
-          <p>
-            The Duracell CR2032 shipped with Home Assistant Yellow is estimated to last 10 years or more (with self-discharge taken into account). Replacement likely won't be necessary within the product's lifetime. If your RTC does not show the correct date, this is likely because the initial time synchronization failed. Make sure that your Internet router does not block NTP (Network Time Protocol) traffic.
-          </p>
-          <p>In case you do replace the battery, make sure the positive side is facing upwards. You should see the plus sign.</p>
-      - title: >
-            What is the purpose of the 3.5 mm barrel audio jack?
-        content: >
-          <p>
-            The 3.5 mm barrel audio jack can be connected to an amplifier and used in combination with the <a href="https://www.home-assistant.io/integrations/vlc_telnet#home-assistant-add-on" target="_blank">VLC</a> add-on. This exposes the output as a media player in Home Assistant Core.
-          </p>
-      - title: >
-          Can I buy the Home Assistant Yellow pre-assembled?
-        content: >
-          <p>No. We previously offered a Home Assistant Yellow Standard model that came pre-assembled with a Raspberry Pi CM4, but this model is no longer manufactured. It is now recommended that if you want a more plug-and-play experience, you purchase a <a href="https://www.home-assistant.io/green" target="_blank">Home Assistant Green</a>, as it requires no assembly and matches many of the capabilities of the Yellow, especially if you add a <a href="https://www.home-assistant.io/connectzbt1/" target="_blank">Home Assistant Connect ZBT-1</a> to give it Zigbee/Thread capability.
-          </p>
-      - title: >
-          What happened to Home Assistant Yellow Standard, and will it still be supported?
-        content: >
-          <p>The Home Assistant Yellow Standard was originally designed to be the beginner option in our product line, as it was pre-assembled and easier to get started with. In 2023, we launched the <a href="https://www.home-assistant.io/green" target="_blank">Home Assistant Green</a>, which offered similar features, including easy setup, but at a lower price point. This led us to end the manufacture of the Home Assistant Yellow Standard and focus on Yellow Kit versions for advanced users. Rest assured, as the Home Assistant Yellow Standard hardware is identical to our Kits, it will continue to receive the same support and software updates.
-          </p>
+          <p>No, Home Assistant Yellow neither has a Z-Wave nor a Bluetooth radio onboard.</p>
+          <ul>
+            <li>For Bluetooth, you can use <a href="https://esphome.io/projects/?type=bluetooth" >
+              an ESPHome as a Bluetooth proxy</a> or add a USB dongle and use <a href="https://www.home-assistant.io/integrations/bluetooth/" >
+                local Bluetooth support</a>.</li>
+            <li>For Z-Wave, you can use a USB dongle.</li>
+          </ul>
 
   - name: Troubleshooting
     faqs:
