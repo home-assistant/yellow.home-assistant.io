@@ -126,7 +126,11 @@ sections:
       - title: >
           Does Home Assistant Yellow have a Z-Wave or Bluetooth radio?
         content: >
-          No, Home Assistant Yellow neither has a Z-Wave nor a Bluetooth radio onboard.
+          <p>No, Home Assistant Yellow neither has a Z-Wave nor a Bluetooth radio onboard.</p>
+          <ul>
+            <li>For Bluetooth, you can use [an ESPHome as a Bluetooth proxy](https://esphome.io/projects/?type=bluetooth) or add a USB dongle and use [local Bluetooth support](https://www.home-assistant.io/integrations/bluetooth/).</li>
+            <li>For Z-Wave, you can use a USB dongle.</li>
+          </ul>
 
   - name: Troubleshooting
     faqs:
