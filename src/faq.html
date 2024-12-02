@@ -6,18 +6,9 @@ sections:
   - name: General
     faqs:
       - title: >
-          How do I find a Raspberry Pi Compute Module 4?
+          Can I use the EDATec Raspberry Pi Compute Module 5 Active Cooler?
         content: >
-          <p>You could use <a href="https://rpilocator.com/" target="_blank">rpilocator</a>. This website tracks the stock of official Raspberry Pi distributors. Follow them on Twitter and enable push notifications. You will be notified as soon as the bot tweets that products are in stock.
-          </p>
-          <p>
-          We recommend purchasing a Raspberry Pi Compute Module 4 with the following characteristics: 
-          <ul>
-            <li>Min. 2&nbsp;GB of RAM.</li>
-            <li>Min. 16&nbsp;GB of eMMC flash space.</li>
-            <li>If you opt for the CM4 Lite: as it does not have an eMMC module, you must use an NVMe SSD hard drive. Some users reported that the <a href="/faq/#which-ssds-are-not-supported">following SSDs</a> are not working on the Home Assistant Yellow.</li>
-          </ul>
-          </p>
+          <p>No, the Raspberry Pi Compute Module 5 Active Cooler is not supported on Home Assistant Yellow. There is no fan plug providing the required 5V and PWM signals. If you are installing the Raspberry Pi Compute Module 5 on Yellow, you can keep using the heat sink that is shipped with Home Assistant Yellow.</p>
       - title: >
           Which SSDs are supported?
         content: >
@@ -80,6 +71,19 @@ sections:
           What happened to Home Assistant Yellow Standard, and will it still be supported?
         content: >
           <p>The Home Assistant Yellow Standard was originally designed to be the beginner option in our product line, as it was pre-assembled and easier to get started with. In 2023, we launched the <a href="https://www.home-assistant.io/green" target="_blank">Home Assistant Green</a>, which offered similar features, including easy setup, but at a lower price point. This led us to end the manufacture of the Home Assistant Yellow Standard and focus on Yellow Kit versions for advanced users. Rest assured, as the Home Assistant Yellow Standard hardware is identical to our Kits, it will continue to receive the same support and software updates.
+          </p>      
+      - title: >
+          How do I find a Raspberry Pi Compute Module 4?
+        content: >
+          <p>You could use <a href="https://rpilocator.com/" target="_blank">rpilocator</a>. This website tracks the stock of official Raspberry Pi distributors. Follow them on Twitter and enable push notifications. You will be notified as soon as the bot tweets that products are in stock.
+          </p>
+          <p>
+          We recommend purchasing a Raspberry Pi Compute Module 4 with the following characteristics: 
+          <ul>
+            <li>Min. 2&nbsp;GB of RAM.</li>
+            <li>Min. 16&nbsp;GB of eMMC flash space.</li>
+            <li>If you opt for the CM4 Lite: as it does not have an eMMC module, you must use an NVMe SSD hard drive. Some users reported that the <a href="/faq/#which-ssds-are-not-supported">following SSDs</a> are not working on the Home Assistant Yellow.</li>
+          </ul>
           </p>
 
   - name: Connectivity
