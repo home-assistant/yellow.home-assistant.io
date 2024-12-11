@@ -404,7 +404,7 @@ procedureReassembleCase:
           <li class="warning">Do not over-tighten the screws.</li>
         </ul>
 procedureRemoveCM4:
-  title: Removing the Raspberry Pi Compute Module 4 or 5
+  title: Removing the Raspberry Pi Compute Module
   steps:
     - title: Removing the heat sink
       image: remove-pins-03.webp
