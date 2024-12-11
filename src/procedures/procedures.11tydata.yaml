@@ -404,7 +404,7 @@ procedureReassembleCase:
           <li class="warning">Do not over-tighten the screws.</li>
         </ul>
 procedureRemoveCM4:
-  title: Removing the Raspberry Pi Compute Module 4
+  title: Removing the Raspberry Pi Compute Module
   steps:
     - title: Removing the heat sink
       image: remove-pins-03.webp
@@ -413,13 +413,14 @@ procedureRemoveCM4:
           <li>Use the pliers and squeeze the front of the pin so that it fits through the hole.</li>
           <li>Repeat the procedure for the other pin.</li>
         </ul>
-    - title: Removing the Raspberry Pi Compute Module 4
+    - title: Removing the Raspberry Pi Compute Module
       image: unseat-cm4.webp
       content: |
         <ul>
-          <li class="warning">Ideally, the module should be pulled up vertically. But this is hard to to.</li>
+          <li><b>Info</b>: The image shows a Raspberry Pi Compute Module 4. But the steps are the same for the Compute Module 5 (CM5).</li>
+          <li class="warning">Ideally, the module should be pulled up vertically. But this is hard to do.</li>
           <li>Pull up the module from one side, tilting as little as possible. Tilting can damage the connector.</li>
-          <li class="info">This requires quite a bit of strength. If it does not work, pull harder.</li>
+          <li class="info">This requires quite a bit of force. If it does not work, pull harder.</li>
           <li class="warning">Do not use a screw driver as a lever. It might damage the board.</li>
         </ul>
 procedureDisableMultiProtocol:
