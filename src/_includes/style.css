@@ -173,13 +173,14 @@ h3 {
   max-width: 100%;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 920px) {
   .nav-bar {
     flex-direction: column;
   }
 
   .nav-bar .logo {
     width: 100%;
+    text-align: center;
   }
 }
 
