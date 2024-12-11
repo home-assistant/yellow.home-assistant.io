@@ -43,7 +43,7 @@ procedureOpeningCase:
           <li>Ideally: Use ESD protective equipment, such as ESD table mats and grounding cords.</li>
         </ul>
     - title: Removing the case - bottom part
-      image: cm5-remove-thumb-screws.jpeg
+      image: cm5-remove-thumb-screws.jpg
       content: |
         <ul>
           <li>Remove the 4 screws on the bottom of the Home Assistant Yellow Kit.</li>
@@ -51,6 +51,34 @@ procedureOpeningCase:
         </ul>
     - title: Removing the case - top part
       image: step-4-open.webp
+      content: |
+        <ul>
+          <li>Make sure the interfaces are facing towards your left.</li>
+          <li>Flip the case over.</li>
+          <li>Slightly lift off the enclosure on your left.</li>
+          <li>Slide the enclosure off towards your right.</li>
+        </ul>
+procedureOpeningCaseCM5:
+  title: Opening the case
+  steps:
+    - title: Protecting from ESD
+      image-apply-filter: true
+      image: step-2-esd.png
+      content: |
+        <p>Grounding protects the components from the static electricity that can be naturally present (electrostatic discharge, ESD).</p>
+        <ul>
+          <li class="warning">Always: Touch the working surface before touching electronics. </li>
+          <li>Ideally: Use ESD protective equipment, such as ESD table mats and grounding cords.</li>
+        </ul>
+    - title: Removing the case - bottom part
+      image: cm5-remove-thumb-screws.jpg
+      content: |
+        <ul>
+          <li>Remove the 4 screws on the bottom of the Home Assistant Yellow Kit.</li>
+          <li>Keep the thumb screws close by; you will need them again later.</li>
+        </ul>
+    - title: Removing the case - top part
+      image: cm5_remove_cover_480.webp
       content: |
         <ul>
           <li>Make sure the interfaces are facing towards your left.</li>
@@ -362,14 +390,14 @@ procedureReassembleCase:
           <li>Make sure the USB connectors are facing upwards, away from you.</li>
         </ul>
     - title: Reassembling - top part
-      image: reassemble-step-3-insert-pcb-and-bottom-plate.webp
+      image: close_cover_480.webp
       content: |
         <ul>
           <li>Turn the enclosure upside down.</li>
           <li>Then, slide the push buttons into the openings of the case.</li>
         </ul>
     - title: Mounting the case
-      image: cm5_insert-thumb-screws.jpeg
+      image: cm5_insert-thumb-screws.jpg
       content: |
         <ul>
           <li>Insert the 4 thumb screws.</li>
