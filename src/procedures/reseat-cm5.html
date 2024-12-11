@@ -1,0 +1,21 @@
+---
+layout: guide
+permalink: "guides/{{ page.fileSlug }}/index.html"
+description: Home Assistant Yellow
+guideName: Re-seating the Raspberry Pi Compute Module 5
+nvme: true
+collectionName: reseat-cm5
+tools:
+  title: Gathering the required items
+  image: cm5_reseat_tools_350.jpg
+  content: |
+    <ul>
+      <li>Home&nbsp;Assistant Yellow</li>
+      <li>Flat nose pliers</li>
+    </ul>
+---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCaseCM5 %}
+{% render "proc.include.liquid", proc: procedureRemoveCM4 %}
+{% render "proc.include.liquid", proc: procedureReseatCM5 %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
