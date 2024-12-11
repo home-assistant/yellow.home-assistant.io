@@ -43,7 +43,7 @@ procedureOpeningCase:
           <li>Ideally: Use ESD protective equipment, such as ESD table mats and grounding cords.</li>
         </ul>
     - title: Removing the case - bottom part
-      image: step-3-remove-thumb-screws.jpeg
+      image: cm5-remove-thumb-screws.jpeg
       content: |
         <ul>
           <li>Remove the 4 screws on the bottom of the Home Assistant Yellow Kit.</li>
@@ -369,7 +369,7 @@ procedureReassembleCase:
           <li>Then, slide the push buttons into the openings of the case.</li>
         </ul>
     - title: Mounting the case
-      image: reassemble-step-4-insert-thumb-screws.jpeg
+      image: cm5_insert-thumb-screws.jpeg
       content: |
         <ul>
           <li>Insert the 4 thumb screws.</li>
