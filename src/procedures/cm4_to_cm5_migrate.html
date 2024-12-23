@@ -1,0 +1,39 @@
+---
+layout: getting-started
+description: Home Assistant Yellow
+guideName: Migrating from CM4 to CM5
+tools:
+  title: Gathering the required items
+  image: cm5_prereqs.jpg
+  content: |
+    <ul>
+      <li>Home&nbsp;Assistant Yellow</li>
+      <li>Ethernet cable</li>
+    </ul>
+    <p>Additionally, make sure you have the following items which are not part of the Kit</p>
+    <ul>
+      <li>Raspberry Pi Compute Module 5 (CM5)</li>
+      <li>USB-C cable</li>
+      <li>If you are using PoE, make sure your router or switch provides PoE on that port</li>
+      <li>Optional: Power supply (12 V / 2 A, if PoE is not used)</li>
+      <li>Flat nose pliers</li>
+    </ul>
+    <p>Preparation steps:</p>
+    <ul>
+      <li>Make sure you installed Home Assistant Operating System version 14 or later.</li>
+      <li>Make sure you have <a href="/guides/create-backup/" target="_blank">created a backup</a>.
+        <ul>
+          <li>Before creating a backup, make sure your CM5 eMMC has enough storage capacity.</li>
+          <li>Check how much disk space you've used under <a class="my" href="https://my.home-assistant.io/redirect/storage/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Storage</b></a>.</li>
+          <li>If this is larger than the eMMC, you need to reduce the size of your instance.</li>
+      </li>
+    </ul>
+---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureRemoveCM4 %}
+{% render "proc.include.liquid", proc: procedureReseatCM5 %}
+{% render "proc.include.liquid", proc: proceduresInstallingHAOSrpiboot %}
+{% render "proc.include.liquid", proc: proceduresRunningRpiImagerCM5 %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
+{% render "proc.include.liquid", proc: proceduresPowerUpCM5 %}

@@ -180,7 +180,7 @@ procedureReseatCM4:
           <li>Ensure that the CM4 is still fully seated after securing the heat sink.</li>
         </ul>
 procedureReseatCM5:
-  title: Re-seating the Raspberry Pi Compute Module 5
+  title: Seating the Raspberry Pi Compute Module 5
   steps:
     - title: Align the Compute Module
       image: step-6-poe-align-cm4.jpeg
@@ -367,6 +367,151 @@ proceduresInstallingHAOS:
           <li>The Home Assistant frontend guides you through the initial onboarding.</li>
           <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
+proceduresInstallingHAOSrpiboot:
+  title: Running rpiboot
+  steps:
+    - title: Install rpiboot on your computer.
+      image: source_code.png
+      content: |
+        <ul>
+        <li>rpiboot is a command line utility for booting a Raspberry Pi in USB device mode. This is needed because the CM5 cannot boot from the USB 2.0 ports of the Yellow.</li>
+        <li>Install rpiboot on your PC.
+          <ul>
+            <li><b>Windows</b>: Download and run the 
+                <a
+                  href="https://github.com/raspberrypi/usbboot/raw/master/win32/rpiboot_setup.exe"
+                  >Windows Installer from Raspberry Pi Github</a
+                >.
+            </li>
+            <li><b>MacOS or Linux</b>: Install from
+                <a
+                  href="https://github.com/raspberrypi/usbboot?tab=readme-ov-file#building"
+                  >source code</a
+                >.
+              <ul>
+              </ul>
+            </li>
+            </ul>
+          </li>
+        </ul>
+    - title: Connect the Yellow to your PC
+      image: yellow_jp1_to_usb.png
+      content: |
+        <ol>
+        <li>On the Yellow board, make sure the JP1 jumper is set to USB.
+          <ul>
+            <li>It is there by default, but it is worth to double-check.</li>
+          </ul>
+        </li>
+        <li>Plug-in a USB-C cable to Home Assistant Yellow and connect it to your PC.
+          <ul>
+            <li>Make sure the cable supports USB 2.0 data.</li>
+          </ul>
+        </li>
+        </ol>
+    - title: Press recovery button and power up
+      image: yellow_usb_recovery_button.png
+      content: |
+        <ol>
+          <li>On the Yellow board, press and <b>hold</b> the recovery button.
+            <ul><li>Older Home Assistant Yellow versions: Bridge JP2 (USB-C Rcvry).</li></ul>
+          </li>
+          <li>Power up the board.
+          <ul><li>Only the red LED should be on at this point (solid, not blinking).</li></ul>
+          </li>
+          <li>Release the recovery push button.
+            <ul><li>Older Home Assistant Yellow versions: Un-bridge JP2.</li>
+            </ul>
+          </li>
+        </ol>
+    - title: Run rpiboot
+      image: led-pattern-install-green.png
+      content: |
+        <ul>
+          <li>On your PC, run rpiboot and let it run through.
+            <ul>
+              <li>If you are on a Windows, it might ask you if you want to reformat the disk. Select <b>Cancel</b> each time.</li>
+              <li>If you are on a Linux, use <code>sudo ./rpiboot -d mass-storage-gadget64</code> to run the tool.</li>                           
+              <li>If you are running an Apple Silicon mac, before running rpiboot, make sure you open the terminal using the “Rosetta” compatibility mode.
+                </li>              
+            </ul>
+          </li>
+          <li>After a few seconds, the yellow LED on the Yellow board should start blinking.</li>
+          <li>Afterwards, only the green LED should be on.</li>
+          <li>The module is now ready and to have the Home Assistant Operating System installed on it (next steps).</li>      
+        </ul>
+proceduresRunningRpiImagerCM5:
+  title: Installing Home Assistant Software on CM5
+  steps:
+    - title: Installing the Raspberry Pi Imager
+      image: rpi_imager.png
+      content: |
+        <ul>
+          <li>Install the Raspberry Pi Imager on your computer as described under <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a></li>
+          <li class="info">If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from <a href="https://github.com/NabuCasa/yellow-buildroot/releases">GitHub releases</a>.</li>
+        </ul>
+    - title: Open Raspberry Pi Imager      
+      image: yellow_rpi-imager_select_device_cm5.png
+      content: |
+        <ul>
+          <li>Open Raspberry Pi Imager.</li>
+          <li>Under <b>Raspberry Pi Device</b>, select </b>Raspberry Pi 5</b>.</li>     
+        </ul>
+    - title: Choosing the operating system
+      image: yellow_rpi-imager_cm5_module_image.webp
+      content: |
+        <ul>
+          <li>Select <b>Choose OS</b></li>
+          <li>Choose <b>Other specific-purpose OS</b>.</li>
+          <li>Choose <b>Home assistants and home automation</b>.</li>
+          <li>Choose <b>Home Assistant</b>.</li>
+          <li>Choose <b>Home Assistant OS x.y (Yellow)</b>.</li>
+        </ul>
+    - title: Choosing storage
+      image: rpi_choose_storage_cm5.png
+      content: |
+        <ul>
+          <li>Select <b>Choose storage</b> and from the dropdown menu, select your Raspberry Pi module.</li>
+        </ul>
+    - title: Writing the installer onto the drive
+      image: rpi_choose_next.png
+      content: |
+        <ol>
+          <li>Select the <b>Next</b> button to start the process.</li>
+          <li>Wait for the Home&nbsp;Assistant OS Installer to be written to the internal eMMC storage on your module.</li>
+          <li>Follow the wizard.</li>
+          <li>When the steps are complete, close the rpi-installer.</li>
+        </ol>
+    - title: Unplug and set to UART
+      image: yellow_jp1_to_uart.png
+      content: |
+        <ol>
+          <li>Unplug the USB cable.</li>
+          <li>Unplug the power cable.</li>
+          <li>Set the JP1 jumper to UART.</li>
+        </ol>
+proceduresPowerUpCM5:
+  title: Powering up and getting started
+  steps:
+    - title: Power up and watch the LEDs
+      image: yellow_heartbeat_yellow_led.webp
+      content: |
+        <ul>
+          <li>Connect Ethernet and power.</li>
+          <li>Start up may take a while. Once te yellow LED blinks in a heartbeat pattern, the system is up and running.</li>          
+        </ul>
+    - title: Getting started with Home Assistant
+      image: yellow_restore_from_backup.png
+      content: |
+        <ol>
+          <li><b>Open Home Assistant</b>: 
+            <ul>
+              <li><b>Mobile</b>: Confirm the IP address detected by the app. E.g. <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
+              <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+            </ul>
+          <li>On the onboarding screen, select <b>Restore from backup</b>.</li>
+          <li>For more information, refer to the section on <a href="/guides/restore-backup/" target="_blank">restoring from backup</a>.</li>        
+        </ol>
 procedureMoveDataDisk:
   title: Configuring Home Assistant and moving your data
   steps:
