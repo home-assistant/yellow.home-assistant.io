@@ -501,18 +501,17 @@ proceduresPowerUpCM5:
           <li>Start up may take a while. Once te yellow LED blinks in a heartbeat pattern, the system is running.</li>          
         </ul>
     - title: Getting started with Home Assistant
-      image: HA-get-started-02.png
+      image: yellow_restore_from_backup.png
       content: |
-        <ul>
-          <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
-          <li><b>Select your Home Assistant Server</b>: 
+        <ol>
+          <li><b>Open Home Assistant</b>: 
             <ul>
               <li><b>Mobile</b>: Confirm the IP address detected by the app. E.g. <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li></li>
               <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
             </ul>
-          <li>The Home Assistant frontend guides you through the initial onboarding.</li>
-          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
-        </ul>
+          <li>On the onboarding screen, select <b>Restore from backup</b>.</li>
+          <li>For more information, refer to the section on <a href="/guides/restore-backup/" target="_blank">restoring from backup</a>.</li>        
+        </ol>
 procedureMoveDataDisk:
   title: Configuring Home Assistant and moving your data
   steps:
