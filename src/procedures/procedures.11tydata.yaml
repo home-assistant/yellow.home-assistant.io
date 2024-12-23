@@ -497,7 +497,7 @@ proceduresPowerUpCM5:
       image: yellow_heartbeat_yellow_led.webp
       content: |
         <ul>
-          <li>Connect power.</li>
+          <li>Connect Ethernet and power.</li>
           <li>Start up may take a while. Once te yellow LED blinks in a heartbeat pattern, the system is running.</li>          
         </ul>
     - title: Getting started with Home Assistant
