@@ -374,7 +374,7 @@ proceduresInstallingHAOSrpiboot:
       image: source_code.png
       content: |
         <ul>
-        <li>rpiboot is a command line utility for booting a Raspberry Pi in USB device mode. This is needed because the CM5 cannot be booted directly from USB.</li>
+        <li>rpiboot is a command line utility for booting a Raspberry Pi in USB device mode. This is needed because the CM5 cannot boot from the USB 2.0 ports of the Yellow.</li>
         <li>Install rpiboot on your PC.
           <ul>
             <li><b>Windows</b>: Download and run the 
@@ -405,7 +405,7 @@ proceduresInstallingHAOSrpiboot:
         </li>
         <li>Plug-in a USB-C cable to Home Assistant Yellow and connect it to your PC.
           <ul>
-            <li>Make sure the cable supports data.</li>
+            <li>Make sure the cable supports USB 2.0 data.</li>
           </ul>
         </li>
         </ol>
@@ -431,8 +431,8 @@ proceduresInstallingHAOSrpiboot:
           <li>On your PC, run rpiboot and let it run through.
             <ul>
               <li>If you are on a Windows, it might ask you if you want to reformat the disk. Select <b>Cancel</b> each time.</li>
-              <li>If you are on a linux, use <code>sudo ./rpiboot -d mass-storage-gadget64</code> to run the tool.</li>                           
-              <li>If you are running an Apple Silicon mac,  before running rpiboot, make sure you open the terminal using the “Rosetta” compatibility mode.
+              <li>If you are on a Linux, use <code>sudo ./rpiboot -d mass-storage-gadget64</code> to run the tool.</li>                           
+              <li>If you are running an Apple Silicon mac, before running rpiboot, make sure you open the terminal using the “Rosetta” compatibility mode.
                 </li>              
             </ul>
           </li>
@@ -465,7 +465,7 @@ proceduresRunningRpiImagerCM5:
           <li>Choose <b>Other specific-purpose OS</b>.</li>
           <li>Choose <b>Home assistants and home automation</b>.</li>
           <li>Choose <b>Home Assistant</b>.</li>
-          <li>Choose <b>Home Assistant OS 14.1 (Yellow)</b>.</li>
+          <li>Choose <b>Home Assistant OS x.y (Yellow)</b>.</li>
         </ul>
     - title: Choosing storage
       image: rpi_choose_storage_cm5.png
