@@ -498,7 +498,7 @@ proceduresPowerUpCM5:
       content: |
         <ul>
           <li>Connect Ethernet and power.</li>
-          <li>Start up may take a while. Once te yellow LED blinks in a heartbeat pattern, the system is up and running.</li>          
+          <li>Start up may take a while. Once the yellow LED blinks in a heartbeat pattern, the system is up and running.</li>          
         </ul>
     - title: Getting started with Home Assistant
       image: yellow_restore_from_backup.png
@@ -512,6 +512,26 @@ proceduresPowerUpCM5:
           <li>On the onboarding screen, select <b>Restore from backup</b>.</li>
           <li>For more information, refer to the section on <a href="/guides/restore-backup/" target="_blank">restoring from backup</a>.</li>        
         </ol>
+proceduresPowerUpCM5NVMe:
+  title: Powering up
+  steps:
+    - title: Power up your Home Assistant Yellow
+      image: yellow_heartbeat_yellow_led.webp
+      content: |
+        <ul>
+          <li>Connect Ethernet and power.</li>
+          <li>Start up may take a while. Once the yellow LED blinks in a heartbeat pattern, the system is up and running.</li>          
+        </ul>
+    - title: Getting started with Home Assistant
+      image: section_view.png
+      content: |
+        <ul>
+          <li><b>Open Home Assistant</b>: 
+            <ul>
+              <li>Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
+              <li>As your data is stored on the NVMe, your dashboard comes up as usual. No additional steps required.</li>
+            </ul>   
+        </ul>
 procedureMoveDataDisk:
   title: Configuring Home Assistant and moving your data
   steps:
