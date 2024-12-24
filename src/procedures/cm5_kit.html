@@ -1,0 +1,33 @@
+---
+layout: getting-started
+description: Home Assistant Yellow
+guideName: Home Assistant Yellow Kit
+tools:
+  title: Gathering the required items
+  image: cm5_kit.jpg
+  content: |
+    <ul>
+      <li>Home&nbsp;Assistant Yellow</li>
+      <li>Heat sink assembly bag</li>
+      <li>Ethernet cable</li>
+      <li>Power supply depending on your kit: either included power supply or PoE</li>
+    </ul>
+    <p>Additionally, make sure you have the following items which are not part of the Kit</p>
+    <ul>
+      <li>Raspberry Pi Compute Module 4 (CM4)</li>
+      <li>USB-C cable</li>
+      <li>If you are using PoE, make sure your router or switch provides PoE on that port
+        <ul>
+          <li>Optional: Power supply (12 V / 2 A, if PoE is not used)</li>
+        </ul>
+      </li>
+      
+    </ul>
+---
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCase %}
+{% render "proc.include.liquid", proc: procedureReseatCM5 %}
+{% render "proc.include.liquid", proc: proceduresInstallingHAOSrpiboot %}
+{% render "proc.include.liquid", proc: proceduresRunningRpiImagerCM5 %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
+{% render "proc.include.liquid", proc: procedurePowerUpCM5Kit %}
