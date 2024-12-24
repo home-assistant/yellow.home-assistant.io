@@ -1,13 +1,13 @@
 ---
 layout: getting-started
 description: Home Assistant Yellow
-guideName: Migrating from CM4 to CM5
+guideName: Migrating from CM4 with NVMe to CM5 with NVMe
 tools:
   title: Gathering the required items
   image: cm5_prereqs.jpg
   content: |
     <ul>
-      <li>Home&nbsp;Assistant Yellow</li>
+      <li>Home&nbsp;Assistant Yellow installation with NVMe SSD drive and CM4</li>
       <li>Ethernet cable</li>
     </ul>
     <p>Additionally, make sure you have the following items which are not part of the Kit</p>
@@ -21,11 +21,7 @@ tools:
     <p>Preparation steps:</p>
     <ul>
       <li>Make sure you installed Home Assistant Operating System version 14 or later.</li>
-      <li>Make sure you have <a href="/guides/create-backup/" target="_blank">created a backup</a>.
-        <ul>
-          <li>Before creating a backup, make sure your CM5 eMMC has enough storage capacity.</li>
-          <li>Check how much disk space you've used under <a class="my" href="https://my.home-assistant.io/redirect/storage/" target="_blank"><b>Settings</b> > <b>System</b> > <b>Storage</b></a>.</li>
-          <li>If this is larger than the eMMC, you need to reduce the size of your instance.</li></ul>
+      <li>Make sure you have <a href="/guides/create-backup/" target="_blank">created a backup</a>.        
       </li>
     </ul>
 ---
@@ -36,4 +32,4 @@ tools:
 {% render "proc.include.liquid", proc: proceduresInstallingHAOSrpiboot %}
 {% render "proc.include.liquid", proc: proceduresRunningRpiImagerCM5 %}
 {% render "proc.include.liquid", proc: procedureReassembleCase %}
-{% render "proc.include.liquid", proc: proceduresPowerUpCM5 %}
+{% render "proc.include.liquid", proc: proceduresPowerUpCM5NVMe %}
