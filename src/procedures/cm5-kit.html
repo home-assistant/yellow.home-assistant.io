@@ -21,11 +21,19 @@ tools:
           <li>Optional: Power supply (12 V / 2 A, if PoE is not used)</li>
         </ul>
       </li>
-      
+      <li><b>Notice</b>: Don't use screws to fix the module in place. The screws can damage the CM5 module.</li>
     </ul>
 ---
 {% render "tools.include.liquid", tools: tools %}
 {% render "proc.include.liquid", proc: procedureOpeningCase %}
+
+<div class="container">
+  <div class="alert alert-note">
+    <p class="alert-title">Notice</p>
+    <p class="alert-content">Don't use screws to fix the module in place. The screws can damage the CM5 module.</p>
+  </div>
+</div> 
+
 {% render "proc.include.liquid", proc: procedureReseatCM5 %}
 {% render "proc.include.liquid", proc: proceduresInstallingHAOSrpiboot %}
 {% render "proc.include.liquid", proc: proceduresRunningRpiImagerCM5 %}
