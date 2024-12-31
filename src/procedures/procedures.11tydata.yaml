@@ -399,6 +399,7 @@ proceduresInstallingHAOSrpiboot:
               <ul>
               </ul>
             </li>
+            <li>Install rpiboot, but do not run it yet!</li>
             </ul>
           </li>
         </ul>
@@ -439,9 +440,9 @@ proceduresInstallingHAOSrpiboot:
           <li>On your PC, run rpiboot and let it run through.
             <ul>
               <li>If you are on a Windows, it might ask you if you want to reformat the disk. Select <b>Cancel</b> each time.</li>
-              <li>If you are on a Linux, use <code>sudo ./rpiboot -d mass-storage-gadget64</code> to run the tool.</li>                           
               <li>If you are running an Apple Silicon mac, before running rpiboot, make sure you open the terminal using the “Rosetta” compatibility mode.
-                </li>              
+              </li> 
+              <li>If you are on a Linux or MacOS, use <code>sudo ./rpiboot -d mass-storage-gadget64</code> to run the tool.</li>                           
             </ul>
           </li>
           <li>After a few seconds, the yellow LED on the Yellow board should start blinking.</li>
