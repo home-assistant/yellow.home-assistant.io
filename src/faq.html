@@ -236,11 +236,18 @@ sections:
                   <li>To connect a terminal using a Mac or Linux computer, follow the steps on <a href="/guides/use-serial-console-linux-macos/" target="_blank">Using the serial console for debugging (Linux/macOS)</a> up to (and including) step 9.</li>
                 </ul>                
               </li>
-              <li>To reset the password, enter <code>ha auth reset --username existing_user --password new_password</code>.</li>
-              <li><b>Note</b>: <code>existing_user</code> and <code>new_password</code> are placeholders. Replace them with your username and desired password.
-                <div style="padding: 8px 0px 0px 0px">
-                  <img src="/images/ha_auth_reset.webp" />
-                </div></li>
+              <li>To reset the password, enter <code>auth reset --username 'existing_user' --password 'new_password'</code>.
+                <ul>
+                  <li>The ha command line doesn't support all special characters.</li>
+                  <li>When resetting via the command line, use a short and simple password without special characters. Once reset, go and replace it with a complex one in the UI.</li>
+                  <li>For example, to reset the password for the user <code>yelena</code> to <code>12345</code>, </br>enter <code>auth reset --username 'yelena' --password '12345'</code>.
+                    <div style="padding: 8px 0px 0px 0px">
+                      <img src="/images/home-assistant-cli.webp" />
+                    </div></li>
+                </ul>
+              </li>
+              <li>Log in with the new password.</li>            
+              <li>Go to your <a class="my" href="https://my.home-assistant.io/redirect/profile/" target="_blank"><b>User profile</b></a> and on the <b>Security</b> tab</b>, replace the simple password with a complex one.</li>
             </ol>
           </p>
 ---
