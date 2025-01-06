@@ -1,0 +1,31 @@
+---
+layout: guide
+permalink: "guides/{{ page.fileSlug }}/index.html"
+description: Home Assistant Yellow
+guideName: Reinstalling the Home Assistant OS on CM5
+nvme: true
+collectionName: reinstall-cm5
+tools:
+  title: Gathering the required items
+  image: yellow_cm5_ucb-c.jpg
+  content: |
+    <ul>
+      <li>Home&nbsp;Assistant Yellow with a Raspberri Pi module installed</li>
+      <li>Connected to the Internet</li>
+      <li>USB-C cable</li>
+      <li><a href="/faq/#can-i-factory-reset-the-system">reset the device</a></li>
+    </ul>
+---
+<div class="container">
+  <div class="alert alert-note">
+    <p class="alert-title">Notice</p>
+    <p class="alert-content">It is very unlikely that reinstalling the Home Assistant OS is necessary. Before going through
+      this procedure, make sure you have <a href="/faq/#can-i-factory-reset-the-system">reset the device</a>.</p>
+  </div>
+</div> 
+{% render "tools.include.liquid", tools: tools %}
+{% render "proc.include.liquid", proc: procedureOpeningCaseCM5 %}
+{% render "proc.include.liquid", proc: proceduresInstallingHAOSrpiboot %}
+{% render "proc.include.liquid", proc: proceduresRunningRpiImagerCM5 %}
+{% render "proc.include.liquid", proc: procedureReassembleCase %}
+{% render "proc.include.liquid", proc: procedurePowerUpCM5Kit %}
