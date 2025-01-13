@@ -606,7 +606,7 @@ procedureMoveDataDisk:
         <ul>
           <li>Select your NVMe drive. If it does not show the full name of your dsik, select <b>nvme0n1</b> and select <b>MOVE</b>.</li>
           <li class="info">For a small instance of 5 GB (incl. 6 add-ons) this takes about 5 minutes.
-            <p>Depending on the size of your instance, this may take up to 30 minutes.</p>
+            <p>Depending on the size of your instance, this may take 30 minutes or longer.</p>
           </li>
         </ul>
     - title: View new disk
