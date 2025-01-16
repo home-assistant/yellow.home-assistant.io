@@ -20,7 +20,7 @@ procedureStandard:
       image: HA-get-started-02.png
       content: |
         <ul>
-          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Info</b>: Initial startup may take a while, depending on your internet connection.</li>
           <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
           <li><b>Select your Home Assistant Server</b>: 
             <ul>
@@ -28,7 +28,7 @@ procedureStandard:
               <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
             </ul>
           <li>The Home Assistant frontend guides you through the initial onboarding.</li>
-          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
+          <li><b>Info</b>: For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 procedureOpeningCase:
   title: Opening the case
@@ -39,7 +39,7 @@ procedureOpeningCase:
       content: |
         <p>Grounding protects the components from the static electricity that can be naturally present (electrostatic discharge, ESD).</p>
         <ul>
-          <li class="warning">Always: Touch the working surface before touching electronics. </li>
+          <li><b>Notice</b>: Risk of damage to the equipment due to electrostatic discharge. Always: Touch the working surface before touching electronics. </li>
           <li>Ideally: Use ESD protective equipment, such as ESD table mats and grounding cords.</li>
         </ul>
     - title: Removing the case - bottom part
@@ -67,7 +67,7 @@ procedureOpeningCaseCM5:
       content: |
         <p>Grounding protects the components from the static electricity that can be naturally present (electrostatic discharge, ESD).</p>
         <ul>
-          <li class="warning">Always: Touch the working surface before touching electronics. </li>
+          <li><b>Notice</b>: Risk of damage to the equipment due to electrostatic discharge. Always: Touch the working surface before touching electronics. </li>
           <li>Ideally: Use ESD protective equipment, such as ESD table mats and grounding cords.</li>
         </ul>
     - title: Removing the case - bottom part
@@ -245,7 +245,7 @@ procedureInstallNvme:
       image: step-9.png
       content: |
         <ul>
-          <li class="warning">Notice! Do not touch the gold connector pins.</li>
+          <li><b>Notice</b>: Do not touch the gold connector pins.</li>
           <li>Carefully hold the NVMe M.2 SSD by the sides.</li>
           <li>Align the notches in the SSD with the ridges in the slot.</li>
           <li>Then, insert at a 30-degree angle.</li>
@@ -265,7 +265,7 @@ procedureInstallNvme:
           <li>Press the stand-off nut and the SSD drive against the board.</li>
           <li>While pressing down the drive, turn over the board.</li>
           <li>From the rear side of the board, insert the M2 hex screw.</li>
-          <li class="warning">Do not over-tighten the screw.</li>
+          <li><b>Notice</b>: Risk of damage to equipment due to excessive force. Do not over-tighten the screw.</li>
         </ul>
 proceduresInstallingHAOS:
   title: Installing Home Assistant Software on Kit
@@ -275,8 +275,8 @@ proceduresInstallingHAOS:
       content: |
         <ul>
           <li>Install the Raspberry Pi Imager on your computer as described under <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a></li>
-          <li class="info">If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from <a href="https://github.com/NabuCasa/yellow-buildroot/releases">GitHub releases</a>.</li>
-          <li class="warning">If you are using a Raspberry Pi Compute Module 4 (CM4) that already has software on it, this procedure does not work. Ignore this and the following steps.<ul>
+          <li><b>Info</b>: If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from <a href="https://github.com/NabuCasa/yellow-buildroot/releases">GitHub releases</a>.</li>
+          <li><b>Important</b>: If you are using a Raspberry Pi Compute Module 4 (CM4) that already has software on it, this procedure does not work. Ignore this and the following steps.<ul>
           <li>Instead, follow the procedure <a href="/guides/reinstall-os/">Option 2: Reinstall Home Assistant OS using rpiboot</a></li>
           <li>The reason is that by default, the CM4 tries to boot from the internal eMMC before booting from the USB flash drive.</li>
           </ul></li>
@@ -331,10 +331,10 @@ proceduresInstallingHAOS:
       content: |
         <ul>
           <li>If you are not using PoE, connect the power supply to Home&nbsp;Assistant&nbsp;Yellow&nbsp;Kit.</li>
-          <li class="info">For CM4 Lite Home Assistant OS is automatically installed on the NVMe SSD.
+          <li><b>Info</b>: For CM4 Lite Home Assistant OS is automatically installed on the NVMe SSD.
             For regular CM4s Home Assistant OS is installed onto the eMMC by default.
           </li>
-          <li class="info"><b>Advanced</b>: Forcing installation onto the NVMe SSD when using CM4 with eMMC:<br>
+          <li><b>Advanced</b>: Forcing installation onto the NVMe SSD when using CM4 with eMMC:<br>
             Press the blue button while the yellow LED
             is on constantly (during the 5s window, see next step).
           </li>
@@ -346,7 +346,7 @@ proceduresInstallingHAOS:
           <li>Wait for Home&nbsp;Assistant Yellow to start booting from the USB flash drive.</li>
           <li>During boot, the Yellow LED is blinking steadily.</li>
           <li>Once the installer is ready, the yellow LED will be constantly on for 5 seconds.</li>
-          <li class="info">If the LED is stuck in steady blinking or constantly on for an extended period of time, this could indicate that the installer cannot connect to the internet. Follow <a href="/guides/issue-while-installing-os-on-emmc/" target="_blank">this procedure</a> to troubleshoot.</li>
+          <li><b>Troubleshooting</b>: If the LED is stuck in steady blinking or constantly on for an extended period of time, this could indicate that the installer cannot connect to the internet. Follow <a href="/guides/issue-while-installing-os-on-emmc/" target="_blank">this procedure</a> to troubleshoot.</li>
         </ul>
     - title: Waiting
       image: led-pattern-install-blink-fast.webp
@@ -374,7 +374,7 @@ proceduresInstallingHAOS:
       image: HA-get-started-02.png
       content: |
         <ul>
-          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Info</b>: Initial startup may take a while, depending on your internet connection.</li>
           <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
           <li><b>Select your Home Assistant Server</b>: 
             <ul>
@@ -382,7 +382,7 @@ proceduresInstallingHAOS:
               <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
             </ul>
           <li>The Home Assistant frontend guides you through the initial onboarding.</li>
-          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
+          <li><b>Info</b>: For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 proceduresInstallingHAOSrpiboot:
   title: Running rpiboot
@@ -469,7 +469,7 @@ proceduresRunningRpiImagerCM5:
       content: |
         <ul>
           <li>Install the Raspberry Pi Imager on your computer as described under <a href="https://www.raspberrypi.com/software/" target="_blank">https://www.raspberrypi.com/software/</a></li>
-          <li class="info">If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from <a href="https://github.com/NabuCasa/yellow-buildroot/releases">GitHub releases</a>.</li>
+          <li><b>Info</b>: If your platform doesn't support the Raspberry Pi Imager, you can use another imager (e.g. balenaEtcher) and flash the Home Assistant OS Installer for Yellow directly from <a href="https://github.com/NabuCasa/yellow-buildroot/releases">GitHub releases</a>.</li>
         </ul>
     - title: Open Raspberry Pi Imager      
       image: yellow_rpi-imager_select_device_cm5.png
@@ -568,7 +568,7 @@ procedurePowerUpCM5Kit:
       image: HA-get-started-02.png
       content: |
         <ul>
-          <li class="info">Initial startup may take a while, depending on your internet connection.</li>
+          <li><b>Info</b>: Initial startup may take a while, depending on your internet connection.</li>
           <li><b>Install the app</b></br>To access Home Assistant from your mobile device, use the QR code to locate the app in the app store.</li>
           <li><b>Select your Home Assistant Server</b>: 
             <ul>
@@ -576,7 +576,7 @@ procedurePowerUpCM5Kit:
               <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li></li>
             </ul>
           <li>The Home Assistant frontend guides you through the initial onboarding.</li>
-          <li class="info">For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
+          <li><b>Info</b>: For further information, refer to the instructions provided under <a href="https://www.home-assistant.io/getting-started/onboarding/" target="_blank">https://www.home-assistant.io/getting-started/onboarding/</a>.</li></br>          
         </ul>
 procedureMoveDataDisk:
   title: Configuring Home Assistant and moving your data
@@ -585,8 +585,8 @@ procedureMoveDataDisk:
       image: ha-config-storage.png
       content: |
         <ul>
-          <li class="warning"><b>CM4 or CM5 Lite</b>: If you have a Raspberry&nbsp;Compute&nbsp;Module&nbsp;4&nbsp;Lite: As there is no eMMC&nbsp;flash, you can skip this and the following steps.</li>
-          <li class="info"><b>Regular CM4 or CM5 modules</b>: This <i>moving your data</i> procedure is required for making use of your SSD, even if your module is new.<li>
+          <li><b>CM4 or CM5 Lite</b>: If you have a Raspberry&nbsp;Compute&nbsp;Module&nbsp;4&nbsp;Lite: As there is no eMMC&nbsp;flash, you can skip this and the following steps.</li>
+          <li><b>Regular CM4 or CM5 modules</b>: This <i>moving your data</i> procedure is required for making use of your SSD, even if your module is new.<li>
             Open your Home Assistant instance and navigate to the storage configuration page using the button below:<br><br>
             <a href="https://my.home-assistant.io/redirect/storage/" target="_blank"><img
               src="https://my.home-assistant.io/badges/storage.svg"
@@ -608,7 +608,7 @@ procedureMoveDataDisk:
       content: |
         <ul>
           <li>Select your NVMe drive. If it does not show the full name of your dsik, select <b>nvme0n1</b> and select <b>MOVE</b>.</li>
-          <li class="info">For a small instance of 5 GB (incl. 6 add-ons) this takes about 5 minutes.
+          <li><b>Info</b>: For a small instance of 5 GB (incl. 6 add-ons) this takes about 5 minutes.
             <p>Depending on the size of your instance, this may take 30 minutes or longer.</p>
           </li>
         </ul>
@@ -627,7 +627,7 @@ procedureReassembleCase:
       content: |
         <ul>
           <li>Place the translucent bottom part of the case onto the table.</li>
-          <li class="info">Make sure the two round notches form a line pointing towards the top right corner.</li>
+          <li>Make sure the two round notches form a line pointing towards the top right corner.</li>
         </ul>
     - title: Reassembling - bottom part
       image: reassemble-step-2-pcb-on-bottom-plate.jpeg
@@ -648,7 +648,7 @@ procedureReassembleCase:
       content: |
         <ul>
           <li>Insert the 4 thumb screws.</li>
-          <li class="warning">Do not over-tighten the screws.</li>
+          <li><b>Notice</b>: Risk of damage to the equipment due to excessive force. Do not over-tighten the screws.</li>
         </ul>
 procedureRemoveCM4:
   title: Removing the Raspberry Pi Compute Module
@@ -665,10 +665,10 @@ procedureRemoveCM4:
       content: |
         <ul>
           <li><b>Info</b>: The image shows a Raspberry Pi Compute Module 4. The steps are the same for the Compute Module 5.</li>
-          <li class="warning">Ideally, the module should be pulled up vertically. But this is hard to do.</li>
+          <li><b>Notice</b>: To avoid damage to the module, ideally, the module should be pulled up vertically. But this is hard to do.</li>
           <li>Pull up the module from one side, tilting as little as possible. Tilting can damage the connector.</li>
-          <li class="info">This requires quite a bit of force. If it does not work, pull harder.</li>
-          <li class="warning">Do not use a screw driver as a lever. It might damage the board.</li>
+          <li><b>Info</b>: This requires quite a bit of force. If it does not work, pull harder.</li>
+          <li><b>Notice</b>: Do not use a screw driver as a lever. It might damage the board.</li>
         </ul>
 procedureDisableMultiProtocol:
   title: Disable multiprotocol support
@@ -691,7 +691,7 @@ procedureDisableMultiProtocol:
           <li>Wait for the setup to complete.</li>
         </ol>
         <ul>
-          <li class=info>Your Zigbee devices will continue to work. Your Thread devices will continue working only if you have another Thread border router set up.</li>
+          <li><b>Info</b>: Your Zigbee devices will continue to work. Your Thread devices will continue working only if you have another Thread border router set up.</li>
         </ul>
 procedureEnableThreadSupport:
   title: Install dedicated Thread support
