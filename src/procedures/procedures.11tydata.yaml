@@ -435,7 +435,10 @@ proceduresInstallingHAOSrpiboot:
             <ul><li>Older Home Assistant Yellow versions: Bridge JP2 (USB-C Rcvry).</li></ul>
           </li>
           <li>Power up the board.
-          <ul><li>Only the red LED should be on at this point (solid, not blinking).</li></ul>
+          <ul>
+            <li>Plug in the 12&nbsp;V&nbsp;DC connector or Ethernet cable (if PoE is used).</li>
+            <li>Only the red LED should be on at this point (solid, not blinking).</li>
+          </ul>
           </li>
           <li>Release the recovery push button.
             <ul><li>Older Home Assistant Yellow versions: Un-bridge JP2.</li>
