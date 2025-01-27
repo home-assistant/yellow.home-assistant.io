@@ -512,7 +512,7 @@ proceduresRunningRpiImagerCM5:
           <li>Set the JP1 jumper to UART.</li>
         </ol>
 proceduresPowerUpCM5:
-  title: Powering up and getting started
+  title: Powering up and finishing the migration
   steps:
     - title: Power up and watch the LEDs
       image: yellow_heartbeat_yellow_led.webp
@@ -521,7 +521,7 @@ proceduresPowerUpCM5:
           <li>Connect Ethernet and power.</li>
           <li>Start up may take a while. Once the yellow LED blinks in a heartbeat pattern, the system is up and running.</li>          
         </ul>
-    - title: Getting started with Home Assistant
+    - title: Finish migration
       image: yellow_restore_from_backup.png
       content: |
         <ol>
