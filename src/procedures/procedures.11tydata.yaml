@@ -530,7 +530,7 @@ proceduresPowerUpCM5:
               <li><b>Mobile</b>: Confirm the IP address detected by the app. For example: <a href="http://192.168.1.196:8123" target="_blank">http://192.168.1.196:8123</a></li>
               
               <li><b>Desktop</b>: Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li>
-              <li><b>Info</b>: If you had a fixed IP address or a domain name on your CM4, note that Home Assistant can no longer be reached under this address, as the address is tied to the board. The static configuration of the CM4 will be lost and the CM5 will use automatic configuration. This means your CM5 will be given a different IP address by your router. After onboarding, you can define the static IP again.</li>
+              <li><b>Info</b>: If you had a fixed IP address or a domain name on your CM4, note that Home Assistant can no longer be reached under this address, as the address is tied to the board. The static configuration of the CM4 will be lost and the CM5 will use automatic configuration.</li>
             </ul></li>
           <li>On the onboarding screen, select <b>Restore from backup</b>.</li>
           <li>For more information, refer to the section on <a href="/guides/restore-backup/" target="_blank">restoring from backup</a>.</li>        
