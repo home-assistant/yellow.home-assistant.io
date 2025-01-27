@@ -551,7 +551,7 @@ proceduresPowerUpCM5NVMe:
         <ul>
           <li><b>Open Home Assistant</b>: 
             <ul>
-              <li>Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li>             
+              <li>Visit <a href="http://homeassistant.local:8123" target="_blank">http://homeassistant.local:8123</a> to access the Home Assistant frontend.</li>
               <li>As your data is stored on the NVMe, your dashboard comes up as usual. No additional steps required.</li>
             </ul></li>
         </ul>
