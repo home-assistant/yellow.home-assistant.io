@@ -187,7 +187,7 @@ procedureReseatCM5:
       content: |
         <ol>
           <li>Place the board in front of you, the red and blue buttons facing to the right.</li>
-          <li>Orient the CM5: The <b>Raspberri Pi</b> text needs to be on the right hand side.</li>
+          <li>Orient the CM5: The <b>Rasapberry Pi</b> text needs to be on the right hand side.</li>
           <li>Carefully place the CM5 without force.
             <ul>
               <li>The CM5 should fall into place slightly when correctly aligned.</li>
