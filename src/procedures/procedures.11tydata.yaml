@@ -7,7 +7,7 @@ procedureStandard:
       content: |
         <ul>
           <li>Plug in your Ethernet cable and make sure it is locked into place.</li>
-          <li>The other end of the Ethernet cable will need to be connected to your Router or Switch and connected to the internet.</li>
+          <li>The other end of the Ethernet cable will need to be connected to your router or switch and connected to the internet.</li>
           <ul><li>Note: Internet is required because the newly installed Home Assistant OS does not contain all Home Assistant components yet. It downloads the latest version of Home Assistant Core on first start.</li><ul>
         </ul>
     - title: Power it up!
@@ -563,7 +563,7 @@ procedurePowerUpCM5Kit:
       content: |
         <ol>
           <li>Plug in your Ethernet cable and make sure it is locked into place.</li>
-          <li>The other end of the Ethernet cable will need to be connected to your Router or Switch and connected to the internet.</li>
+          <li>The other end of the Ethernet cable will need to be connected to your router or switch and connected to the internet.</li>
           <li>If you are not using PoE, connect the power to the wall and then to the Home&nbsp;Assistant Yellow.</li>
         </ol>
     - title: Getting started with Home Assistant
