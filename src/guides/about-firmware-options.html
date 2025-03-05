@@ -7,14 +7,13 @@ guideName: About firmware options
 
     <p>This section has two goals: 
         <ol>
-            <li>List the currently available firmware options for Home Assistant Yellow and Connect&nbsp;ZBT-1.</li>
+            <li>List the currently available firmware options for Home Assistant Yellow and Connect&nbsp;ZBT-1 (the two devices have the same radio chip built-in).</li>
             <li>List the different add-ons and integrations related to these options and show their relationships.</li>
         </ol></p>
     <h1>Currently available firmware</h1>
-    
-    <p>
+     <p>
         <span>
-            There are currently 2 different recommended firmware options available for Home Assistant Yellow:
+            There are currently 2 different firmware options for Home Assistant Yellow:
             <ol>
                 <li><b>Zigbee firmware</b>
                     <ul>
@@ -31,23 +30,15 @@ guideName: About firmware options
                     </ul>
                 </li>
             </ol>
-            <p><b>There is also an experimental firmware, which is not recommended: the Multiprotocol firmware</b>
-                <ul>
-                    <li>This is the firmware that enables Yellow and Connect&nbsp;ZBT-1 to run both a Thread and a Zigbee network. Both networks run on the same <abbr title="radio frequency">RF</abbr> channel.</li>
-                    <li>Bundled and automatically installed with the <b>Silicon Labs Multiprotocol</b> add-on. This add-on comes with the Thread border router component, as well as with the Zigbee stack. The ZHA integration communicates with the Zigbee stack running inside the add-on.</li>
-                    <li>This firmware is currently experimental. For more information, refer to the documentation <a href="/guides/about-multiprotocol/" target="_blank">about
-                        multiprotocol issues</a>.</li>
-                    <li>Other terms you may have seen to designate this firmware: multi-<abbr title="personal area network">PAN</abbr>, RCP multi-<abbr title="personal area network">PAN</abbr></li>
-                </ul>
-            </p>
 
             <h3>Overview of Zigbee and Thread firmware options, add-ons, and integrations in Home Assistant.</h3>
             <p class="img">
                 <picture>
-                  <img src="/images/zigbee-thread-firmware-add-ons-integrations_02.png">
+                  <img src="/images/firmware-options-no-multiprotocol.svg">
                 </picture>
                 <br>
                 <small>Chart illustrating the relationships between Zigbee and Thread firmware options, add-ons, and integrations in Home Assistant.</small>
+<<<<<<< Updated upstream
               </p></p>            
 
             <h1>Why is it best to use only one protocol at once?</h1>
@@ -70,4 +61,14 @@ guideName: About firmware options
                     <li><a href="https://www.home-assistant.io/integrations/thread/" target="_blank">Thread integration documentation</a>
                     </li>
                 </ul></p>
+=======
+              </p></p>    
+                     
+            <h1>Related topics</h1>
+            <p><ul>
+                <li><a href="https://www.home-assistant.io/integrations/zha/" target="_blank">Zigbee Home Automation integration documentation</a>
+                <li><a href="https://www.home-assistant.io/integrations/thread/" target="_blank">Thread integration documentation</a>
+                </li>
+            </ul></p>
+>>>>>>> Stashed changes
 </div>
