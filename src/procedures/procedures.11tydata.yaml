@@ -725,7 +725,7 @@ procedureEnableThreadSupport:
         <ul>
           <li>Under <b>Pick your firmware</b>, select <b>Thread</b>.</li>
           <li><b>Result</b>: The OpenThread Border Router add-on is installed.</li>
-          <li>The dialog informs you that Connect&nbsp;ZBT-1 now acts as an OpenThread border bouter. Select <b>Submit</b>.</li>
+          <li>The dialog informs you that Connect&nbsp;ZBT-1 now acts as an OpenThread border router. Select <b>Submit</b>.</li>
           <li>Then, select <b>Finish</b>.</li>
         </ul>
     - title: Locate the Thread integrations
