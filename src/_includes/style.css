@@ -571,7 +571,8 @@ td {
   width: -webkit-fill-available;
 }
 
-div.alert {
+div.alert,
+li.alert {
   position: relative;
 
   background: #e7f2fa;
@@ -580,24 +581,25 @@ div.alert {
   margin-bottom: 24px;
   border-radius: 16px;
 
-  p {
-    margin-bottom: 0px;
+  p,
+  {
+  margin-bottom: 0px;
 
-    &.alert-title {
-      font-weight: bold;
-      line-height: 1.5em;
-    }
-
-    &.alert-content {
-      padding: 6px;
-    }
+  &.alert-title {
+    font-weight: bold;
+    line-height: 1.5em;
   }
 
-  &.alert-note {
-    p.alert-title {
-      color: #6ab0de;
-    }
-
-    background-color: var(--background-color-alert-note);
+  &.alert-content {
+    padding: 6px;
   }
+}
+
+&.alert-note {
+  p.alert-title {
+    color: #6ab0de;
+  }
+
+  background-color: var(--background-color-alert-note);
+}
 }
