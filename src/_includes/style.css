@@ -575,7 +575,7 @@ div.alert,
 li.alert {
   position: relative;
 
-  background: #e7f2fa;
+  background-color: var(--background-color-alert-note);
 
   padding: 20px 24px 20px 24px;
   margin-bottom: 24px;
@@ -600,6 +600,6 @@ li.alert {
     color: #6ab0de;
   }
 
-  background-color: var(--background-color-alert-note);
+
 }
 }
