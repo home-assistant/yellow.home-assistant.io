@@ -1,4 +1,4 @@
-The content of this Website has been migrated to https://github.com/NabuCasa/support
+The content of this website has been migrated to https://github.com/NabuCasa/support
 
 # Home Assistant Yellow website
 
