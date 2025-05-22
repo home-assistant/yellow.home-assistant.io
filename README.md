@@ -1,10 +1,8 @@
 The content of this Website has been migrated to https://github.com/NabuCasa/support
 
-<!-- The content of this Website has been migrated to https://github.com/NabuCasa/support. 
-
 # Home Assistant Yellow website
 
-This is the source of the Yellow documentation website at [yellow.home-assistant.io](https://yellow.home-assistant.io). 
+This was the source of the Yellow documentation website at [yellow.home-assistant.io](https://yellow.home-assistant.io). 
 
 ## Setup
 
@@ -26,4 +24,3 @@ If you prefer other editors, Dev Containers is an open standard and can be used 
 
 There is a pre-configured task to run a preview version of the website. Use Ctrl+Shift+P, and select **Tasks: Run tasks**.
 
--->
