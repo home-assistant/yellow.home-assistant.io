@@ -1,6 +1,8 @@
+The content of this website has been migrated to https://github.com/NabuCasa/support
+
 # Home Assistant Yellow website
 
-This is the source of the Yellow documentation website at [yellow.home-assistant.io](https://yellow.home-assistant.io). 
+This was the source of the Yellow documentation website at [yellow.home-assistant.io](https://yellow.home-assistant.io). 
 
 ## Setup
 
